@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../components/signup_css.css';
+import '../../components/Login_Signup/signup_css.css';
 
 const Signin = () => {
 	return (
