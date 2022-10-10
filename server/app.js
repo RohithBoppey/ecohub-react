@@ -66,10 +66,8 @@ app.use(passport.session());
 /* This defaults to the views directory in the application root directory. 
 view engine -> the template engine to use.*/
 
-app.set("view engine", "ejs")
 
 /* Connecting the path.join to make relative path (in file) to absolute (actual path) */
-app.set('views', path.join(__dirname, 'views'));
 
 /* Making the app use the public folder as they are static */
 app.use(express.static("public"));
@@ -97,12 +95,6 @@ mongoose.connect(DBurl).then(() => {
 	console.log("OOPS! Bad Credentials");
 }
 )
-
-// This is the home page (Without Login)
-app.get("/", (req, res) => {
-	res.render("index")
-})
-
 
 /* 
 	Making this user = null because:
