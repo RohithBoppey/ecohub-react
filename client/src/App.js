@@ -6,15 +6,16 @@ import Signin from "./components/Login_Signup/Signin";
 import ArticlesPage from "./pages/Articles/ArticlesPage";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 import ContactSalesManager from "./pages/Contact Sales Manager/ContactSalesManager";
-import AdminLogin from "./components/Admin/AdminLogin";
+import AdminLoginPage from "./pages/Admin/AdminLoginPage";
 import FAQpage from "./pages/FaqPage/FAQpage";
 import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
-import Evpage from "./pages/Electricvehicles/Evpage";
+import Evpage from "./pages/ElectricVehicles/Evpage";
 
 import AdminHome from "./pages/Admin/AdminHome";
 
 function App() {
+	// yfvrdvtfvbgbybyby
 	return (
 		<Router>
 			<Routes>
@@ -27,7 +28,7 @@ function App() {
 				<Route path="/faqpage" element={<FAQpage />} exact />
 				<Route path="/cabservice" element={<Cabservice />} exact />
 				<Route path="/productservice" element={<Productservice/>} exact/>
-				<Route path="/evpage" element={<Evpage/>}exact />
+				<Route path="/ev_cars" element={<Evpage/>}exact />
 
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route
@@ -37,7 +38,7 @@ function App() {
 				/>
 
 				{/* Admin Section */}
-				<Route path="/admin/login" element={<AdminLogin />} exact />
+				<Route path="/admin/login" element={<AdminLoginPage />} exact />
 				<Route path="/admin/home" element={<AdminHome />} exact />
 				
 

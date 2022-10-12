@@ -39,7 +39,7 @@
   border-radius: 30px;
 }
 
-body {
+.ev_body {
   background: #f5f1ee;
   font-family: "Roboto", sans-serif;
 }
@@ -77,15 +77,7 @@ small.ghj {
   background: #ecedf1;
 }
 
-h6 {
-  color: red;
-}
 
-h6.ml-1 {
-    padding-left: 13px;
-  color: black;
-  font-size: 13px;
-}
 
 small.key {
     margin-top: 15px;
@@ -364,7 +356,7 @@ figure.effect-sarah:hover p {
   clear: both;
 }
 
-body {
+.evbody_final {
   background: #97e2aa;
   color: #fff;
   font-weight: 400;
@@ -372,7 +364,7 @@ body {
   font-family: "Raleway", Arial, sans-serif;
 }
 
-a {
+/* a {
   outline: none;
   color: #3498db;
   text-decoration: none;
@@ -381,7 +373,7 @@ a {
 a:hover,
 a:focus {
   color: #528cb3;
-}
+} */
 
 .section1{
   padding: 35px;
