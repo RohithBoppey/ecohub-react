@@ -1,5 +1,5 @@
 import React from 'react'
-import '../FaqPage/FAQcss.css'
+// import './FAQcss.css'
 import Navbarloggedin from '../../components/Navbar/Navbarloggedin'
 
 const FAQpage = () => {

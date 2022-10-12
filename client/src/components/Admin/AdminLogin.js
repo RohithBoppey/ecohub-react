@@ -26,11 +26,11 @@ const AdminLogin = () => {
 									</label>
 									<input
 										type="text"
-										class="form-control"
+										class="form-control ad_login"
 										name="username"></input>
 								</div>
 								<div class="form-group">
-									<label class="form-control-label">
+									<label class="form-control-label ad_password">
 										PASSWORD &nbsp;&nbsp;&nbsp;
 									</label>
 									<input

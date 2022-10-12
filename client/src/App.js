@@ -23,8 +23,8 @@ function App() {
 				<Route path="/signin" element={<Signin />} exact />
 				<Route path="/about_us" element={<AboutUsPage />} exact />
 				<Route path="/articles" element={<ArticlesPage />} exact />
-				<Route path="/faqpage" element={<FAQpage/>}exact/>
-				<Route path="/cabservice" element={<Cabservice/>}exact/>
+				<Route path="/faqpage" element={<FAQpage />} exact />
+				<Route path="/cabservice" element={<Cabservice />} exact />
 
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route
@@ -36,7 +36,7 @@ function App() {
 				{/* Admin Section */}
 				<Route path="/admin/login" element={<AdminLogin />} exact />
 				<Route path="/admin/home" element={<AdminHome />} exact />
-				
+
 				{/* Error if no page is found */}
 				<Route path="*" element={<Error />} exact />
 			</Routes>

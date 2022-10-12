@@ -1,85 +1,164 @@
-import React from 'react'
-import Lottie from 'react-lottie';
-import electriccab from '../../lotties/electric-cab.json';
+import React from "react";
+import Lottie from "react-lottie";
+import electriccab from "../../lotties/electric-cab.json";
 
 const Cabrequest = () => {
-    const generateDefaultOptions = (nameOfFile) => {
-        return {
-            loop: true,
-            autoplay: true,
-            animationData: nameOfFile,
-            rendererSettings: {
-                preserveAspectRatio: "xMidYMid meet"
+	const generateDefaultOptions = (nameOfFile) => {
+		return {
+			loop: true,
+			autoplay: true,
+			animationData: nameOfFile,
+			rendererSettings: {
+				preserveAspectRatio: "xMidYMid meet",
+			},
+		};
+	};
+	return (
+		<>
+			<section className="container">
+				<div className="row ">
+					<div className="text col col-lg-20 col-md-20 col-12 w-50 mx-auto cabformclass">
+						<form
+							className=" form-card"
+							onsubmit="documentValiation()">
+							<div className="row USER-DETAILS justify-content-between text-left">
+								<div className="input-box col-sm-6 flex-column d-flex">
+									{" "}
+									<label className="form-control-label px-3">
+										From:<span className="details"> *</span>
+									</label>{" "}
+									<input
+										type="text"
+										placeholder="Enter your pickup location"
+										required
+										className="cab_input"
+									/>{" "}
+								</div>
+								<div className="input-box col-sm-6 flex-column d-flex">
+									{" "}
+									<label className="form-control-label px-3">
+										To:<span className="details"> *</span>
+									</label>{" "}
+									<input
+										type="text"
+										placeholder="Enter your drop location"
+										required
+										className="cab_input"
+									/>{" "}
+								</div>
+							</div>
+							<div className="row USER-DETAILS justify-content-between text-left">
+								<div className="input-box col-sm-6 flex-column d-flex">
+									{" "}
+									<label className="form-control-label px-3">
+										Phone number:
+										<span className="details"> *</span>
+									</label>{" "}
+									<input
+										type="text"
+										placeholder="Enter phone number:"
+										required
+										id="phone"
+										className="cab_input"
+									/>{" "}
+								</div>
+								<div className="input-box col-sm-6 flex-column d-flex">
+									{" "}
+									<label className="form-control-label px-3">
+										Date and Time:
+										<span className="details"> *</span>
+									</label>{" "}
+									<input
+										type="datetime-local"
+										className="cab_input"
+										required
+									/>
+								</div>
+							</div>
 
-            }
-        }
-    }
-  return (
-      <>
-          
-          <section className="container">
+							<br />
+							<br />
+							<div>
+								<div className="category">
+									<div className="form-check form-check-inline">
+										<input
+											className="form-check-input cab_form_input "
+											type="radio"
+											name="Cab"
+											id="Radios"
+											value="Standard"
+											required
+										/>
+										<label
+											className="form-check-label"
+											for="inlineRadio1">
+											Standard{" "}
+										</label>
+									</div>
 
-              <div className="row ">
-                  <div className="text col col-lg-20 col-md-20 col-12 w-50 mx-auto cabformclass">
+									<div className="form-check form-check-inline">
+										<input
+											className="form-check-input cab_form_input"
+											type="radio"
+											name="Cab"
+											id="Radios"
+											value="Minivan"
+										/>
+										<label
+											className="form-check-label"
+											for="inlineRadio1">
+											Minivan{" "}
+										</label>
+									</div>
 
-                      <form className=" form-card" onsubmit="documentValiation()">
-                          <div className="row USER-DETAILS justify-content-between text-left">
-                              <div className="input-box col-sm-6 flex-column d-flex"> <label
-                                  className="form-control-label px-3">From:<span className="details"> *</span></label> <input
-                                      type="text" placeholder="Enter your pickup location" required /> </div>
-                              <div className="input-box col-sm-6 flex-column d-flex"> <label
-                                  className="form-control-label px-3">To:<span className="details"> *</span></label> <input
-                                      type="text" placeholder="Enter your drop location" required /> </div>
-                          </div>
-                          <div className="row USER-DETAILS justify-content-between text-left">
-                              <div className="input-box col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Phone
-                                  number:<span className="details"> *</span></label> <input type="text"
-                                      placeholder="Enter phone number:" required id="phone" /> </div>
-                              <div className="input-box col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Date
-                                  and Time:<span className="details"> *</span></label> <input type="datetime-local" required />
-                              </div>
-                          </div>
+									<div className="form-check form-check-inline">
+										<input
+											className="form-check-input cab_form_input"
+											type="radio"
+											name="Cab"
+											id="Radios"
+											value="Business"
+										/>
+										<label
+											className="form-check-label"
+											for="inlineRadio1">
+											Business{" "}
+										</label>
+									</div>
 
-                          <br /><br />
-                          <div>
+									<div className="form-check form-check-inline">
+										<input
+											className="form-check-input cab_form_input"
+											type="radio"
+											name="Cab"
+											id="Radios"
+											value="VIP"
+										/>
+										<label
+											className="form-check-label"
+											for="inlineRadio1">
+											VIP{" "}
+										</label>
+									</div>
+								</div>
+							</div>
 
-                              <div className="category">
-                                  <div className="form-check form-check-inline">
-                                      <input className="form-check-input" type="radio" name="Cab" id="Radios" value="Standard"
-                                          required />
-                                      <label className="form-check-label" for="inlineRadio1">Standard </label>
-                                  </div>
+							<br />
+							<br />
+							<br />
 
-                                  <div className="form-check form-check-inline">
-                                      <input className="form-check-input" type="radio" name="Cab" id="Radios" value="Minivan" />
-                                      <label className="form-check-label" for="inlineRadio1">Minivan </label>
-                                  </div>
+							<div className="mx-auto d-grid gap-2 col-6">
+								<button
+									className="btn btn-secondary btn-lg cab_button"
+									type="submit"
+									value="Get Taxi">
+									Get Taxi
+								</button>
+							</div>
+						</form>
+					</div>
 
-                                  <div className="form-check form-check-inline">
-                                      <input className="form-check-input" type="radio" name="Cab" id="Radios" value="Business" />
-                                      <label className="form-check-label" for="inlineRadio1">Business </label>
-                                  </div>
-
-                                  <div className="form-check form-check-inline">
-                                      <input className="form-check-input" type="radio" name="Cab" id="Radios" value="VIP" />
-                                      <label className="form-check-label" for="inlineRadio1">VIP </label>
-                                  </div>
-                              </div>
-                          </div>
-
-                          <br />
-                          <br /><br />
-
-                          <div className="mx-auto d-grid gap-2 col-6">
-                              <button className="btn btn-secondary btn-lg" type="submit" value="Get Taxi">Get Taxi</button>
-
-                          </div>
-
-                      </form>
-
-                  </div>
-
-                  {/* <div className="img col d-none d-md-flex" data-aos="fade-up">
+					{/* <div className="img col d-none d-md-flex" data-aos="fade-up">
                       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
                           var anim; var elem = document.getElementById('bodymovin2')
                           var animData = {container: elem, renderer: 'svg', loop: true, autoplay: true, rendererSettings: {progressiveLoad: false, preserveAspectRatio: 'xMaxYMax slice' }, path: 'data4.json' }; anim = bodymovin.loadAnimation(animData);
@@ -89,18 +168,16 @@ const Cabrequest = () => {
                               background="rgba(255, 255, 255, 1.0)" speed="1" loop autoplay id="bodymovin2"></lottie-player>
                       </div>
                   </div> */}
-                  <Lottie options={generateDefaultOptions(electriccab)}
-                      height={500}
-                      width={550}>
-                  </Lottie>
+					<Lottie
+						options={generateDefaultOptions(electriccab)}
+						height={500}
+						width={550}></Lottie>
+				</div>
+			</section>
+			<br /> <br />
+			<br />
+		</>
+	);
+};
 
-              </div>
-
-          </section>
-
-          <br /> <br /><br />
-      </>
-  )
-}
-
-export default Cabrequest
+export default Cabrequest;

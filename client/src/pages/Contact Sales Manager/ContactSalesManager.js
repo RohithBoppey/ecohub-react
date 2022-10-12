@@ -62,7 +62,7 @@ const ContactSalesManager = () => {
 				<div class="container1">
 					<div class="row">
 						<div class="col-md-4">
-							<img src={guyPhoto} class="img"></img>
+							<img src={guyPhoto} class="img1"></img>
 						</div>
 						<div class="col-md-8">
 							<div class="row">

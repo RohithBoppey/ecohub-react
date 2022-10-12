@@ -13,7 +13,7 @@ const Cabprices = () => {
                   <div className="row gx-4 gx-lg-5">
                       <div className="col-lg-3 col-md-6 text-center">
                           <div className="mt-5">
-                              <div className="mb-lg-5"><img src="https://cdn-icons-png.flaticon.com/512/3089/3089803.png"/></div>
+                              <div className="mb-lg-5"><img src="https://cdn-icons-png.flaticon.com/512/3089/3089803.png" className='cab_img'/></div>
                               <h3 className="h4 mb-2" style={{color: "black"}}><b> Standard</b></h3>
                               <h4 style={{color: "black"}} className="h4 mb-1">₹25 per km</h4>
                           
@@ -24,7 +24,7 @@ const Cabprices = () => {
                   <div className="col-lg-3 col-md-6 text-center">
                       <div className="mt-5">
 
-                          <div className="mb-lg-5"><img src="https://cdn-icons-png.flaticon.com/512/3063/3063823.png" alt=""/>
+                          <div className="mb-lg-5"><img src="https://cdn-icons-png.flaticon.com/512/3063/3063823.png" alt="" className='cab_img'/>
                           </div>
                               <h3 style={{ color: "black" }} className="h4 mb-2"><b>Minivan</b></h3>
                               <h4 style={{ color: "black" }} className="h4 mb-1">₹50 per km</h4>
@@ -35,7 +35,7 @@ const Cabprices = () => {
 
                   <div className="col-lg-3 col-md-6 text-center">
                       <div className="mt-5">
-                          <div className="mb-lg-5"><img src="https://cdn-icons-png.flaticon.com/512/744/744506.png" alt=""/>
+                          <div className="mb-lg-5"><img src="https://cdn-icons-png.flaticon.com/512/744/744506.png" alt="" className='cab_img'/>
                           </div>
                          
                               <h3 style={{ color: "black" }} className="h4 mb-2"><b>Business</b></h3>
@@ -47,7 +47,7 @@ const Cabprices = () => {
 
                   <div className="col-lg-3 col-md-6 text-center">
                       <div className="mt-5">
-                          <div className="mb-lg-0"><img src="https://cdn-icons-png.flaticon.com/512/296/296216.png" alt=""/>
+                          <div className="mb-lg-0"><img src="https://cdn-icons-png.flaticon.com/512/296/296216.png" alt="" className='cab_img'/>
                           </div><br/><br/>
                               <h3 style={{color: "black"}} className="h4 mb-2"><b>VIP</b></h3>
                               <h4 style={{ color: "black" }} className="h4 mb-1">₹100 per km</h4>

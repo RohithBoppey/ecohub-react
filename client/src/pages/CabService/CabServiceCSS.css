@@ -47,7 +47,8 @@
 
 
 }
-form input[ type="radio"]{
+
+.cab_form_input{
  display: flex; 
  margin: 0 20px 0 20px;
  align-items: center;
@@ -64,15 +65,15 @@ form input[ type="radio"]{
     align-items: center;
 }
 
-img, svg {
+.cab_img, .cab_svg {
     width: 40%;
     vertical-align: middle;
 }
 
 
-input,
-textarea,
-button {
+.cab_input,
+.cab_textarea,
+.cab_button {
   padding: 8px 15px;
   border-radius: 5px !important;
   margin: 5px 0px;
