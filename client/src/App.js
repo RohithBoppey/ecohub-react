@@ -15,7 +15,6 @@ import Evpage from "./pages/ElectricVehicles/Evpage";
 import AdminHome from "./pages/Admin/AdminHome";
 
 function App() {
-	// yfvrdvtfvbgbybyby
 	return (
 		<Router>
 			<Routes>
@@ -27,8 +26,12 @@ function App() {
 				<Route path="/articles" element={<ArticlesPage />} exact />
 				<Route path="/faqpage" element={<FAQpage />} exact />
 				<Route path="/cabservice" element={<Cabservice />} exact />
-				<Route path="/productservice" element={<Productservice/>} exact/>
-				<Route path="/ev_cars" element={<Evpage/>}exact />
+				<Route
+					path="/productservice"
+					element={<Productservice />}
+					exact
+				/>
+				<Route path="/ev_cars" element={<Evpage />} exact />
 
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route

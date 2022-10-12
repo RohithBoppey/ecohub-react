@@ -12,6 +12,7 @@ const Cars = () => {
 								src="https://imgur.com/edOjtEC.png"
 								className="card-img-top"
 								width="100%"
+								alt="car image"
 							/>
 							<div className="card-body pt-0 px-0">
 								<div className="d-flex flex-row justify-content-between mb-0 px-3">
@@ -48,6 +49,7 @@ const Cars = () => {
 												src="https://imgur.com/iPtsG7I.png"
 												width="35px"
 												height="25px"
+												alt="alt"
 											/>
 											<div className="d-flex flex-column ml-1">
 												<small className="ghj">
@@ -64,7 +66,10 @@ const Cars = () => {
 											HORSEPOWER
 										</small>
 										<div className="d-flex flex-row">
-											<img src="https://imgur.com/J11mEBq.png" />
+											<img
+												src="https://imgur.com/J11mEBq.png"
+												alt="alt"
+											/>
 											<h6 className="ml-1">
 												135 hp&ast;
 											</h6>
@@ -94,6 +99,7 @@ const Cars = () => {
 								src="https://imgur.com/SKZolYE.png"
 								className="card-img-top"
 								width="100%"
+								alt="alt"
 							/>
 							<div className="card-body pt-0 px-0">
 								<div className="d-flex flex-row justify-content-between mb-0 px-3">
@@ -130,6 +136,7 @@ const Cars = () => {
 												src="https://imgur.com/iPtsG7I.png"
 												width="35px"
 												height="25px"
+												alt="alt"
 											/>
 											<div className="d-flex flex-column ml-1">
 												<small className="ghj">
@@ -146,7 +153,10 @@ const Cars = () => {
 											HORSEPOWER
 										</small>
 										<div className="d-flex flex-row">
-											<img src="https://imgur.com/J11mEBq.png" />
+											<img
+												src="https://imgur.com/J11mEBq.png"
+												alt="alt"
+											/>
 											<h6 className="ml-1">
 												135 hp&ast;
 											</h6>
@@ -176,6 +186,7 @@ const Cars = () => {
 								src="https://imgur.com/gUQNKPd.png"
 								className="card-img-top"
 								width="100%"
+								alt="alt"
 							/>
 							<div className="card-body pt-0 px-0">
 								<div className="d-flex flex-row justify-content-between mb-0 px-3">
@@ -212,6 +223,7 @@ const Cars = () => {
 												src="https://imgur.com/iPtsG7I.png"
 												width="35px"
 												height="25px"
+												alt="alt"
 											/>
 											<div className="d-flex flex-column ml-1">
 												<small className="ghj">
@@ -228,7 +240,10 @@ const Cars = () => {
 											HORSEPOWER
 										</small>
 										<div className="d-flex flex-row">
-											<img src="https://imgur.com/J11mEBq.png" />
+											<img
+												src="https://imgur.com/J11mEBq.png"
+												alt="alt"
+											/>
 											<h6 className="ml-1">
 												135 hp&ast;
 											</h6>
