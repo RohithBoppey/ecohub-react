@@ -6,7 +6,7 @@ import Signin from "./components/Login_Signup/Signin";
 import ArticlesPage from "./pages/Articles/ArticlesPage";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 import ContactSalesManager from "./pages/Contact Sales Manager/ContactSalesManager";
-import AdminLogin from "./components/Admin/AdminLogin";
+import AdminLoginPage from "./pages/Admin/AdminLoginPage";
 import FAQpage from "./pages/FaqPage/FAQpage";
 import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
@@ -38,7 +38,7 @@ function App() {
 				/>
 
 				{/* Admin Section */}
-				<Route path="/admin/login" element={<AdminLogin />} exact />
+				<Route path="/admin/login" element={<AdminLoginPage />} exact />
 				<Route path="/admin/home" element={<AdminHome />} exact />
 
 				{/* Error if no page is found */}
