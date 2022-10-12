@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from 'react-lottie';
-import electriccab from '../lotties/electric-cab.json';
+import electriccab from '../../lotties/electric-cab.json';
 
 const Cabrequest = () => {
     const generateDefaultOptions = (nameOfFile) => {
