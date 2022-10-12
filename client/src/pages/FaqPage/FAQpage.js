@@ -2,6 +2,7 @@ import React from 'react'
 import '../FaqPage/FAQcss.css'
 import Navbarloggedin from '../../components/Navbar/Navbarloggedin'
 
+
 const FAQpage = () => {
   return (
     <>

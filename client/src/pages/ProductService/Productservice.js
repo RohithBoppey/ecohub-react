@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbarloggedin'
-import RegisterFooter from '../components/Login_Signup/RegisterFooter'
+import Navbar from '../../components/Navbar/Navbarloggedin'
+import RegisterFooter from '../../components/Login_Signup/RegisterFooter'
 // import classes from '../components/ProductServicePage.module.css'
 // import '../components/ProductServicePage.css'
 
