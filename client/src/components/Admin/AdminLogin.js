@@ -1,11 +1,11 @@
 import React from "react";
 
-// import "./adLogin.css";
+import "./adLogin.css";
 
 const AdminLogin = () => {
 	return (
-		// <div class="body">
-		<div class="container">
+		<div class="adminbody">
+			{/* <div class="container"> */}
 			<div class="row">
 				<div class="col-lg-3 col-md-2"></div>
 				<div class="col-lg-6 col-md-8 login-box">

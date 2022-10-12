@@ -7,6 +7,7 @@ import ArticlesPage from "./pages/Articles/ArticlesPage";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 import ContactSalesManager from "./pages/Contact Sales Manager/ContactSalesManager";
 import AdminLogin from "./components/Admin/AdminLogin";
+import AdminHome from "./pages/Admin/AdminHome";
 
 function App() {
 	return (
@@ -27,6 +28,10 @@ function App() {
 
 				{/* Admin Section */}
 				<Route path="/admin/login" element={<AdminLogin />} exact />
+				<Route path="/admin/home" element={<AdminHome />} exact />
+				
+				{/* Error if no page is found */}
+				<Route path="*" element={<Error />} exact />
 			</Routes>
 		</Router>
 	);
