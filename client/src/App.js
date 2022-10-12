@@ -7,6 +7,10 @@ import ArticlesPage from "./pages/Articles/ArticlesPage";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 import ContactSalesManager from "./pages/Contact Sales Manager/ContactSalesManager";
 import AdminLogin from "./components/Admin/AdminLogin";
+import FAQpage from "./pages/FaqPage/FAQpage";
+import Cabservice from "./pages/CabService/Cabservice";
+import Productservice from "./pages/Productservice";
+
 import AdminHome from "./pages/Admin/AdminHome";
 
 function App() {
@@ -19,6 +23,9 @@ function App() {
 				<Route path="/signin" element={<Signin />} exact />
 				<Route path="/about_us" element={<AboutUsPage />} exact />
 				<Route path="/articles" element={<ArticlesPage />} exact />
+				<Route path="/faqpage" element={<FAQpage/>}exact/>
+				<Route path="/cabservice" element={<Cabservice/>}exact/>
+
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route
 					path="/contact_sm"

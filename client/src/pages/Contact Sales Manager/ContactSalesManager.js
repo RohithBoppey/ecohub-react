@@ -1,7 +1,7 @@
 import React from "react";
 import Navbarloggedin from "../../components/Navbar/Navbarloggedin";
 
-// import './ContactSM.css';
+import './ContactSM.css';
 
 import guyPhoto from './guy.png';
 
