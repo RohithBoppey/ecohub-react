@@ -7,6 +7,7 @@ import ViwinPhoto from "../../faces_photos/viwin.jpg";
 import KarthikPhoto from "../../faces_photos/karthik.jpg";
 
 import "./about_us.css";
+import Navbar from "../../components/Navbar/Navbar";
 const AboutUsPage = () => {
 	const generateSocials = () => {
 		return (
@@ -46,6 +47,7 @@ const AboutUsPage = () => {
 					</li>
 				</ul>
 			</div>
+			
 		);
 	};
 
@@ -112,6 +114,7 @@ const AboutUsPage = () => {
 	};
 	return (
 		<div>
+			<Navbar />
 			<div className="bg-light">
 				<div className="container py-5">
 					<div className="row h-100 align-items-center py-5">

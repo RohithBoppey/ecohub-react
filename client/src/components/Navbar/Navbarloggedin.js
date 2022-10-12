@@ -6,7 +6,7 @@ const Navbarloggedin = () => {
 		<>
 			{/* {classes.navbar + classeses.navbar-expand + class} */}
 			<nav className="navbar navbar-expand-lg navbar-dark defaultNavbar">
-				<NavLink className="navbar-brand" to="/home">
+				<NavLink className="navbar-brand" to="/">
 					ECOHUB
 				</NavLink>
 				<button
@@ -27,7 +27,7 @@ const Navbarloggedin = () => {
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/home#services">
+							<NavLink className="nav-link" to="/#services">
 								Our services
 							</NavLink>
 						</li>
