@@ -10,7 +10,7 @@ import AdminLogin from "./components/Admin/AdminLogin";
 import FAQpage from "./pages/FaqPage/FAQpage";
 import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
-import Evpage from "./pages/Electricvehicles/Evpage";
+import Evpage from "./pages/ElectricVehicles/Evpage";
 
 import AdminHome from "./pages/Admin/AdminHome";
 
@@ -28,7 +28,7 @@ function App() {
 				<Route path="/faqpage" element={<FAQpage />} exact />
 				<Route path="/cabservice" element={<Cabservice />} exact />
 				<Route path="/productservice" element={<Productservice/>} exact/>
-				<Route path="/evpage" element={<Evpage/>}exact />
+				<Route path="/ev_cars" element={<Evpage/>}exact />
 
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route
