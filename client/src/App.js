@@ -10,9 +10,9 @@ import AdminLoginPage from "./pages/Admin/AdminLoginPage";
 import FAQpage from "./pages/FaqPage/FAQpage";
 import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
-import Evpage from "./pages/ElectricVehicles/Evpage";
-
+import Evpage from './pages/Electricvehicles/Evpage';
 import AdminHome from "./pages/Admin/AdminHome";
+import Adminadduser from "./pages/Admin/Adminadduser";
 
 function App() {
 	return (
@@ -31,7 +31,7 @@ function App() {
 					element={<Productservice />}
 					exact
 				/>
-				<Route path="/ev_cars" element={<Evpage />} exact />
+				<Route path="/ev_cars" element={<Evpage/>} exact />
 
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route
@@ -43,7 +43,7 @@ function App() {
 				{/* Admin Section */}
 				<Route path="/admin/login" element={<AdminLoginPage />} exact />
 				<Route path="/admin/home" element={<AdminHome />} exact />
-				
+				<Route path="/admin/adduser" element={<Adminadduser />} exact />
 
 				{/* Error if no page is found */}
 				<Route path="*" element={<Error />} exact />
