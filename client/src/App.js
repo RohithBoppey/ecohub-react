@@ -12,7 +12,7 @@ import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
 import Evpage from './pages/Electricvehicles/Evpage';
 import AdminHome from "./pages/Admin/AdminHome";
-import Adminadduser from "./pages/Admin/Adminadduser";
+import Adminadduser from "./pages/Admin/AdminAddUser";
 
 function App() {
 	return (

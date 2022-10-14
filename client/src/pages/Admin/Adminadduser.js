@@ -1,13 +1,14 @@
 import React from "react";
-
+import AdminNavbar from "../../components/Admin/Navbar/Navbar";
 // import AdminLogin from "../../components/Admin/Adminadduser";
-
-const Adminadduser = () => {
+import AddUser from "../../components/Admin/AddUser";
+const AdminAddUser = () => {
 	return (
 		<div>
-			
+			<AdminNavbar/>
+            <AddUser/>
 		</div>
 	);
 };
 
-export default Adminadduser;
+export default AdminAddUser;
