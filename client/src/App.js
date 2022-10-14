@@ -43,7 +43,7 @@ function App() {
 				{/* Admin Section */}
 				<Route path="/admin/login" element={<AdminLoginPage />} exact />
 				<Route path="/admin/home" element={<AdminHome />} exact />
-				<Route path="/admin/adduser" element={<Adminadduser />} exact />
+				<Route path="/admin/adduser" element={<AdminAddUser />} exact />
 
 				{/* Error if no page is found */}
 				<Route path="*" element={<Error />} exact />
