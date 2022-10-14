@@ -1,15 +1,16 @@
 import React from "react";
-import Cabprices from "../CabService/Cabprices";
-import Cabrequest from "../CabService/Cabrequest";
+
 import "../CabService/CabServiceCSS.css";
-import Navbarloggedin from "../../components/Navbar/Navbarloggedin";
+import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
+import CabRequest from "../../components/Cab Service/CabRequest";
+import CabPrices from "../../components/Cab Service/CabPrices";
 
 const Cabservice = () => {
 	return (
 		<>
-			<Navbarloggedin />
-			<Cabrequest />
-			<Cabprices />
+			<NavbarLoggedIn />
+			<CabRequest />
+			<CabPrices />
 		</>
 	);
 };

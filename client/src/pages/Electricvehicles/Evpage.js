@@ -1,7 +1,7 @@
 import React from "react";
-import Cars from "./Cars";
+// import Cars from "./Cars";
 import UpcomingCars from "./UpcomingCars";
-import Navbarloggedin from "../../components/Navbar/Navbarloggedin";
+import Navbarloggedin from "../../components/Navbar/NavbarLoggedIn";
 import RegisterFooter from "../../components/Login_Signup/RegisterFooter";
 import "./ev-list.css";
 

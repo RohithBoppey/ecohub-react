@@ -101,26 +101,9 @@
 }
 
 /*---------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 20px;
-}
-
-p {
-  font-family: Montserrat-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666666;
-  margin: 0px;
-}
-
 
 /*---------------------------------------------*/
-input {
+.input_faq {
   outline: none;
   border: none;
 }
@@ -130,34 +113,34 @@ textarea {
   border: none;
 }
 
-textarea:focus,
-input:focus {
+.input_textarea:focus,
+.input_faq:focus {
   border-color: transparent !important;
 }
 
-input::-webkit-input-placeholder {
+.input_faq::-webkit-input-placeholder {
   color: #999999;
 }
-input:-moz-placeholder {
+.input_faq:-moz-placeholder {
   color: #999999;
 }
-input::-moz-placeholder {
+.input_faq::-moz-placeholder {
   color: #999999;
 }
-input:-ms-input-placeholder {
+.input_faq:-ms-input-placeholder {
   color: #999999;
 }
 
-textarea::-webkit-input-placeholder {
+.input_textarea::-webkit-input-placeholder {
   color: #999999;
 }
-textarea:-moz-placeholder {
+.input_textarea:-moz-placeholder {
   color: #999999;
 }
-textarea::-moz-placeholder {
+.input_textarea::-moz-placeholder {
   color: #999999;
 }
-textarea:-ms-input-placeholder {
+.input_textarea:-ms-input-placeholder {
   color: #999999;
 }
 
@@ -231,21 +214,21 @@ textarea:-ms-input-placeholder {
   padding-bottom: 44px;
 }
 
-input.input1 {
+.input_faq.input1 {
   height: 50px;
   border-radius: 25px;
   padding: 0 30px;
 }
-input.input1 + .shadow-input1 {
+.input_faq.input1 + .shadow-input1 {
   border-radius: 25px;
 }
 
-textarea.input1 {
+.input_textarea.input1 {
   min-height: 150px;
   border-radius: 25px;
   padding: 12px 30px;
 }
-textarea.input1 + .shadow-input1 {
+.input_textarea.input1 + .shadow-input1 {
   border-radius: 25px;
 }
 

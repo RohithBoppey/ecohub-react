@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbarloggedin = () => {
+const NavbarLoggedIn = () => {
 	return (
 		<>
 			{/* {classes.navbar + classeses.navbar-expand + class} */}
@@ -32,14 +32,12 @@ const Navbarloggedin = () => {
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/FAQ">
+							<NavLink className="nav-link" to="/faq">
 								FAQ's
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink
-								className="nav-link"
-								to="/FAQ#FAQ_contactUs">
+							<NavLink className="nav-link" to="/faq">
 								Contact us
 							</NavLink>
 						</li>
@@ -81,4 +79,4 @@ const Navbarloggedin = () => {
 	);
 };
 
-export default Navbarloggedin;
+export default NavbarLoggedIn;

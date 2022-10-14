@@ -1,5 +1,5 @@
 import React from "react";
-import Navbarloggedin from "../../components/Navbar/Navbarloggedin";
+import Navbarloggedin from "../../components/Navbar/NavbarLoggedIn";
 
 import "./ArticleCSS.css";
 

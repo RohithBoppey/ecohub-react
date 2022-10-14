@@ -44,7 +44,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.card {
+/* .card {
   width: 300px;
   border-radius: 10px;
 }
@@ -52,7 +52,7 @@
 .card-img-top {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
+} */
 
 span.text-muted {
   font-size: 12px;
@@ -562,8 +562,8 @@ body #cda-remove {
   align-items: center;
 }
 
-.mb-2{
-    display: flex;
+.mb-2_ev_list{
+  display: flex;
   justify-content: center;
   align-items: center;
 }

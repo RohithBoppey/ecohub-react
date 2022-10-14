@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../../components/Navbar/Navbarloggedin'
+import Navbar from '../../components/Navbar/NavbarLoggedIn'
 import RegisterFooter from '../../components/Login_Signup/RegisterFooter'
 // import classes from '../components/ProductServicePage.module.css'
-// import '../components/ProductServicePage.css'
+import './ProductServicePage.css'
 
 const Productservice = () => {
   return (

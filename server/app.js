@@ -297,7 +297,7 @@ app.post('/admin', (req, res) => {
 							password: element.password
 						}
 						console.log("Admin entered successfully!")
-						res.redirect("/admin/home");
+						res.send(admin);
 					}
 					else {
 						console

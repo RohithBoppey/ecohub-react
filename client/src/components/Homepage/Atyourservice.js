@@ -3,7 +3,7 @@ import React from "react";
 const Atyourservice = () => {
 	return (
 		<>
-			<section className="page-section">
+			<section className="page-section" style={{ backgroundColor: "white" }}>
 				<div className="container px-4 px-lg-5">
 					<hr className="divider" />
 					<h2 className="text-center mt-0">

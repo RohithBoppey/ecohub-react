@@ -24,7 +24,7 @@ function App() {
 				<Route path="/signin" element={<Signin />} exact />
 				<Route path="/about_us" element={<AboutUsPage />} exact />
 				<Route path="/articles" element={<ArticlesPage />} exact />
-				<Route path="/faqpage" element={<FAQpage />} exact />
+				<Route path="/faq" element={<FAQpage />} exact />
 				<Route path="/cabservice" element={<Cabservice />} exact />
 				<Route
 					path="/productservice"

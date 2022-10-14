@@ -149,7 +149,7 @@ const Cabrequest = () => {
 
 							<div className="mx-auto d-grid gap-2 col-6">
 								<button
-									className="btn btn-secondary btn-lg cab_button"
+									className="btn1 btn-secondary btn-lg cab_button"
 									type="submit"
 									value="Get Taxi">
 									Get Taxi

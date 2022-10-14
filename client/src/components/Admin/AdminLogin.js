@@ -1,8 +1,25 @@
-import React from "react";
-
-import "./adLogin.css";
+import React, { useEffect, useRef } from "react";
+// import axios from "axios";
+// import "./adLogin.css";
+import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
+	const nav = useNavigate();
+	useEffect(() => {
+		if(localStorage.getItem("adminLoggedIn") == 'true'){
+			nav('/admin/home');
+		}
+	}, [])
+	
+	const submitHandler = (event) => {
+		event.preventDefault();
+		localStorage.setItem("adminLoggedIn", 'true');
+		window.location.reload();
+	};
+
+	const usernameRef = useRef();
+	const passwordRef = useRef();
+
 	return (
 		<div class="adminbody">
 			{/* <div class="container"> */}
@@ -17,26 +34,27 @@ const AdminLogin = () => {
 					<div class="col-lg-12 login-form middle">
 						<div class="col-lg-12 login-form">
 							<form
-								autocomplete="off"
-								method="post"
-								action="/admin">
+								autoComplete="off"
+								onSubmit={submitHandler}>
 								<div class="form-group">
-									<label class="form-control-label">
+									<label class="form-control-label ad_label">
 										USERNAME &nbsp;&nbsp;&nbsp;
 									</label>
 									<input
 										type="text"
-										class="form-control ad_login"
-										name="username"></input>
+										class="form-control_ad ad_input"
+										name="username"
+										ref={usernameRef}></input>
 								</div>
 								<div class="form-group">
-									<label class="form-control-label ad_password">
+									<label class="form-control-label ad_label">
 										PASSWORD &nbsp;&nbsp;&nbsp;
 									</label>
 									<input
 										type="password"
-										class="form-control"
-										name="password"></input>
+										class="form-control_ad ad_input"
+										name="password"
+										ref={passwordRef}></input>
 								</div>
 
 								<div class="col-lg-12 loginbttm middle login-btm login-button">
