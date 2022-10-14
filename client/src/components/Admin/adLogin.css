@@ -82,7 +82,11 @@
   box-shadow: 0 0 0;
 } */
 
+<<<<<<< HEAD
 .ad_label {
+=======
+.label {
+>>>>>>> 90f34c418e54811a12d795f91645c23ee5311651
   padding-left: 20px;
   margin-bottom: 0px;
 }
