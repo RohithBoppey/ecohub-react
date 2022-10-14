@@ -4,48 +4,48 @@ import "./adLogin.css";
 
 const AdminLogin = () => {
 	return (
-		<div class="adminbody">
-			{/* <div class="container"> */}
-			<div class="row">
-				<div class="col-lg-3 col-md-2"></div>
-				<div class="col-lg-6 col-md-8 login-box">
-					<div class="col-lg-12 login-key">
-						<i class="fa fa-key" aria-hidden="true"></i>
+		<div className="adminbody ">
+			{/* <div className="container"> */}
+			<div className="row">
+				<div className="col-lg-3 col-md-2"></div>
+				<div className="col-lg-6 col-md-8 login-box">
+					<div className="col-lg-12 login-key">
+						<i className="fa fa-key" aria-hidden="true"></i>
 					</div>
-					<div class="col-lg-12 login-title">ADMIN PANEL</div>
+					<div className="col-lg-12 login-title">ADMIN PANEL</div>
 
-					<div class="col-lg-12 login-form middle">
-						<div class="col-lg-12 login-form">
+					<div className="col-lg-12 login-form middle">
+						<div className="col-lg-12 login-form">
 							<form
-								autocomplete="off"
+								autoComplete="off"
 								method="post"
 								action="/admin">
-								<div class="form-group">
-									<label class="form-control-label">
+								<div className="form-group">
+									<label className="form-control-label label">
 										USERNAME &nbsp;&nbsp;&nbsp;
 									</label>
 									<input
 										type="text"
-										class="form-control ad_login"
+										className="form-control ad_login"
 										name="username"></input>
 								</div>
-								<div class="form-group">
-									<label class="form-control-label ad_password">
+								<div className="form-group">
+									<label className="form-control-label ad_password label">
 										PASSWORD &nbsp;&nbsp;&nbsp;
 									</label>
 									<input
 										type="password"
-										class="form-control"
+										className="form-control"
 										name="password"></input>
 								</div>
 
-								<div class="col-lg-12 loginbttm middle login-btm login-button">
-									{/* <div class="col-lg-6 login-btm login-text">
+								<div className="col-lg-12 loginbttm middle login-btm login-button">
+									{/* <div className="col-lg-6 login-btm login-text">
                                         </div> */}
-									{/* <div class="col-lg-6 login-btm login-button"> */}
+									{/* <div className="col-lg-6 login-btm login-button"> */}
 									<button
 										type="submit"
-										class="btn btn-outline-primary">
+										className="btn btn-outline-primary">
 										LOGIN
 									</button>
 									{/* </div> */}
@@ -53,9 +53,12 @@ const AdminLogin = () => {
 							</form>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-2"></div>
+					{/* <div className="col-lg-3 col-md-2"><h1></h1></div> */}
 				</div>
 			</div>
+			<div className="row">
+
+				</div>
 		</div>
 		// </div>
 	);

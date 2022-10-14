@@ -82,7 +82,7 @@ input:focus {
   box-shadow: 0 0 0;
 }
 
-label {
+.label {
   padding-left: 20px;
   margin-bottom: 0px;
 }
