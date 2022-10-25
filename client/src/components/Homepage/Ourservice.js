@@ -12,8 +12,6 @@ const Ourservice = () => {
 			</h1>
 			<br />
 			<hr className="divider" />
-			<br />
-
 			<section className="section services-section" id="services">
 				<div className="container">
 					<div className="row">

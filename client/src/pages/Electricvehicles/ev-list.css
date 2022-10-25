@@ -341,12 +341,7 @@ figure.effect-sarah:hover p {
     width: 100%;
   }
 }
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -528,20 +523,6 @@ a:focus {
   text-align: left;
 }
 
-/* Demo ad design */
-body #cdawrap {
-  background: none;
-  top: 50px;
-  border: none;
-}
-
-body #cdawrap a {
-  color: #fff !important;
-}
-
-body #cda-remove {
-  color: #fff;
-}
 
 @media screen and (max-width: 25em) {
   .codrops-header {

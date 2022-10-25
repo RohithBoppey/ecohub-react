@@ -10,9 +10,10 @@ import AdminLoginPage from "./pages/Admin/AdminLoginPage";
 import FAQpage from "./pages/FaqPage/FAQpage";
 import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
-import Evpage from './pages/Electricvehicles/Evpage';
+import Evpage from "./pages/Electricvehicles/Evpage";
 import AdminHome from "./pages/Admin/AdminHome";
-import Adminadduser from "./pages/Admin/AdminAddUser";
+import AdminAddUser from "./pages/Admin/AdminAddUser";
+import ElectricCarDetails from "./pages/ElectricVehicleDetails/ElectricCarDetails";
 
 function App() {
 	return (
@@ -31,8 +32,18 @@ function App() {
 					element={<Productservice />}
 					exact
 				/>
-				<Route path="/ev_cars" element={<Evpage/>} exact />
-
+				<Route path="/ev_cars" element={<Evpage />}>
+					{/* <Route
+						path=":name"
+						element={<ElectricCarDetails />}
+						exact
+					/> */}
+				</Route>
+				<Route
+						path="/ev_cars/:name"
+						element={<ElectricCarDetails />}
+						exact
+					/>
 				{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 				<Route
 					path="/contact_sm"

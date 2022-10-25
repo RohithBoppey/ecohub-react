@@ -1,18 +1,18 @@
 import React from "react";
 import "./FAQcss.css";
-import Navbarloggedin from "../../components/Navbar/NavbarLoggedIn";
+import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import LeafImage from './Mail Green.png';
 
 const FAQpage = () => {
 	return (
-		<>
-			<Navbarloggedin />
+		<div>
+			<NavbarLoggedIn />
 			<div className="mainTitle">
 				See the Frequently asked questions here:
 			</div>
 
 			<br />
-			<div className="container faqBox">
+			<div className="container1 faqBox">
 				<div
 					className="accordion accordion-flush"
 					id="accordionFlushExample">
@@ -179,7 +179,7 @@ const FAQpage = () => {
 					</form>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Navbarloggedin from "../../components/Navbar/NavbarLoggedIn";
+import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
 import './ContactSM.css';
 
@@ -8,7 +8,7 @@ import guyPhoto from './guy.png';
 const ContactSalesManager = () => {
 	return (
 		<div>
-			<Navbarloggedin />
+			<NavbarLoggedIn />
 			<div class="column left">
 				<h1 style={{ fontSize: 50, paddingTop: 60 }}>Get a demo</h1>
 				<p class="p0">Fill in the following details: </p>
@@ -62,7 +62,7 @@ const ContactSalesManager = () => {
 				<div class="container1">
 					<div class="row">
 						<div class="col-md-4">
-							<img src={guyPhoto} class="img1"></img>
+							<img src={guyPhoto} class="img1" alt = 'alt'></img>
 						</div>
 						<div class="col-md-8">
 							<div class="row">
