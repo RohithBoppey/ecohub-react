@@ -1,65 +1,40 @@
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
+// import axios from "axios";
 import "./adLogin.css";
+import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
+	const nav = useNavigate();
+	useEffect(() => {
+		if (localStorage.getItem("adminLoggedIn") === "true") {
+			nav("/admin/home");
+		}
+	}, [nav]);
+
+	const submitHandler = (event) => {
+		event.preventDefault();
+		localStorage.setItem("adminLoggedIn", "true");
+		window.location.reload();
+	};
+
+	const usernameRef = useRef();
+	const passwordRef = useRef();
+
 	return (
-		<div className="adminbody ">
-			{/* <div className="container"> */}
-			<div className="row">
-				<div className="col-lg-3 col-md-2"></div>
-				<div className="col-lg-6 col-md-8 login-box">
-					<div className="col-lg-12 login-key">
-						<i className="fa fa-key" aria-hidden="true"></i>
-					</div>
-					<div className="col-lg-12 login-title">ADMIN PANEL</div>
-
-					<div className="col-lg-12 login-form middle">
-						<div className="col-lg-12 login-form">
-							<form
-								autoComplete="off"
-								method="post"
-								action="/admin">
-								<div className="form-group">
-									<label className="form-control-label label">
-										USERNAME &nbsp;&nbsp;&nbsp;
-									</label>
-									<input
-										type="text"
-										className="form-control ad_login"
-										name="username"></input>
-								</div>
-								<div className="form-group">
-									<label className="form-control-label ad_password label">
-										PASSWORD &nbsp;&nbsp;&nbsp;
-									</label>
-									<input
-										type="password"
-										className="form-control"
-										name="password"></input>
-								</div>
-
-								<div className="col-lg-12 loginbttm middle login-btm login-button">
-									{/* <div className="col-lg-6 login-btm login-text">
-                                        </div> */}
-									{/* <div className="col-lg-6 login-btm login-button"> */}
-									<button
-										type="submit"
-										className="btn btn-outline-primary">
-										LOGIN
-									</button>
-									{/* </div> */}
-								</div>
-							</form>
-						</div>
-					</div>
-					{/* <div className="col-lg-3 col-md-2"><h1></h1></div> */}
-				</div>
-			</div>
-			<div className="row">
-
-				</div>
-		</div>
+		<form className="login-ad" action="./" method="POST">
+           
+            <div className="content-ad">
+                <div className="header-ad"><h2>Admin Login</h2></div>
+                <label><h5>Email</h5></label>
+				<br></br>
+                <input className="input-ad" type="email" name="_email" placeholder="Email"></input>
+				<br></br><br></br>
+                <label><h5>Password</h5></label>
+				<br></br>
+                <input className="input-ad" type="password" name="_password" placeholder="Password"></input>
+                <button className="button-ad" type="submit">Login</button>
+            </div>
+        </form>
 		// </div>
 	);
 };
