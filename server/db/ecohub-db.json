@@ -7,6 +7,8 @@
 			"fullname": "Rohith Boppey",
 			"useremail": "r@g.com",
 			"cityname": "Hyderabad",
+			"phoneNumber": "9533666898",
+			"address": "da98sdha9s8dh",
 			"avatar": "https://m.media-amazon.com/images/M/MV5BMTUyNDlkZDEtNmE5OS00NzMzLWI3Y2ItY2EzYWNlN2JlZmRmXkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg",
 			"password": "rb123"
 		},
@@ -17,22 +19,10 @@
 			"fullname": "Santosh K",
 			"useremail": "santosh.k@gmail.com",
 			"cityname": "Hyderabad",
+			"phoneNumber": "9533666898",
+			"address": "da98sdha9s8dh",
 			"avatar": "https://pbs.twimg.com/profile_images/1297865607799480320/rjLk9X3Z_400x400.jpg",
 			"password": "sk123"
-		},
-		{
-			"username": "r",
-			"useremail": "t@g.com",
-			"password": "12345",
-			"avatar": "https://telugu.samayam.com/photo/msid-81898857,imgsize-141244/pic.jpg",
-			"id": "R8bToH9"
-		},
-		{
-			"username": "r",
-			"useremail": "t@g.com",
-			"password": "12345",
-			"avatar": "https://telugu.samayam.com/photo/msid-81898857,imgsize-141244/pic.jpg",
-			"id": "yPiUoYk"
 		},
 		{
 			"username": "asdas",
@@ -40,7 +30,7 @@
 			"fullname": "dasdas",
 			"phoneNumber": "9533666898",
 			"password": "sa9d0ajsd890as",
-			"city": "hyd",
+			"cityname": "Hyderabad",
 			"address": "da98sdha9s8dh",
 			"gender": "Male",
 			"avatar": "adasdas",
