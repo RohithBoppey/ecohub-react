@@ -56,7 +56,7 @@ const AdminNavbar = (props) => {
 							<Link
 								className="nav-link active"
 								aria-current="page"
-								to="/admin/showallmessages">
+								to="/admin/messages">
 								Messages
 							</Link>
 						</li>
