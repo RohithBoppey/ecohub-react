@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
+      "gender": "Male",
+      "username": "rohBop",
+      "fullname": "Rohith Boppey",
+      "useremail": "r@g.com",
+      "cityname": "Hyderabad",
+      "avatar": "https://m.media-amazon.com/images/M/MV5BMTUyNDlkZDEtNmE5OS00NzMzLWI3Y2ItY2EzYWNlN2JlZmRmXkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg",
+      "password": "rb123"
+    },
+    {
+      "id": "41da7c8s90sad-fce-9246-b6fb273594c0",
+      "gender": "Male",
+      "username": "SantoshK",
+      "fullname": "Santosh K",
+      "useremail": "santosh.k@gmail.com",
+      "cityname": "Hyderabad",
+      "avatar": "https://pbs.twimg.com/profile_images/1297865607799480320/rjLk9X3Z_400x400.jpg",
+      "password": "sk123"
+    },
+    {
+      "username": "r",
+      "useremail": "t@g.com",
+      "password": "12345",
+      "avatar": "https://telugu.samayam.com/photo/msid-81898857,imgsize-141244/pic.jpg",
+      "id": "R8bToH9"
+    },
+    {
+      "username": "r",
+      "useremail": "t@g.com",
+      "password": "12345",
+      "avatar": "https://telugu.samayam.com/photo/msid-81898857,imgsize-141244/pic.jpg",
+      "id": "yPiUoYk"
+    }
+  ]
+}

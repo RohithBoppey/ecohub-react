@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const NavbarLoggedIn = () => {
+const NavbarLoggedIn = (props) => {
 	return (
 		<>
 			{/* {classes.navbar + classeses.navbar-expand + class} */}
@@ -42,9 +42,13 @@ const NavbarLoggedIn = () => {
 							</NavLink>
 						</li>
 						<li className="dropdown">
-							{/* <NavLink to="#" data-toggle="dropdown" className="dropdown-toggle user-action"><img
-                              src="<%= user.img_url %>"
-                              className="avatar" alt="Avatar"> <%= user.username %>   <b className="caret"></b></NavLink> */}
+							<NavLink
+								to="#"
+								data-toggle="dropdown"
+								className="dropdown-toggle user-action">
+								<img className="avatar" src = {props.user.avatar} alt="Avatar" />{" "}
+								<b className="caret">{props.user.username}</b>
+							</NavLink>
 							<ul className="dropdown-menu">
 								<li>
 									<NavLink to="/user-profile">

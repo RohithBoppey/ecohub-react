@@ -3,10 +3,10 @@ import RegisterForm from '../components/Login_Signup/RegisterForm'
 import '../components/Login_Signup/signup_css.css';
 import RegisterFooter from '../components/Login_Signup/RegisterFooter'
 
-const Register = () => {
+const Register = (props) => {
   return (
     <>
-      <RegisterForm />
+      <RegisterForm onSubmitForm = {props.onRegister}/>
       <RegisterFooter />
     </>
   )

@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 
-import '../../components/Login_Signup/signup_css.css';
+import "../../components/Login_Signup/signup_css.css";
 
-const Signin = () => {
+const SigninForm = (props) => {
+	const useremailRef = useRef();
+	const passwordRef = useRef();
+
+	const submitHandler = (event) => {
+		event.preventDefault();
+		props.onSubmitForm({
+			useremail: useremailRef.current.value,
+			password: passwordRef.current.value,
+		});
+	};
+
 	return (
 		<div>
 			<div class="container signup_body">
@@ -16,23 +27,8 @@ const Signin = () => {
 								</h5>
 
 								<form
-									action="/signin"
-									method="post"
-									autocomplete="off">
-									{/* <div class="form-floating mb-3">
-										<input
-											type="text"
-											class="form-control"
-											id="floatingInputUsername"
-											placeholder="myusername"
-											required
-											autofocus
-										/>
-										<label for="floatingInputUsername">
-											Username
-										</label>
-									</div> */}
-
+									autoComplete="off"
+									onSubmit={submitHandler}>
 									<div class="form-floating mb-3">
 										<input
 											type="email"
@@ -40,6 +36,7 @@ const Signin = () => {
 											id="floatingInputEmail"
 											placeholder="name@example.com"
 											name="email"
+											ref={useremailRef}
 										/>
 										<label for="floatingInputEmail">
 											Email address <span>*</span>
@@ -55,6 +52,7 @@ const Signin = () => {
 											id="floatingPassword"
 											placeholder="Password"
 											name="password"
+											ref={passwordRef}
 										/>
 										<label
 											for="floatingPassword"
@@ -107,4 +105,4 @@ const Signin = () => {
 	);
 };
 
-export default Signin;
+export default SigninForm;
