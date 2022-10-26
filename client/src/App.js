@@ -40,6 +40,7 @@ function App() {
 	};
 
 	const adminSigninHandler = async (details) => {
+		console.log(details);
 		const allAdmin = await fetch("http://localhost:3002/admins");
 		const allAdminsJson = await allAdmin.json();
 		// console.log(allUsersJson);
@@ -87,10 +88,15 @@ function App() {
 		setUserDetails({});
 	};
 
+	const adminLogoutHandler = () => {
+		localStorage.removeItem("ecohub-admin");
+		setAdminDetails({});
+	};
+
 	const isLoggedIn = async () => {
 		const useremail = localStorage.getItem("ecohub-email");
 		if (useremail !== null && useremail !== undefined) {
-			console.log(useremail);
+			// console.log(useremail);
 			const allUsers = await fetch("http://localhost:3001/users");
 			const allUsersJson = await allUsers.json();
 			const requiredUser = allUsersJson.filter(
@@ -214,10 +220,28 @@ function App() {
 			{/* Admin Section */}
 			<Route
 				path="/admin/login"
-				element={<AdminLoginPage onSignin={adminSigninHandler} />}
+				element={
+					<AdminLoginPage
+						onSignin={adminSigninHandler}
+						onLogout={adminLogoutHandler}
+					/>
+				}
 				exact
 			/>
-			<Route path="/admin/home" element={<AdminHome />} exact />
+			<Route
+				path="/admin/home"
+				element={
+					Object.keys(adminDetails).length === 0 ? (
+						<AdminLoginPage
+							onSignin={adminSigninHandler}
+							onLogout={adminLogoutHandler}
+						/>
+					) : (
+						<AdminHome onLogout={adminLogoutHandler} />
+					)
+				}
+				exact
+			/>
 
 			{/* Error if no page is found */}
 			<Route path="*" element={<Error />} exact />

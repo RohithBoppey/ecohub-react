@@ -1,7 +1,7 @@
 import React from "react";
 import pic from "../Navbar/Animated Leaf Icon final.jpg";
 
-const AdminNavbar = () => {
+const AdminNavbar = (props) => {
 	return (
 		<nav
 			className="navbar navbar-expand-lg navbar-light "
@@ -64,7 +64,8 @@ const AdminNavbar = () => {
 							<a
 								className="nav-link active"
 								aria-current="page"
-								href="/">
+								href="/admin/home"
+								onClick={props.onLogout}>
 								Logout
 							</a>
 						</li>

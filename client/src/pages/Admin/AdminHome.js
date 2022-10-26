@@ -1,10 +1,10 @@
 import React from "react";
 import AdminNavbar from "../../components/Admin/Navbar/Navbar";
 
-const AdminHome = () => {
+const AdminHome = (props) => {
 	return (
 		<>
-		<AdminNavbar/>
+		<AdminNavbar onLogout = {props.onLogout}/>
 		<div style={{paddingTop : '10%'}}>
 			<center>
 				<h1>Admin Dashboard</h1>
