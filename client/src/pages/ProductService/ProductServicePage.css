@@ -49,6 +49,7 @@ color:greenyellow;
     width: 70%;
 }
 .contact-form .form-control{
+    padding-top: 10px;
     border-radius:1rem;
 }
 .contact-image{

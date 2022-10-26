@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import pic from "../Navbar/Animated Leaf Icon final.jpg";
 
 const AdminNavbar = (props) => {
@@ -15,11 +16,11 @@ const AdminNavbar = (props) => {
 					height="36"
 					className="d-inline-block align-text-top"
 				/>{" "}
-				<a
-					href="/admin/home"
+				<Link
+					to="/admin/home"
 					style={{ textDecoration: "none", color: "black" }}>
 					<b>ECOHUB</b>{" "}
-				</a>
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -35,39 +36,39 @@ const AdminNavbar = (props) => {
 					id="navbarSupportedContent">
 					<ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li className="nav-item">
-							<a
+							<Link
 								className="nav-link active"
 								aria-current="page"
-								href="/admin/home">
+								to="/admin/home">
 								Home
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a
+							<Link
 								className="nav-link active"
 								aria-current="page"
-								href="/admin/showusers">
+								to="/admin/show-all-data">
 								Show all Data
-							</a>
+							</Link>
 						</li>
 
 						<li className="nav-item">
-							<a
+							<Link
 								className="nav-link active"
 								aria-current="page"
-								href="/admin/showallmessages">
+								to="/admin/showallmessages">
 								Messages
-							</a>
+							</Link>
 						</li>
 
 						<li className="nav-item">
-							<a
+							<Link
 								className="nav-link active"
 								aria-current="page"
-								href="/admin/home"
+								to="/admin/home"
 								onClick={props.onLogout}>
 								Logout
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>

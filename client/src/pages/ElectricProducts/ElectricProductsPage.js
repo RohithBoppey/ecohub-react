@@ -9,10 +9,13 @@ const ElectricProductsPage = (props) => {
 
 			<div class="container-xl">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12 ">
+						<div className="title-container">
 						<h2>
 							Featured <b>Products</b>
 						</h2>
+
+						</div>
 						<div
 							id="myCarousel"
 							class="carousel slide"
@@ -636,6 +639,19 @@ const ElectricProductsPage = (props) => {
 					</div>
 				</div>
 			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			<section class="section-products">
 				<div class="container item">

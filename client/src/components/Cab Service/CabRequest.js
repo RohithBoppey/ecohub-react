@@ -16,11 +16,9 @@ const Cabrequest = () => {
 	return (
 		<>
 			<section className="container">
-				<div className="row ">
+				<div className="row main-cab">
 					<div className="text col col-lg-20 col-md-20 col-12 w-50 mx-auto cabformclass">
-						<form
-							className=" form-card"
-							onsubmit="documentValiation()">
+						<form className=" form-card">
 							<div className="row USER-DETAILS justify-content-between text-left">
 								<div className="input-box col-sm-6 flex-column d-flex">
 									{" "}

@@ -3,7 +3,6 @@ import "./adLogin.css";
 import AdminNavbar from "./Navbar/Navbar";
 
 const AdminLogin = (props) => {
-
 	const submitHandler = (event) => {
 		event.preventDefault();
 		const details = {
@@ -18,8 +17,11 @@ const AdminLogin = (props) => {
 
 	return (
 		<>
-			<AdminNavbar onLogout = {props.onLogout}/>
-			<form className="login-ad" onSubmit={submitHandler} autoComplete = "off">
+			<AdminNavbar onLogout={props.onLogout} />
+			<form
+				className="login-ad"
+				onSubmit={submitHandler}
+				autoComplete="off">
 				<div className="content-ad">
 					<div className="header-ad">
 						<h2>Admin Login</h2>

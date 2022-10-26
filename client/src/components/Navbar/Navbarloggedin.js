@@ -72,12 +72,6 @@ const NavbarLoggedIn = (props) => {
 										Your Cart
 									</NavLink>
 								</li>
-								<li>
-									<NavLink to="/update-profile">
-										<i className="fa fa-sliders"></i>{" "}
-										Settings
-									</NavLink>
-								</li>
 								<li className="divider"></li>
 								<li>
 									<NavLink to="/" onClick={logoutHandler}>
