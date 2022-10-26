@@ -16,6 +16,9 @@ import { useEffect, useState } from "react";
 import Signin from "./pages/Signin";
 import UserDetails from "./pages/UserProfile/UserDetails";
 import ElectricProductsPage from "./pages/ElectricProducts/ElectricProductsPage";
+import AdminAddUser from "./pages/Admin/AdminAddUser";
+import ShowMainData from "./pages/Admin/ShowMainData";
+
 
 function App() {
 	const [userDetails, setUserDetails] = useState({});
@@ -218,34 +221,14 @@ function App() {
 			/>
 
 			{/* Admin Section */}
-			<Route
-				path="/admin/login"
-				element={
-					<AdminLoginPage
-						onSignin={adminSigninHandler}
-						onLogout={adminLogoutHandler}
-					/>
-				}
-				exact
-			/>
-			<Route
-				path="/admin/home"
-				element={
-					Object.keys(adminDetails).length === 0 ? (
-						<AdminLoginPage
-							onSignin={adminSigninHandler}
-							onLogout={adminLogoutHandler}
-						/>
-					) : (
-						<AdminHome onLogout={adminLogoutHandler} />
-					)
-				}
-				exact
-			/>
+			<Route path="/admin/login" element={<AdminLoginPage />} exact />
+			<Route path="/admin/home" element={<AdminHome />} exact />
+			<Route path="/admin/adduser" element={<AdminAddUser />} exact />
 
 			{/* Error if no page is found */}
 			<Route path="*" element={<Error />} exact />
 		</Routes>
+
 	);
 }
 
