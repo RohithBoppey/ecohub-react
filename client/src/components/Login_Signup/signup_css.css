@@ -6,7 +6,7 @@
   .card-img-left {
     width: 50%;
     /* Link to your background image using in the property below! */
-    background: center url('../../components/Login_Signup/Register_Leaf.png');
+    background: center url('../../components/Login_Signup/Sign\ in.jpg');
     background-repeat: no-repeat;
     background-size: 500px 500px;
   }
@@ -27,6 +27,6 @@
     background-color: #3b5998;
   }
   
-  span{
+  .span_login{
     color: red;
   }

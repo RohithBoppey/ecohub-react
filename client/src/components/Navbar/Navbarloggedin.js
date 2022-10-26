@@ -1,7 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-const Navbarloggedin = () => {
+const NavbarLoggedIn = (props) => {
+	const navigate = useNavigate();
+
+	const logoutHandler = () => {
+		props.onLogout();
+		navigate("/");
+	};
+
 	return (
 		<>
 			{/* {classes.navbar + classeses.navbar-expand + class} */}
@@ -32,21 +39,27 @@ const Navbarloggedin = () => {
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/FAQ">
+							<NavLink className="nav-link" to="/faq">
 								FAQ's
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink
-								className="nav-link"
-								to="/FAQ#FAQ_contactUs">
+							<NavLink className="nav-link" to="/faq">
 								Contact us
 							</NavLink>
 						</li>
 						<li className="dropdown">
-							{/* <NavLink to="#" data-toggle="dropdown" className="dropdown-toggle user-action"><img
-                              src="<%= user.img_url %>"
-                              className="avatar" alt="Avatar"> <%= user.username %>   <b className="caret"></b></NavLink> */}
+							<NavLink
+								to="#"
+								data-toggle="dropdown"
+								className="dropdown-toggle user-action">
+								<img
+									className="avatar"
+									src={props.user.avatar}
+									alt="Avatar"
+								/>{" "}
+								<b className="caret">{props.user.username}</b>
+							</NavLink>
 							<ul className="dropdown-menu">
 								<li>
 									<NavLink to="/user-profile">
@@ -67,7 +80,7 @@ const Navbarloggedin = () => {
 								</li>
 								<li className="divider"></li>
 								<li>
-									<NavLink to="/">
+									<NavLink to="/" onClick={logoutHandler}>
 										<i className="fas fa-door-open"></i>{" "}
 										Logout
 									</NavLink>
@@ -81,4 +94,4 @@ const Navbarloggedin = () => {
 	);
 };
 
-export default Navbarloggedin;
+export default NavbarLoggedIn;

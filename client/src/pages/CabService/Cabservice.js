@@ -1,15 +1,23 @@
 import React from "react";
-import Cabprices from "../CabService/Cabprices";
-import Cabrequest from "../CabService/Cabrequest";
-import "../CabService/CabServiceCSS.css";
-import Navbarloggedin from "../../components/Navbar/Navbarloggedin";
 
-const Cabservice = () => {
+import "../CabService/CabServiceCSS.css";
+import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
+import CabRequest from "../../components/Cab Service/CabRequest";
+import CabPrices from "../../components/Cab Service/CabPrices";
+import Navbar from "../../components/Navbar/Navbar";
+
+const Cabservice = (props) => {
+	const isLoggedIn = Object.keys(props.user).length !== 0;
+
 	return (
 		<>
-			<Navbarloggedin />
-			<Cabrequest />
-			<Cabprices />
+			{!isLoggedIn ? (
+				<Navbar />
+			) : (
+				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
+			)}
+			<CabRequest />
+			<CabPrices />
 		</>
 	);
 };

@@ -16,7 +16,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header>
+			<header style={{ backgroundColor: "white" }}>
 				<div style={{ backgroundColor: "white" }}>
 					{/* <center>
                       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">

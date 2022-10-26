@@ -1,14 +1,21 @@
 import React from "react";
-import Navbarloggedin from "../../components/Navbar/Navbarloggedin";
+import Navbar from "../../components/Navbar/Navbar";
+import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
-import './ContactSM.css';
+import "./ContactSM.css";
 
-import guyPhoto from './guy.png';
+import guyPhoto from "./guy.png";
 
-const ContactSalesManager = () => {
+const ContactSalesManager = (props) => {
+	const isLoggedIn = Object.keys(props.user).length !== 0;
+
 	return (
 		<div>
-			<Navbarloggedin />
+			{!isLoggedIn ? (
+				<Navbar />
+			) : (
+				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
+			)}
 			<div class="column left">
 				<h1 style={{ fontSize: 50, paddingTop: 60 }}>Get a demo</h1>
 				<p class="p0">Fill in the following details: </p>
@@ -59,10 +66,10 @@ const ContactSalesManager = () => {
 					vehicles, but also services for electric products completely
 					for free!
 				</p>
-				<div class="container1">
+				<div class="container-csm">
 					<div class="row">
 						<div class="col-md-4">
-							<img src={guyPhoto} class="img1"></img>
+							<img src={guyPhoto} class="img1" alt="alt"></img>
 						</div>
 						<div class="col-md-8">
 							<div class="row">

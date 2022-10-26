@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Ourservice = () => {
+const Ourservice = (props) => {
 	return (
 		<>
 			<br />
@@ -12,32 +13,43 @@ const Ourservice = () => {
 			</h1>
 			<br />
 			<hr className="divider" />
-			<br />
-
 			<section className="section services-section" id="services">
 				<div className="container">
 					<div className="row">
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
-								<a href="/register" rel="noopener noreferrer">
+								<Link
+									to={
+										props.isLoggedIn
+											? `/electric-products`
+											: `/register`
+									}
+									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-bolt"></i>
 									</div>
 									<div className="feature-content">
 										<h5>Electric products</h5>
 										<p>
-											Check out a wide range of electric
-											products which are verified, safe to
-											use and environment friendly.
+											Check out Link wide range of
+											electric products which are
+											verified, safe to use and
+											environment friendly.
 										</p>
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
-								<a href="/register" rel="noopener noreferrer">
+								<Link
+									to={
+										props.isLoggedIn
+											? `/ev_cars`
+											: `/register`
+									}
+									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-car"></i>
 									</div>
@@ -50,13 +62,19 @@ const Ourservice = () => {
 											and is eco-friendly.
 										</p>
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
-								<a href="/register" rel="noopener noreferrer">
+								<Link
+									to={
+										props.isLoggedIn
+											? `/cabservice`
+											: `/register`
+									}
+									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-taxi"></i>
 									</div>
@@ -69,13 +87,19 @@ const Ourservice = () => {
 											pickup and dropping.
 										</p>
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
-								<a href="/register" rel="noopener noreferrer">
+								<Link
+									to={
+										props.isLoggedIn
+											? `/contact_sm`
+											: `/register`
+									}
+									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-comments-o"></i>
 									</div>
@@ -88,13 +112,19 @@ const Ourservice = () => {
 											your doubts and queries.
 										</p>
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
-								<a href="/register" rel="noopener noreferrer">
+								<Link
+									to={
+										props.isLoggedIn
+											? `/productservice`
+											: `/register`
+									}
+									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-wrench"></i>
 									</div>
@@ -108,13 +138,19 @@ const Ourservice = () => {
 											in no time.
 										</p>
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
-								<a href="/register" rel="noopener noreferrer">
+								<Link
+									to={
+										props.isLoggedIn
+											? `/articles`
+											: `/register`
+									}
+									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-newspaper-o"></i>
 									</div>
@@ -127,7 +163,7 @@ const Ourservice = () => {
 											the market or in the making.
 										</p>
 									</div>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

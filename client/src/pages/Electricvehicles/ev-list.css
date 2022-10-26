@@ -44,7 +44,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.card {
+/* .card {
   width: 300px;
   border-radius: 10px;
 }
@@ -52,7 +52,7 @@
 .card-img-top {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
+} */
 
 span.text-muted {
   font-size: 12px;
@@ -341,12 +341,7 @@ figure.effect-sarah:hover p {
     width: 100%;
   }
 }
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -528,20 +523,6 @@ a:focus {
   text-align: left;
 }
 
-/* Demo ad design */
-body #cdawrap {
-  background: none;
-  top: 50px;
-  border: none;
-}
-
-body #cdawrap a {
-  color: #fff !important;
-}
-
-body #cda-remove {
-  color: #fff;
-}
 
 @media screen and (max-width: 25em) {
   .codrops-header {
@@ -562,8 +543,8 @@ body #cda-remove {
   align-items: center;
 }
 
-.mb-2{
-    display: flex;
+.mb-2_ev_list{
+  display: flex;
   justify-content: center;
   align-items: center;
 }
