@@ -12,7 +12,8 @@ import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
 import Evpage from './pages/Electricvehicles/Evpage';
 import AdminHome from "./pages/Admin/AdminHome";
-import Adminadduser from "./pages/Admin/AdminAddUser";
+import AdminAddUser from "./pages/Admin/AdminAddUser";
+import ShowMainData from "./pages/Admin/ShowMainData";
 
 function App() {
 	return (
@@ -44,7 +45,7 @@ function App() {
 				<Route path="/admin/login" element={<AdminLoginPage />} exact />
 				<Route path="/admin/home" element={<AdminHome />} exact />
 				<Route path="/admin/adduser" element={<AdminAddUser />} exact />
-
+				<Route path="/admin/showdata" element={<ShowMainData />} exact />
 				{/* Error if no page is found */}
 				<Route path="*" element={<Error />} exact />
 			</Routes>
