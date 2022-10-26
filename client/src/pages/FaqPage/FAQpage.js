@@ -1,12 +1,19 @@
 import React from "react";
 import "./FAQcss.css";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
-import LeafImage from './Mail Green.png';
+import LeafImage from "./Mail Green.png";
+import Navbar from "../../components/Navbar/Navbar";
 
-const FAQpage = () => {
+const FAQpage = (props) => {
+	const isLoggedIn = Object.keys(props.user).length !== 0;
+
 	return (
 		<div>
-			<NavbarLoggedIn />
+			{!isLoggedIn ? (
+				<Navbar />
+			) : (
+				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
+			)}
 			<div className="mainTitle">
 				See the Frequently asked questions here:
 			</div>

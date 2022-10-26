@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 const AdminLogin = () => {
 	const nav = useNavigate();
 	useEffect(() => {
-		if (localStorage.getItem("adminLoggedIn") == "true") {
+		if (localStorage.getItem("adminLoggedIn") === "true") {
 			nav("/admin/home");
 		}
-	}, []);
+	}, [nav]);
 
 	const submitHandler = (event) => {
 		event.preventDefault();

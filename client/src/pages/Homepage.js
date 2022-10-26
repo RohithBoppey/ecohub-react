@@ -8,16 +8,18 @@ import "../components/Homepage/HomepageCSS.css";
 import NavbarLoggedIn from "../components/Navbar/NavbarLoggedIn";
 
 const Homepage = (props) => {
+	const isLoggedIn = Object.keys(props.user).length !== 0;
+
 	return (
 		<div>
-			{Object.keys(props.user).length === 0 ? (
+			{!isLoggedIn ? (
 				<Navbar />
 			) : (
-				<NavbarLoggedIn user={props.user} />
+				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
 			)}
 			<Header />
 			<Atyourservice />
-			<Ourservice />
+			<Ourservice isLoggedIn={isLoggedIn} />
 			<Footer />
 		</div>
 	);

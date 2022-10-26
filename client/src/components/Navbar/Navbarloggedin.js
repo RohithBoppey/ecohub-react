@@ -1,7 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const NavbarLoggedIn = (props) => {
+	const navigate = useNavigate();
+
+	const logoutHandler = () => {
+		props.onLogout();
+		navigate("/");
+	};
+
 	return (
 		<>
 			{/* {classes.navbar + classeses.navbar-expand + class} */}
@@ -46,7 +53,11 @@ const NavbarLoggedIn = (props) => {
 								to="#"
 								data-toggle="dropdown"
 								className="dropdown-toggle user-action">
-								<img className="avatar" src = {props.user.avatar} alt="Avatar" />{" "}
+								<img
+									className="avatar"
+									src={props.user.avatar}
+									alt="Avatar"
+								/>{" "}
 								<b className="caret">{props.user.username}</b>
 							</NavLink>
 							<ul className="dropdown-menu">
@@ -69,7 +80,7 @@ const NavbarLoggedIn = (props) => {
 								</li>
 								<li className="divider"></li>
 								<li>
-									<NavLink to="/">
+									<NavLink to="/" onClick={logoutHandler}>
 										<i className="fas fa-door-open"></i>{" "}
 										Logout
 									</NavLink>

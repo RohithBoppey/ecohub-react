@@ -1,9 +1,12 @@
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
 import "./ArticleCSS.css";
 
-const ArticlesPage = () => {
+const ArticlesPage = (props) => {
+	const isLoggedIn = Object.keys(props.user).length !== 0;
+
 	const articles = [
 		{
 			heading:
@@ -52,9 +55,14 @@ const ArticlesPage = () => {
             positioned to deliver.”`,
 		},
 	];
+
 	return (
 		<div>
-			<NavbarLoggedIn />
+			{!isLoggedIn ? (
+				<Navbar />
+			) : (
+				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
+			)}
 			<div class="container-md-fluid">
 				<div class="row">
 					<div class="col-10">

@@ -8,7 +8,11 @@ import KarthikPhoto from "../../faces_photos/karthik.jpg";
 
 import "./about_us.css";
 import Navbar from "../../components/Navbar/Navbar";
-const AboutUsPage = () => {
+import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
+
+
+const AboutUsPage = (props) => {
+
 	const generateSocials = () => {
 		return (
 			<div className="col-md-12 text-center">
@@ -114,7 +118,11 @@ const AboutUsPage = () => {
 	};
 	return (
 		<div>
-			<Navbar />
+			{Object.keys(props.user).length === 0 ? (
+				<Navbar />
+			) : (
+				<NavbarLoggedIn user={props.user} />
+			)}
 			<div className="bg-light">
 				<div className="container py-5">
 					<div className="row h-100 align-items-center py-5">

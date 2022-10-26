@@ -36,47 +36,90 @@ function App() {
 		navigate("/");
 	};
 
+	const LogoutHandler = () => {
+		setUserDetails({});
+	};
+
 	return (
 		<Routes>
-			<Route path="/" element={<HomePage user={userDetails} />} exact />
+			<Route
+				path="/"
+				element={
+					<HomePage user={userDetails} onLogout={LogoutHandler} />
+				}
+				exact
+			/>
 			<Route
 				path="/user-profile"
-				element={<UserDetails user={userDetails} />}
+				element={
+					<UserDetails user={userDetails} onLogout={LogoutHandler} />
+				}
 				exact
 			/>
 			<Route path="/error" element={<Error />} exact />
 			<Route
 				path="/register"
-				element={<Register onRegister={onRegisterSign} />}
+				element={
+					<Register
+						onRegister={onRegisterSign}
+						onLogout={LogoutHandler}
+					/>
+				}
 				exact
 			/>
 			<Route
 				path="/signin"
-				element={<Signin onSignin={onRegisterSign} />}
+				element={
+					<Signin
+						onSignin={onRegisterSign}
+						onLogout={LogoutHandler}
+					/>
+				}
 				exact
 			/>
 			<Route
 				path="/about_us"
-				element={<AboutUsPage user={userDetails} />}
+				element={
+					<AboutUsPage user={userDetails} onLogout={LogoutHandler} />
+				}
 				exact
 			/>
 			<Route
 				path="/articles"
-				element={<ArticlesPage user={userDetails} />}
+				element={
+					<ArticlesPage user={userDetails} onLogout={LogoutHandler} />
+				}
 				exact
 			/>
-			<Route path="/faq" element={<FAQpage user={userDetails} />} exact />
+			<Route
+				path="/faq"
+				element={
+					<FAQpage user={userDetails} onLogout={LogoutHandler} />
+				}
+				exact
+			/>
 			<Route
 				path="/cabservice"
-				element={<Cabservice user={userDetails} />}
+				element={
+					<Cabservice user={userDetails} onLogout={LogoutHandler} />
+				}
 				exact
 			/>
 			<Route
 				path="/productservice"
-				element={<Productservice user={userDetails} />}
+				element={
+					<Productservice
+						user={userDetails}
+						onLogout={LogoutHandler}
+					/>
+				}
 				exact
 			/>
-			<Route path="/ev_cars" element={<Evpage user={userDetails} />}>
+			<Route
+				path="/ev_cars"
+				element={
+					<Evpage user={userDetails} onLogout={LogoutHandler} />
+				}>
 				{/* <Route
 						path=":name"
 						element={<ElectricCarDetails />}
@@ -85,13 +128,23 @@ function App() {
 			</Route>
 			<Route
 				path="/ev_cars/:name"
-				element={<ElectricCarDetails user={userDetails} />}
+				element={
+					<ElectricCarDetails
+						user={userDetails}
+						onLogout={LogoutHandler}
+					/>
+				}
 				exact
 			/>
 			{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
 			<Route
 				path="/contact_sm"
-				element={<ContactSalesManager user={userDetails} />}
+				element={
+					<ContactSalesManager
+						user={userDetails}
+						onLogout={LogoutHandler}
+					/>
+				}
 				exact
 			/>
 

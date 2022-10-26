@@ -17,6 +17,7 @@ const Cabprices = () => {
 									<img
 										src="https://cdn-icons-png.flaticon.com/512/3089/3089803.png"
 										className="cab_img"
+										alt=""
 									/>
 								</div>
 								<h3

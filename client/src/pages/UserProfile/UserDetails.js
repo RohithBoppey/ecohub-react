@@ -13,10 +13,10 @@ const UserDetails = (props) => {
 						class="profile-nav col-md-14 middle">
 						<div class="panel">
 							<div class="container user-heading round">
-								<a href="#">
+								<a href="/user-profile">
 									<img
 										src={props.user.avatar}
-										alt="User-image"
+										alt="User"
 										class="profileImage"
 									/>
 								</a>
