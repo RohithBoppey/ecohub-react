@@ -43,7 +43,9 @@ const AdminHome = (props) => {
 								</center>
 								<div className="card-body">
 									<center>
-										<h5 className="card-title">{allUsers.length}</h5>
+										<h5 className="card-title">
+											{allUsers.length}
+										</h5>
 									</center>
 								</div>
 							</div>
@@ -60,7 +62,9 @@ const AdminHome = (props) => {
 								</center>
 								<div className="card-body">
 									<center>
-										<h5 className="card-title">{allProducts.length}</h5>
+										<h5 className="card-title">
+											{allProducts.length}
+										</h5>
 									</center>
 								</div>
 							</div>
