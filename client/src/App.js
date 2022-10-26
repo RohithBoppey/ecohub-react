@@ -11,14 +11,16 @@ import Cabservice from "./pages/CabService/Cabservice";
 import Productservice from "./pages/ProductService/Productservice";
 import Evpage from "./pages/Electricvehicles/Evpage";
 import AdminHome from "./pages/Admin/AdminHome";
-import AdminAddUser from "./pages/Admin/AdminAddUser";
 import ElectricCarDetails from "./pages/ElectricVehicleDetails/ElectricCarDetails";
 import { useEffect, useState } from "react";
 import Signin from "./pages/Signin";
 import UserDetails from "./pages/UserProfile/UserDetails";
+import ElectricProductsPage from "./pages/ElectricProducts/ElectricProductsPage";
 
 function App() {
 	const [userDetails, setUserDetails] = useState({});
+	const [adminDetails, setAdminDetails] = useState({});
+
 	const navigate = useNavigate();
 
 	const onSign = async (details) => {
@@ -35,6 +37,21 @@ function App() {
 		setUserDetails(requiredUser[0]);
 		localStorage.setItem("ecohub-email", requiredUser[0].useremail);
 		navigate("/");
+	};
+
+	const adminSigninHandler = async (details) => {
+		const allAdmin = await fetch("http://localhost:3002/admins");
+		const allAdminsJson = await allAdmin.json();
+		// console.log(allUsersJson);
+		const requiredAdmin = allAdminsJson.filter(
+			(user) =>
+				user.username === details.username &&
+				user.password === details.password
+		);
+		console.log(requiredAdmin);
+		setAdminDetails(requiredAdmin[0]);
+		localStorage.setItem("ecohub-admin", requiredAdmin[0].username);
+		navigate("/admin/home");
 	};
 
 	const onRegister = async (details) => {
@@ -66,7 +83,7 @@ function App() {
 	};
 
 	const LogoutHandler = () => {
-		localStorage.removeItem('ecohub-email');
+		localStorage.removeItem("ecohub-email");
 		setUserDetails({});
 	};
 
@@ -178,7 +195,11 @@ function App() {
 				}
 				exact
 			/>
-			{/* <Route path='/electric-products' element={<ElectricProductsPage />} exact/> */}
+			<Route
+				path="/electric-products"
+				element={<ElectricProductsPage user={userDetails} />}
+				exact
+			/>
 			<Route
 				path="/contact_sm"
 				element={
@@ -191,9 +212,12 @@ function App() {
 			/>
 
 			{/* Admin Section */}
-			<Route path="/admin/login" element={<AdminLoginPage />} exact />
+			<Route
+				path="/admin/login"
+				element={<AdminLoginPage onSignin={adminSigninHandler} />}
+				exact
+			/>
 			<Route path="/admin/home" element={<AdminHome />} exact />
-			<Route path="/admin/adduser" element={<AdminAddUser />} exact />
 
 			{/* Error if no page is found */}
 			<Route path="*" element={<Error />} exact />

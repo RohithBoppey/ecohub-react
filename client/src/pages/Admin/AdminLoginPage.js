@@ -2,10 +2,10 @@ import React from "react";
 
 import AdminLogin from "../../components/Admin/AdminLogin";
 
-const AdminLoginPage = () => {
+const AdminLoginPage = (props) => {
 	return (
 		<div>
-			<AdminLogin />
+			<AdminLogin onSignin = {props.onSignin}/>
 		</div>
 	);
 };
