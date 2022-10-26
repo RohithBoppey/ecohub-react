@@ -13,7 +13,7 @@ import Evpage from "./pages/Electricvehicles/Evpage";
 import AdminHome from "./pages/Admin/AdminHome";
 import AdminAddUser from "./pages/Admin/AdminAddUser";
 import ElectricCarDetails from "./pages/ElectricVehicleDetails/ElectricCarDetails";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Signin from "./pages/Signin";
 import UserDetails from "./pages/UserProfile/UserDetails";
 
@@ -21,7 +21,7 @@ function App() {
 	const [userDetails, setUserDetails] = useState({});
 	const navigate = useNavigate();
 
-	const onRegisterSign = async (details) => {
+	const onSign = async (details) => {
 		// console.log(details);
 		const allUsers = await fetch("http://localhost:3001/users");
 		const allUsersJson = await allUsers.json();
@@ -31,14 +31,61 @@ function App() {
 				user.useremail === details.useremail &&
 				user.password === details.password
 		);
-		// console.log(requiredUser);
+		console.log(requiredUser);
 		setUserDetails(requiredUser[0]);
+		localStorage.setItem("ecohub-email", requiredUser[0].useremail);
+		navigate("/");
+	};
+
+	const onRegister = async (details) => {
+		const allUsers = await fetch("http://localhost:3001/users");
+		const allUsersJson = await allUsers.json();
+
+		const requiredUser = allUsersJson.filter(
+			(user) => user.useremail === details.useremail
+		);
+
+		// console.log(requiredUser);
+
+		if (requiredUser.length === 0) {
+			// no user exists
+			await fetch("http://localhost:3001/users", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(details),
+			});
+			setUserDetails(details);
+			localStorage.setItem("ecohub-email", details.useremail);
+		} else {
+			localStorage.setItem("ecohub-email", requiredUser[0].useremail);
+			setUserDetails(requiredUser[0]);
+		}
 		navigate("/");
 	};
 
 	const LogoutHandler = () => {
+		localStorage.removeItem('ecohub-email');
 		setUserDetails({});
 	};
+
+	const isLoggedIn = async () => {
+		const useremail = localStorage.getItem("ecohub-email");
+		if (useremail !== null && useremail !== undefined) {
+			console.log(useremail);
+			const allUsers = await fetch("http://localhost:3001/users");
+			const allUsersJson = await allUsers.json();
+			const requiredUser = allUsersJson.filter(
+				(user) => user.useremail === useremail
+			);
+			setUserDetails(requiredUser[0]);
+		}
+	};
+
+	useEffect(() => {
+		isLoggedIn();
+	}, []);
 
 	return (
 		<Routes>
@@ -61,7 +108,7 @@ function App() {
 				path="/register"
 				element={
 					<Register
-						onRegister={onRegisterSign}
+						onRegister={onRegister}
 						onLogout={LogoutHandler}
 					/>
 				}
@@ -69,12 +116,7 @@ function App() {
 			/>
 			<Route
 				path="/signin"
-				element={
-					<Signin
-						onSignin={onRegisterSign}
-						onLogout={LogoutHandler}
-					/>
-				}
+				element={<Signin onSignin={onSign} onLogout={LogoutHandler} />}
 				exact
 			/>
 			<Route

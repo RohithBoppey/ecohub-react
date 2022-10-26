@@ -1,15 +1,15 @@
 
-.container{
+.container-up{
     padding:5%;
 }
 
-.container .details{
+.container-up .details{
     display: flex;
     align-items: center;
     justify-content: center;
     border-left:3px solid #ded4da;
 }
-.container .details p{
+.container-up .details p{
     padding-left: 50px;
     display: flex;
     align-items: center;

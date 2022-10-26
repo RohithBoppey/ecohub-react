@@ -1,6 +1,42 @@
-import React from "react";
+import React, { useRef } from "react";
+
+const AutoCapitalizeWords = (givenString) => {
+	const words = givenString.split(" ");
+	for (let i = 0; i < words.length; i++) {
+		words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+	}
+	const newWord = words.join(" ");
+	return newWord;
+};
 
 const RegisterForm = (props) => {
+	const usernameRef = useRef();
+	const fullnameRef = useRef();
+	const useremailRef = useRef();
+	const passwordRef = useRef();
+	const phoneNumberRef = useRef();
+	const cityRef = useRef();
+	const addressRef = useRef();
+	const genderRef = useRef();
+	const avatarRef = useRef();
+
+	const submitHandler = (event) => {
+		event.preventDefault();
+		const details = {
+			username: usernameRef.current.value,
+			useremail: useremailRef.current.value,
+			fullname: AutoCapitalizeWords(fullnameRef.current.value),
+			phoneNumber: phoneNumberRef.current.value,
+			password: passwordRef.current.value,
+			cityname: AutoCapitalizeWords(cityRef.current.value),
+			address: AutoCapitalizeWords(addressRef.current.value),
+			gender: genderRef.current.checked ? "Male" : "Female",
+			avatar: avatarRef.current.value,
+		};
+		// console.log(details);
+		props.onSubmitForm(details);
+	};
+
 	return (
 		<>
 			<div className="container signup_body">
@@ -14,10 +50,8 @@ const RegisterForm = (props) => {
 								</h5>
 
 								<form
-									onsubmit="documentValidation()"
-									method="post"
-									action="/register"
-									autocomplete="off">
+									onSubmit={submitHandler}
+									autoComplete="off">
 									<div className="form-floating mb-3">
 										<input
 											type="text"
@@ -27,6 +61,7 @@ const RegisterForm = (props) => {
 											required
 											autofocus
 											name="username"
+											ref={usernameRef}
 										/>
 										<label htmlFor="floatingInputUsername">
 											Username{" "}
@@ -45,7 +80,9 @@ const RegisterForm = (props) => {
 											placeholder="myinputname"
 											required
 											autofocus
+											autoCapitalize={true}
 											name="fullname"
+											ref={fullnameRef}
 										/>
 										<label htmlFor="floatingInputFullName">
 											Fullname{" "}
@@ -63,6 +100,7 @@ const RegisterForm = (props) => {
 											placeholder="name@example.com"
 											name="email"
 											required
+											ref={useremailRef}
 										/>
 										<label htmlFor="floatingInputEmail">
 											Email address{" "}
@@ -84,6 +122,7 @@ const RegisterForm = (props) => {
 											required
 											pattern=".{8,}"
 											title="Minimum 8 required"
+											ref={passwordRef}
 										/>
 										<label htmlFor="pass">
 											Password{" "}
@@ -102,7 +141,8 @@ const RegisterForm = (props) => {
 											name="phonenumber"
 											required
 											pattern="[0-9]{10}"
-											title="10 numbers hsa to be there"
+											title="10 numbers has to be there"
+											ref={phoneNumberRef}
 										/>
 										<label htmlFor="phonenumber">
 											Phone Number{" "}
@@ -120,6 +160,8 @@ const RegisterForm = (props) => {
 											placeholder="City"
 											name="city"
 											required
+											autoCapitalize={true}
+											ref={cityRef}
 										/>
 										<label htmlFor="city">
 											City{" "}
@@ -137,6 +179,7 @@ const RegisterForm = (props) => {
 											placeholder="Address"
 											name="address"
 											required
+											ref={addressRef}
 										/>
 										<label htmlFor="address">
 											Address{" "}
@@ -162,6 +205,7 @@ const RegisterForm = (props) => {
 											value="Male"
 											required
 											checked
+											ref={genderRef}
 										/>
 										<label
 											className="form-check-label"
@@ -195,6 +239,7 @@ const RegisterForm = (props) => {
 											placeholder="myimgurl"
 											autofocus
 											name="img_url"
+											ref={avatarRef}
 										/>
 										<label htmlFor="floatingimglink">
 											URL for profile image

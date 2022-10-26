@@ -39,7 +39,7 @@ const SigninForm = (props) => {
 											ref={useremailRef}
 										/>
 										<label for="floatingInputEmail">
-											Email address <span>*</span>
+											Email address <span className = "span_login">*</span>
 										</label>
 									</div>
 
@@ -59,7 +59,7 @@ const SigninForm = (props) => {
 											required
 											pattern=".{8,}"
 											title="Minimum 8 required">
-											Password <span>*</span>
+											Password <span className = "span_login">*</span>
 										</label>
 									</div>
 

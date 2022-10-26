@@ -3,16 +3,16 @@ import React from "react";
 import "./user-profile.css";
 
 const UserDetails = (props) => {
-	// console.log(props)
+	console.log(props.user)
 	return (
 		<div>
-			<div class="container middle">
+			<div class="container-up middle">
 				<div class="outer">
 					<div
 						id="userprofilepage"
 						class="profile-nav col-md-14 middle">
 						<div class="panel">
-							<div class="container user-heading round">
+							<div class="container-up user-heading round">
 								<a href="/user-profile">
 									<img
 										src={props.user.avatar}
@@ -75,7 +75,7 @@ const UserDetails = (props) => {
 			</div>
 
 			<footer class="bg-light pb-5">
-				<div class="container text-center">
+				<div class="container-up text-center">
 					<p class="font-italic text-muted mb-0">
 						&copy; Ecohub.com All rights reserved.
 					</p>
