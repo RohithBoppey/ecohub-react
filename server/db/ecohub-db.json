@@ -165,7 +165,7 @@
 		},
 		{
 			"_id": { "$oid": "62625f22c0c4467217d00de2" },
-			"name": "Shop  box Meat Grinders",
+			"name": "Shop box Meat Grinders",
 			"a_price": "1099.00",
 			"d_price": "869.00",
 			"img_link": "https://m.media-amazon.com/images/I/4161ghQNJYS.AC_UL480_FMwebp_QL65.jpg"

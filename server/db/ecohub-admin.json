@@ -1,8 +1,26 @@
 {
-    "admins": [
-        {
-            "username" : "admin_new",
-            "password" : "admin123"
-        }
-    ]
+	"admins": [
+		{
+			"username": "admin_new",
+			"password": "admin123"
+		}
+	],
+	"messages": [
+		{
+			"userId": "z2g9nUe",
+			"fullname": "Rohith Boppey",
+			"typeofQuery": "Contact Sales Manager",
+			"query": "asdas",
+			"useremail": "rohithboppey1298@gmail.com",
+			"id": 1
+		},
+		{
+			"userId": "z2g9nUe",
+			"fullname": "Rohith Boppey",
+			"typeofQuery": "Contact Us / Suggestion",
+			"query": "This is an amazing website!",
+			"useremail": "rohithboppey1298@gmail.com",
+			"id": 2
+		}
+	]
 }

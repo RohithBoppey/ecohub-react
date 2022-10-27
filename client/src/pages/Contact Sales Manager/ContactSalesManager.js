@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
+import { sendMessageToAdmin } from "../../util/utils";
 
 import "./ContactSM.css";
 
 import guyPhoto from "./guy.png";
 
 const ContactSalesManager = (props) => {
+	const queryRef = useRef();
+
 	const isLoggedIn = Object.keys(props.user).length !== 0;
+
+	const navigate = useNavigate();
+
+	const submitHandler = async (event) => {
+		event.preventDefault();
+		const details = {
+			userId: props.user.id,
+			fullname: props.user.fullname,
+			typeofQuery: "Contact Sales Manager",
+			query: queryRef.current.value,
+			useremail: props.user.useremail,
+		};
+		await sendMessageToAdmin(details);
+		navigate("/");
+	};
 
 	return (
 		<div>
@@ -19,14 +38,17 @@ const ContactSalesManager = (props) => {
 			<div class="column left">
 				<h1 style={{ fontSize: 50, paddingTop: 60 }}>Get a demo</h1>
 				<p class="p0">Fill in the following details: </p>
-				<form method="post" action="/sm/message">
+				<form onSubmit={submitHandler}>
 					<input
 						type="text"
 						placeholder="Name"
+						value={props.user.fullname}
 						id="name"
 						name="name"
 						class="input"
 						autoComplete="off"
+						readOnly="true"
+						disabled="true"
 						required></input>
 					<input
 						type="text"
@@ -34,6 +56,7 @@ const ContactSalesManager = (props) => {
 						id="query"
 						name="query"
 						class="input"
+						ref={queryRef}
 						autoComplete="off"
 						required></input>
 					<input
@@ -42,6 +65,9 @@ const ContactSalesManager = (props) => {
 						id="email"
 						name="email"
 						class="input"
+						readOnly="true"
+						disabled="true"
+						value={props.user.useremail}
 						autoComplete="off"
 						required></input>
 					<input
@@ -50,6 +76,9 @@ const ContactSalesManager = (props) => {
 						id="phone"
 						name="phone"
 						class="input"
+						readOnly="true"
+						disabled="true"
+						value={props.user.phoneNumber}
 						autoComplete="off"
 					/>
 					<br />

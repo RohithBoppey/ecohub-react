@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../../components/Navbar/NavbarLoggedIn";
 import RegisterFooter from "../../components/Login_Signup/RegisterFooter";
 import "./ProductServicePage.css";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import AnimatedLeafIcon from "../../components/Animated Leaf Icon final.jpg";
+import { sendMessageToAdmin } from "../../util/utils";
+import { useNavigate } from "react-router-dom";
 
 const Productservice = (props) => {
+	console.log(props);
+
 	const isLoggedIn = Object.keys(props.user).length !== 0;
+	const navigate = useNavigate();
+
+	const queryRef = useRef();
+	const productIDRef = useRef();
+
+	const submitHandler = async (event) => {
+		event.preventDefault();
+		const details = {
+			userId: props.user.id,
+			fullname: props.user.fullname,
+			typeofQuery: "Product Service",
+			query: queryRef.current.value,
+			productId: productIDRef.current.value,
+			useremail: props.user.useremail,
+		};
+		await sendMessageToAdmin(details);
+		navigate("/");
+
+	};
 
 	return (
 		<>
@@ -20,10 +43,7 @@ const Productservice = (props) => {
 				<div className="contact-image">
 					<img src={AnimatedLeafIcon} alt="rocket_contact" />
 				</div>
-				<form
-					onsubmit="documentValiation()"
-					method="post"
-					action="/ps/message">
+				<form onSubmit={submitHandler}>
 					<h3>Please enter the Product Details</h3>
 					<div className="row">
 						<div className="col-md-6">
@@ -33,7 +53,8 @@ const Productservice = (props) => {
 									className="form-control"
 									placeholder="Please explain your concern *"
 									style={{ width: "100%", height: "400px" }}
-									required></textarea>
+									required
+									ref={queryRef}></textarea>
 							</div>
 						</div>
 
@@ -44,6 +65,9 @@ const Productservice = (props) => {
 									name="name"
 									className="form-control"
 									placeholder="Enter Your Name *"
+									value={props.user.fullname}
+									readOnly="true"
+									disabled="true"
 									required
 									autoComplete="off"
 								/>
@@ -54,6 +78,9 @@ const Productservice = (props) => {
 									name="email"
 									className="form-control"
 									placeholder="Enter Your Email *"
+									value={props.user.useremail}
+									readOnly="true"
+									disabled="true"
 									required
 									id="email"
 									autoComplete="off"
@@ -66,6 +93,9 @@ const Productservice = (props) => {
 									name="phone"
 									className="form-control"
 									placeholder="Enter Your Phone Number *"
+									value={props.user.phoneNumber}
+									readOnly="true"
+									disabled="true"
 									id="pno"
 									required
 									autoComplete="off"
@@ -77,7 +107,7 @@ const Productservice = (props) => {
 									name="ID"
 									className="form-control"
 									placeholder="Enter Your Unique product ID *"
-									value=""
+									ref={productIDRef}
 									required
 									autoComplete="off"
 								/>
@@ -86,18 +116,12 @@ const Productservice = (props) => {
 							<h6>You can upload images if you have any:</h6>
 							<div className="item-wrapper one">
 								<div className="item">
-									<form
-										data-validation="true"
-										action="#"
-										method="post"
-										enctype="multipart/form-data">
-										<input
-											type="file"
-											id="file-upload"
-											multiple
-											accept="image/*"
-										/>
-									</form>
+									<input
+										type="file"
+										id="file-upload"
+										multiple
+										accept="image/*"
+									/>
 								</div>
 							</div>
 							<div className="form-group">

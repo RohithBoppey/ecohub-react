@@ -17,8 +17,7 @@ import Signin from "./pages/Signin";
 import UserDetails from "./pages/UserProfile/UserDetails";
 import ElectricProductsPage from "./pages/ElectricProducts/ElectricProductsPage";
 import ShowMainData from "./pages/Admin/ShowMainData";
-import Messages from "./components/Admin/Messages";
-import AdminNavbar from "./components/Admin/Navbar/Navbar";
+import ShowAllMessages from "./pages/Admin/ShowAllMessages";
 
 function App() {
 	const [userDetails, setUserDetails] = useState({});
@@ -238,10 +237,14 @@ function App() {
 			<Route
 				path="/admin/login"
 				element={
-					<AdminLoginPage
-						onSignin={adminSigninHandler}
-						onLogout={adminLogoutHandler}
-					/>
+					Object.keys(adminDetails).length === 0 ? (
+						<AdminLoginPage
+							onSignin={adminSigninHandler}
+							onLogout={adminLogoutHandler}
+						/>
+					) : (
+						<AdminHome onLogout={adminLogoutHandler} />
+					)
 				}
 				exact
 			/>
@@ -274,16 +277,20 @@ function App() {
 				}
 				exact
 			/>
-			<Route path = '/admin/messages' element = {
-				Object.keys(adminDetails).length === 0 ? (
-					<AdminLoginPage
-						onSignin={adminSigninHandler}
-						onLogout={adminLogoutHandler}
-					/>
-				) : (
-					<Messages onLogout = {adminLogoutHandler}/>
-				)
-			} exact />
+			<Route
+				path="/admin/messages"
+				element={
+					Object.keys(adminDetails).length === 0 ? (
+						<AdminLoginPage
+							onSignin={adminSigninHandler}
+							onLogout={adminLogoutHandler}
+						/>
+					) : (
+						<ShowAllMessages onLogout={adminLogoutHandler} />
+					)
+				}
+				exact
+			/>
 			{/* Error if no page is found */}
 			<Route path="*" element={<Error />} exact />
 		</Routes>

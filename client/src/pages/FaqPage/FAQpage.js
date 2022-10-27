@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./FAQcss.css";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import LeafImage from "./Mail Green.png";
 import Navbar from "../../components/Navbar/Navbar";
+import { sendMessageToAdmin } from "../../util/utils";
+import { useNavigate } from "react-router-dom";
 
 const FAQpage = (props) => {
 	const isLoggedIn = Object.keys(props.user).length !== 0;
+
+	const navigate = useNavigate();
+	const queryRef = useRef();
+
+	const submitHandler = async (event) => {
+		event.preventDefault();
+		const details = {
+			userId: props.user.id,
+			fullname: props.user.fullname,
+			typeofQuery: "Contact Us / Suggestion",
+			query: queryRef.current.value,
+			useremail: props.user.useremail,
+		};
+		await sendMessageToAdmin(details);
+		navigate("/");
+	};
 
 	return (
 		<div>
@@ -109,9 +127,7 @@ const FAQpage = (props) => {
 
 					<form
 						className="contact1-form validate-form"
-						autocomplete="off"
-						method="post"
-						action="/con/message">
+						onSubmit={submitHandler}>
 						<span className="contact1-form-title">
 							{" "}
 							Try contacting us{" "}
@@ -126,6 +142,9 @@ const FAQpage = (props) => {
 								name="name"
 								placeholder="Name"
 								id="name"
+								value={props.user.fullname}
+								disabled={true}
+								readOnly={true}
 								required
 							/>
 							<span className="shadow-input1"></span>
@@ -139,6 +158,9 @@ const FAQpage = (props) => {
 								type="email"
 								name="email"
 								placeholder="Email"
+								value={props.user.useremail}
+								disabled={true}
+								readOnly={true}
 								id="email"
 								required
 							/>
@@ -154,6 +176,9 @@ const FAQpage = (props) => {
 								name="subject"
 								placeholder="Subject"
 								id="subject"
+								value="Contact Us / Suggestion"
+								disabled={true}
+								readOnly={true}
 								required
 							/>
 							<span className="shadow-input1"></span>
@@ -163,6 +188,7 @@ const FAQpage = (props) => {
 							className="wrap-input1 validate-input"
 							data-validate="Message is required">
 							<textarea
+								ref={queryRef}
 								className="input1 input_textarea"
 								name="message"
 								placeholder="Message"
@@ -172,11 +198,9 @@ const FAQpage = (props) => {
 						</div>
 
 						<div className="container-contact1-form-btn">
-							<button
-								className="contact1-form-btn"
-								onclick="validateForm()">
+							<button className="contact1-form-btn" type="submit">
 								<span>
-									Send Email
+									Get in Touch
 									<i
 										className="fa fa-long-arrow-right"
 										aria-hidden="true"></i>
