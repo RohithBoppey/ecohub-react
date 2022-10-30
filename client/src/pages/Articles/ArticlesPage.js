@@ -104,7 +104,7 @@ const ArticlesPage = (props) => {
 									href="#collapseSummary2"
 									aria-expanded="false"
 									aria-controls="collapseSummary">
-									s
+									
 								</a>
 							</div>
 						</div>
