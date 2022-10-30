@@ -28,6 +28,13 @@
       "query": "Hi friends, This is Hitesh. I'm feeling happy. Please consider my request to buy a new Laptop in which I can watch lots of high quality 4k movies. Thank you.",
       "useremail": "hiteshmalla@gmail.com",
       "id": 3
+    },
+    {
+      "fullname": "Sai Kiran",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "I want to buy a good smart bulb with two fuses which will reduce electricity usage by 69.69%. Please send as soon as possible.",
+      "useremail": "sk@hotmail.com",
+      "id": 4
     }
   ]
 }
