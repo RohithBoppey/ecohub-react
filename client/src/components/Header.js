@@ -2,33 +2,12 @@ import React from "react";
 import Lottie from "react-lottie";
 import windmill from "../lotties/windmill.json";
 import solar_car from "../lotties/solar-env.json";
+import { generateDefaultOptions } from "../util/utils";
 const Header = () => {
-	const generateDefaultOptions = (nameOfFile) => {
-		return {
-			loop: true,
-			autoplay: true,
-			animationData: nameOfFile,
-			rendererSettings: {
-				preserveAspectRatio: "xMidYMid meet",
-			},
-		};
-	};
-
 	return (
 		<>
 			<header style={{ backgroundColor: "white" }}>
 				<div style={{ backgroundColor: "white" }}>
-					{/* <center>
-                      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
-                          var anim; var elem = document.getElementById('bodymovin')
-                          var animData = {container: elem, renderer: 'svg', loop: true, autoplay: true, rendererSettings: {progressiveLoad: false, preserveAspectRatio: 'xMaxYMax slice' }, path: 'data4.json' }; anim = bodymovin.loadAnimation(animData);
-                      </script>
-                      <div className="container" style={{height: "700px"}}>
-                          <lottie-player className="embed-responsive" src="https://assets3.lottiefiles.com/packages/lf20_jqahashv.json"
-                              background="rgba(255, 255, 255, 1.0)" speed="1" style="width: 100%" loop autoplay id="bodymovin">
-                          </lottie-player>
-                      </div>
-                  </center> */}
 					<Lottie
 						options={generateDefaultOptions(windmill)}
 						height={750}

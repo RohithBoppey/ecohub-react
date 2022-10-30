@@ -3,7 +3,7 @@ import React from "react";
 import "./user-profile.css";
 
 const UserDetails = (props) => {
-	console.log(props.user)
+	// console.log(props.user)
 	return (
 		<div>
 			<div class="container-up middle">

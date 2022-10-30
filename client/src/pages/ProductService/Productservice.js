@@ -26,6 +26,8 @@ const Productservice = (props) => {
 			productId: productIDRef.current.value,
 			useremail: props.user.useremail,
 		};
+
+		// sending the details to backend admin messages
 		await sendMessageToAdmin(details);
 		navigate("/");
 

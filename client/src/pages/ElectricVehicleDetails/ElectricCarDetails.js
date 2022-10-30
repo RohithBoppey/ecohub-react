@@ -3,11 +3,18 @@ import { useParams } from "react-router-dom";
 import VehicleFullDetails from "./VehicleFullDetails";
 
 const ElectricCarDetails = () => {
+
+	// useParams = extract name from URL
+	
 	const { name } = useParams();
 	// console.log(name);
 
 	const [vehicleDetails, setVehicleDetails] = useState();
 
+	/*
+		1. Compare the slug to entered slug
+		2. Matched and Set the details.
+	*/
 	const getDetails = async () => {
 		const allVehicles = await fetch("http://localhost:3001/vehicles");
 		const allVehiclesJSON = await allVehicles.json();
@@ -19,8 +26,9 @@ const ElectricCarDetails = () => {
 		setVehicleDetails(requriedVehicle[0]);
 	};
 
+	// get details from backend and set state
 	useEffect(() => {
-		getDetails(name);
+		getDetails();
 	}, []);
 
 	const vehDetails =

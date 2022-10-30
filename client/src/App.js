@@ -46,7 +46,6 @@ function App() {
 	*/
 
 	const onSign = async (details) => {
-
 		/* 
 			Signin works as:
 			1. We fetch all the users from the database.
@@ -70,7 +69,7 @@ function App() {
 		);
 
 		/* Filtered user => array like [{}] => One object */
-		
+
 		console.log(requiredUser);
 
 		// Set localStorage and State.
@@ -81,9 +80,8 @@ function App() {
 	};
 
 	const adminSigninHandler = async (details) => {
-		
 		// Same as onSignin.
-		
+
 		console.log(details);
 		const allAdmin = await fetch("http://localhost:3002/admins");
 		const allAdminsJson = await allAdmin.json();
@@ -100,7 +98,6 @@ function App() {
 	};
 
 	const onRegister = async (details) => {
-
 		/*
 			1. Details entered in Register component will come here.
 			2. Compare all Details in the database.
@@ -131,7 +128,6 @@ function App() {
 			setUserDetails(details);
 			localStorage.setItem("ecohub-email", details.useremail);
 		} else {
-
 			// Storing already present userDetails in state and also localStore
 
 			localStorage.setItem("ecohub-email", requiredUser[0].useremail);
@@ -144,7 +140,7 @@ function App() {
 		1. Remove localStorage content.
 		2. Restore state value to empty JS object.
 	*/
-		
+
 	const LogoutHandler = () => {
 		localStorage.removeItem("ecohub-email");
 		setUserDetails({});
@@ -154,7 +150,6 @@ function App() {
 		localStorage.removeItem("ecohub-admin");
 		setAdminDetails({});
 	};
-
 
 	// function which runs each time component renders.
 
@@ -200,9 +195,9 @@ function App() {
 
 	// Routing should be here.
 	// Route should contain path and element and exact(optional)
-	
+
 	// Sending onLogout to all for Navbar -> Logout button
-	
+
 	return (
 		<Routes>
 			<Route
@@ -311,6 +306,7 @@ function App() {
 			/>
 
 			{/* Admin Section */}
+			{/* Check if admin details are present and redirect accordingly */}
 			<Route
 				path="/admin/login"
 				element={

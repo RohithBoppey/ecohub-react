@@ -19,6 +19,7 @@ const Homepage = (props) => {
 			)}
 			<Header />
 			<Atyourservice />
+			{/* if not logged in, redirect to register */}
 			<Ourservice isLoggedIn={isLoggedIn} />
 			<Footer />
 		</div>

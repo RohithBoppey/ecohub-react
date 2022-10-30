@@ -10,9 +10,8 @@ import "./about_us.css";
 import Navbar from "../../components/Navbar/Navbar";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
-
 const AboutUsPage = (props) => {
-
+	// This function will generate socials.
 	const generateSocials = () => {
 		return (
 			<div className="col-md-12 text-center">
@@ -51,9 +50,10 @@ const AboutUsPage = (props) => {
 					</li>
 				</ul>
 			</div>
-			
 		);
 	};
+
+	// This function will generate Information for Each member. Takes in username and photo.
 
 	const generateInformation = (info) => {
 		return (

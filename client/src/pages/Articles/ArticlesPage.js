@@ -7,6 +7,8 @@ import "./ArticleCSS.css";
 const ArticlesPage = (props) => {
 	const isLoggedIn = Object.keys(props.user).length !== 0;
 
+	// All articles will be present here. Will map from here.
+
 	const articles = [
 		{
 			heading:
@@ -84,6 +86,7 @@ const ArticlesPage = (props) => {
 				</div>
 			</div>
 
+			{/* Mapping from here. */}
 			{articles.map((article) => (
 				<div class="container-article">
 					<div class="row">

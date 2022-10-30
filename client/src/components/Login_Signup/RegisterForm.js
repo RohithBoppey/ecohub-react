@@ -10,6 +10,7 @@ const AutoCapitalizeWords = (givenString) => {
 };
 
 const RegisterForm = (props) => {
+	// Using Refs for input tags
 	const usernameRef = useRef();
 	const fullnameRef = useRef();
 	const useremailRef = useRef();
@@ -33,7 +34,13 @@ const RegisterForm = (props) => {
 			gender: genderRef.current.checked ? "Male" : "Female",
 			avatar: avatarRef.current.value,
 		};
+
+		// For radio -> ref.current.checked
+
 		// console.log(details);
+
+		/* props.onSubmitForm = onRegister (App.js) */
+
 		props.onSubmitForm(details);
 	};
 

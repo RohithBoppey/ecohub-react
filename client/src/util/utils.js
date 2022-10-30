@@ -33,3 +33,15 @@ export const sendMessageToAdmin = async (messageDetails) => {
 		console.log("Sent", messageDetails);
 	}
 };
+
+// For lottie players -> required options.
+export const generateDefaultOptions = (nameOfFile) => {
+	return {
+		loop: true,
+		autoplay: true,
+		animationData: nameOfFile,
+		rendererSettings: {
+			preserveAspectRatio: "xMidYMid meet",
+		},
+	};
+};

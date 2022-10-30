@@ -1,18 +1,9 @@
 import React from "react";
 import Lottie from "react-lottie";
 import electriccab from "../../lotties/electric-cab.json";
+import { generateDefaultOptions } from "../../util/utils";
 
 const Cabrequest = () => {
-	const generateDefaultOptions = (nameOfFile) => {
-		return {
-			loop: true,
-			autoplay: true,
-			animationData: nameOfFile,
-			rendererSettings: {
-				preserveAspectRatio: "xMidYMid meet",
-			},
-		};
-	};
 	return (
 		<>
 			<section className="container">

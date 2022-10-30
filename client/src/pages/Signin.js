@@ -5,6 +5,7 @@ import SigninForm from "../components/Login_Signup/SigninForm";
 const Signin = (props) => {
 	return (
 		<>
+			{/* onSignin = onSign (App.js) */}
 			<SigninForm onSubmitForm = {props.onSignin} />
 			<RegisterFooter />
 		</>

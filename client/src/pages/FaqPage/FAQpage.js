@@ -21,6 +21,7 @@ const FAQpage = (props) => {
 			query: queryRef.current.value,
 			useremail: props.user.useremail,
 		};
+		// Send the current details to the admin -> messages using function
 		await sendMessageToAdmin(details);
 		navigate("/");
 	};

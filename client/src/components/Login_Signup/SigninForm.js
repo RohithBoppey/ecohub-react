@@ -3,11 +3,14 @@ import React, { useRef } from "react";
 import "../../components/Login_Signup/signup_css.css";
 
 const SigninForm = (props) => {
+	// using refs
+
 	const useremailRef = useRef();
 	const passwordRef = useRef();
 
 	const submitHandler = (event) => {
 		event.preventDefault();
+		// onSubmitForm = onSign (App.js)
 		props.onSubmitForm({
 			useremail: useremailRef.current.value,
 			password: passwordRef.current.value,
@@ -39,7 +42,10 @@ const SigninForm = (props) => {
 											ref={useremailRef}
 										/>
 										<label for="floatingInputEmail">
-											Email address <span className = "span_login">*</span>
+											Email address{" "}
+											<span className="span_login">
+												*
+											</span>
 										</label>
 									</div>
 
@@ -59,7 +65,10 @@ const SigninForm = (props) => {
 											required
 											pattern=".{8,}"
 											title="Minimum 8 required">
-											Password <span className = "span_login">*</span>
+											Password{" "}
+											<span className="span_login">
+												*
+											</span>
 										</label>
 									</div>
 

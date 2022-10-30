@@ -24,6 +24,8 @@ const ContactSalesManager = (props) => {
 			query: queryRef.current.value,
 			useremail: props.user.useremail,
 		};
+		
+		// sending the details to backend admin messages
 		await sendMessageToAdmin(details);
 		navigate("/");
 	};

@@ -6,6 +6,7 @@ import RegisterFooter from '../components/Login_Signup/RegisterFooter'
 const Register = (props) => {
   return (
     <>
+    {/* props.onRegister = onRegister (App.js) */}
       <RegisterForm onSubmitForm = {props.onRegister}/>
       <RegisterFooter />
     </>
