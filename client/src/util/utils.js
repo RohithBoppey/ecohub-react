@@ -1,3 +1,7 @@
+// Aim is to get details entered in form -> userID, username, etc.
+// Check if user already sent one kind of request.
+// If request present, alert, else add to messages.
+
 export const sendMessageToAdmin = async (messageDetails) => {
 	let flag = false;
 	console.log(messageDetails);
