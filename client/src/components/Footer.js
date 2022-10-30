@@ -3,17 +3,17 @@ import React from "react";
 const Footer = () => {
 	return (
 		<>
-			<div style={{ "text-align": "center" }}>
+			<div style={{ textAlign: "center" }}>
 				<a href="/register">
 					<button
 						style={{
-							"text-align": "center",
+							textAlign: "center",
 							color: "whitesmoke",
-							"font-size": "2rem",
-							"font-weight": "600",
-							"background-color": "greenyellow",
+							fontSize: "2rem",
+							fontWeight: "600",
+							backgroundColor: "greenyellow",
 							padding: "0 1rem",
-							"border-radius": "30px",
+							borderRadius: "30px",
 						}}
 						className="btn btn-outline-success my-2 my-sm-0"
 						type="submit">
@@ -23,7 +23,7 @@ const Footer = () => {
 			</div>
 			<br />
 			<br />
-			<h1 style={{ color: "black", "text-align": "center" }}>
+			<h1 style={{ color: "black", textAlign: "center" }}>
 				<b>Visit our socials</b>
 			</h1>
 			<br />

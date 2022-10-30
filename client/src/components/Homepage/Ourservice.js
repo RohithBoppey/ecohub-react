@@ -8,7 +8,7 @@ const Ourservice = (props) => {
 			<br />
 			<hr className="divider" />
 			<br />
-			<h1 style={{ color: "black", "text-align": "center" }}>
+			<h1 style={{ color: "black", textAlign: "center" }}>
 				<b>Our Services</b>
 			</h1>
 			<br />
