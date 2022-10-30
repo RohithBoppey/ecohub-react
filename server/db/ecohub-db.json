@@ -106,6 +106,7 @@
       "speed": "1.85",
       "max_speed": "300",
       "p_power": "1020",
+      "buy_link": "https://cars.tatamotors.com/suv/nexon",
       "img_link": "https://cars.tatamotors.com/images/nexon/brochures/img4_1280_800.png"
     },
     {
@@ -116,6 +117,7 @@
       "speed": "1.96",
       "max_speed": "230",
       "p_power": "1050",
+      "buy_link": "https://www.mahindraelectric.com/vehicles/e2oplus/",
       "img_link": "https://www.pluginindia.com/uploads/2/1/8/5/21854234/screen-shot-2016-10-15-at-12-15-28-pm_1.png?1195"
     },
     {
@@ -126,6 +128,7 @@
       "speed": "1.96",
       "max_speed": "220",
       "p_power": "1060",
+      "buy_link": "https://www.volvocars.com/in/cars/xc40-electric/",
       "img_link": "https://wallpapercave.com/wp/wp4780199.jpg"
     },
     {
@@ -136,6 +139,7 @@
       "speed": "1.96",
       "max_speed": "150",
       "p_power": "1080",
+      "buy_link": "https://www.mercedes-benz.com/en/vehicles/mercedes-eq/eqs/",
       "img_link": "https://w0.peakpx.com/wallpaper/120/475/HD-wallpaper-2022-mercedes-benz-eqs-580-4matic-amg-line-edition-1-color-high-tech-silver-obsidian-black-headlight-car.jpg"
     }
   ],

@@ -8,7 +8,7 @@ const VehicleFullDetails = (props) => {
 		<body
 			class="bg"
 			style={{ backgroundImage: `url(${props.vehicle.img_link})` }}>
-			<h1 className = 'h1-ev'>{props.vehicle.title}</h1>
+			<h1 className="h1-ev">{props.vehicle.title}</h1>
 			<div id="footer">
 				<div class="row1 el">
 					<div class="column1">
@@ -28,7 +28,10 @@ const VehicleFullDetails = (props) => {
 						<p> Peak Power</p>
 					</div>
 					<div class="column1 " style={{ marginTop: 10 }}>
-						<a href="<%= car.expand_link %>" class="hello ll">
+						<a
+							href={props.vehicle.buy_link}
+							target="__blank"
+							class="hello ll">
 							Order Now
 						</a>
 					</div>
