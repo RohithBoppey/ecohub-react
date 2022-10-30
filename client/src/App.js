@@ -19,15 +19,48 @@ import ElectricProductsPage from "./pages/ElectricProducts/ElectricProductsPage"
 import ShowMainData from "./pages/Admin/ShowMainData";
 import ShowAllMessages from "./pages/Admin/ShowAllMessages";
 
+/* 
+	This is the main file.
+	1. Every request will come to this component.
+	2. Refer to useEffect component -> 
+		The code in useEffect will be run each time the component is re-rendered.
+		So will check for login each and everytime this page gets rendered.
+	3. Check for isLoggedIn() function in useEffect.
+*/
+
 function App() {
+	/* 
+		These are the states required for all pages. Initially would be an empty Javascript object. 
+	*/
+
 	const [userDetails, setUserDetails] = useState({});
 	const [adminDetails, setAdminDetails] = useState({});
 
+	/* 
+		This navigate helps to navigate between pages while retaining states.
+	*/
 	const navigate = useNavigate();
 
+	/* 
+		The details entered in signin page will be entered here.
+	*/
+
 	const onSign = async (details) => {
+
+		/* 
+			Signin works as:
+			1. We fetch all the users from the database.
+			2. We compare the given useremail and password to each of the user from the database.
+			3. If it matches, we return the corresponding user and save it into the localStorage as well as the userDetails state.
+		*/
+
 		// console.log(details);
 		const allUsers = await fetch("http://localhost:3001/users");
+
+		/* 
+			String -> Convert into JSON
+		*/
+
 		const allUsersJson = await allUsers.json();
 		// console.log(allUsersJson);
 		const requiredUser = allUsersJson.filter(
@@ -35,13 +68,22 @@ function App() {
 				user.useremail === details.useremail &&
 				user.password === details.password
 		);
+
+		/* Filtered user => array like [{}] => One object */
+		
 		console.log(requiredUser);
+
+		// Set localStorage and State.
+
 		setUserDetails(requiredUser[0]);
 		localStorage.setItem("ecohub-email", requiredUser[0].useremail);
 		navigate("/");
 	};
 
 	const adminSigninHandler = async (details) => {
+		
+		// Same as onSignin.
+		
 		console.log(details);
 		const allAdmin = await fetch("http://localhost:3002/admins");
 		const allAdminsJson = await allAdmin.json();
@@ -58,6 +100,14 @@ function App() {
 	};
 
 	const onRegister = async (details) => {
+
+		/*
+			1. Details entered in Register component will come here.
+			2. Compare all Details in the database.
+			3. If email found, already user there, hence same details.
+			4. Else, new email, save to backend. 
+		*/
+
 		const allUsers = await fetch("http://localhost:3001/users");
 		const allUsersJson = await allUsers.json();
 
@@ -76,15 +126,25 @@ function App() {
 				},
 				body: JSON.stringify(details),
 			});
+
+			// Storing entered userDetails in state and also localStore
 			setUserDetails(details);
 			localStorage.setItem("ecohub-email", details.useremail);
 		} else {
+
+			// Storing already present userDetails in state and also localStore
+
 			localStorage.setItem("ecohub-email", requiredUser[0].useremail);
 			setUserDetails(requiredUser[0]);
 		}
 		navigate("/");
 	};
 
+	/* 
+		1. Remove localStorage content.
+		2. Restore state value to empty JS object.
+	*/
+		
 	const LogoutHandler = () => {
 		localStorage.removeItem("ecohub-email");
 		setUserDetails({});
@@ -94,6 +154,16 @@ function App() {
 		localStorage.removeItem("ecohub-admin");
 		setAdminDetails({});
 	};
+
+
+	// function which runs each time component renders.
+
+	/* 
+		1. Check for details in localStorage.
+		2. If not null, not undefined, then restore all from Database.
+		3. Compare with each and save the current user with matched email.
+		4. If no user, nothing is sent and redirected to Register. 
+	*/
 
 	const isLoggedIn = async () => {
 		const useremail = localStorage.getItem("ecohub-email");
@@ -122,10 +192,17 @@ function App() {
 		}
 	};
 
+	// This will render each time component is re-rendered.
+
 	useEffect(() => {
 		isLoggedIn();
 	}, []);
 
+	// Routing should be here.
+	// Route should contain path and element and exact(optional)
+	
+	// Sending onLogout to all for Navbar -> Logout button
+	
 	return (
 		<Routes>
 			<Route

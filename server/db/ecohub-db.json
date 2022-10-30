@@ -1,272 +1,324 @@
 {
-	"users": [
-		{
-			"id": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
-			"gender": "Male",
-			"username": "rohBop",
-			"fullname": "Rohith Boppey",
-			"useremail": "r@g.com",
-			"cityname": "Hyderabad",
-			"phoneNumber": "9533666898",
-			"address": "da98sdha9s8dh",
-			"avatar": "https://m.media-amazon.com/images/M/MV5BMTUyNDlkZDEtNmE5OS00NzMzLWI3Y2ItY2EzYWNlN2JlZmRmXkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg",
-			"password": "rb123"
-		},
-		{
-			"id": "41da7c8s90sad-fce-9246-b6fb273594c0",
-			"gender": "Male",
-			"username": "SantoshK",
-			"fullname": "Santosh K",
-			"useremail": "santosh.k@gmail.com",
-			"cityname": "Hyderabad",
-			"phoneNumber": "9533666898",
-			"address": "da98sdha9s8dh",
-			"avatar": "https://pbs.twimg.com/profile_images/1297865607799480320/rjLk9X3Z_400x400.jpg",
-			"password": "sk123"
-		},
-		{
-			"username": "asdas",
-			"useremail": "das@g.com",
-			"fullname": "dasdas",
-			"phoneNumber": "9533666898",
-			"password": "sa9d0ajsd890as",
-			"cityname": "Hyderabad",
-			"address": "da98sdha9s8dh",
-			"gender": "Male",
-			"avatar": "adasdas",
-			"id": "KnrSQpo"
-		},
-		{
-			"username": "R",
-			"useremail": "rohithboppey1298@gmail.com",
-			"fullname": "Rohith Boppey",
-			"phoneNumber": "9533666898",
-			"password": "RB12345678",
-			"cityname": "Hyderabad",
-			"address": "1-21--3-123-12-",
-			"gender": "Female",
-			"avatar": "https://avatars.githubusercontent.com/u/73538974?v=4",
-			"id": "z2g9nUe"
-		},
-		{
-			"username": "BargavK",
-			"useremail": "bargavk@g.com",
-			"fullname": "Bargav Koduri",
-			"phoneNumber": "9533666898",
-			"password": "prabhasislove",
-			"cityname": "Kakinada",
-			"address": "12-9js1 -djn-12jdc-12uj-",
-			"gender": "Female",
-			"avatar": "https://im.indiatimes.in/content/2021/Aug/2eq_6128dca7c069c.JPG?w=820&h=540&cc=1",
-			"id": "meqTNl3"
-		},
-		{
-			"username": "AbhinavP",
-			"useremail": "abhi@g.com",
-			"fullname": "Abhinav Kumar Padala",
-			"phoneNumber": "9533666898",
-			"password": "abhinav12345",
-			"cityname": "Hyderabad",
-			"address": "2131231",
-			"gender": "Female",
-			"avatar": "https://wellgroomedgentleman.com/media/images/Tony_Stark_Beard_with_Quiff_Hairstyle.width-800.jpg",
-			"id": "bg4gPLF"
-		},
-		{
-			"username": "Srav",
-			"useremail": "s@g.con",
-			"fullname": "Sraan Krm",
-			"phoneNumber": "9533666898",
-			"password": "9533666898",
-			"cityname": "Bhimvaram",
-			"address": "12-we-12-sd- 1-s2-12- 1",
-			"gender": "Female",
-			"avatar": "https://images.indianexpress.com/2022/09/Pk-1200by667.jpg",
-			"id": "NBVAnk5"
-		}
-	],
-	"vehicles": [
-		{
-			"_id": "6241b9c3d920b7e27af359f8",
-			"slug": "tata-nexon",
-			"title": "Tata Nexon",
-			"range": "2.42",
-			"speed": "1.85",
-			"max_speed": "300",
-			"p_power": "1020",
-			"img_link": "https://cars.tatamotors.com/images/nexon/brochures/img4_1280_800.png"
-		},
-		{
-			"_id": "6241b9c3d920b7e27af359f9",
-			"slug": "mahindra-e20",
-			"title": "Mahindra E20 Plus",
-			"range": "3.91",
-			"speed": "1.96",
-			"max_speed": "230",
-			"p_power": "1050",
-			"img_link": "https://www.pluginindia.com/uploads/2/1/8/5/21854234/screen-shot-2016-10-15-at-12-15-28-pm_1.png?1195"
-		},
-		{
-			"_id": "6241b9c3d920b7e27af359fb",
-			"title": "Volvo XC 40",
-			"slug": "xc40-recharge",
-			"range": "3.91",
-			"speed": "1.96",
-			"max_speed": "220",
-			"p_power": "1060",
-			"img_link": "https://wallpapercave.com/wp/wp4780199.jpg"
-		},
-		{
-			"_id": "6241b9c3d920b7e27af359fa",
-			"title": "Benz EQS",
-			"slug": "benz-eqs",
-			"range": "3.91",
-			"speed": "1.96",
-			"max_speed": "150",
-			"p_power": "1080",
-			"img_link": "https://w0.peakpx.com/wallpaper/120/475/HD-wallpaper-2022-mercedes-benz-eqs-580-4matic-amg-line-edition-1-color-high-tech-silver-obsidian-black-headlight-car.jpg"
-		}
-	],
-	"products": [
-		{
-			"_id": { "$oid": "6261a281ef04f29a7e3de2eb" },
-			"name": "Philips Electric Kettle",
-			"a_price": "400.00",
-			"d_price": "369.68",
-			"img_link": "https://radiotvcentre.pk/wp-content/uploads/2020/07/HD9303.jpg"
-		},
-		{
-			"_id": { "$oid": "6261a414ef04f29a7e3de2ec" },
-			"name": "Philips Coffee Maker",
-			"a_price": "225.62",
-			"d_price": "223.68",
-			"img_link": "https://radiotvcentre.pk/wp-content/uploads/2020/07/HD9303.jpg"
-		},
-		{
-			"_id": { "$oid": "62625d23c0c4467217d00ddf" },
-			"name": "Dr. Fit Body Massager",
-			"a_price": "899.00",
-			"d_price": "649.00",
-			"img_link": "https://m.media-amazon.com/images/I/71oq8MxkjRL.AC_UL480_FMwebp_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "62625e5ec0c4467217d00de0" },
-			"name": "IBell Electric Screwdriver",
-			"a_price": "315.00",
-			"d_price": "250.00",
-			"img_link": "https://m.media-amazon.com/images/I/81aC4h5kVAL.AC_UL480_FMwebp_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "62625edec0c4467217d00de1" },
-			"name": "Cello Electric Table BBQ",
-			"a_price": "289.00",
-			"d_price": "269.00",
-			"img_link": "https://m.media-amazon.com/images/I/618r1GoN84L.AC_UL480_FMwebp_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "62625f22c0c4467217d00de2" },
-			"name": "Shop box Meat Grinders",
-			"a_price": "1099.00",
-			"d_price": "869.00",
-			"img_link": "https://m.media-amazon.com/images/I/4161ghQNJYS.AC_UL480_FMwebp_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "626260adc0c4467217d00de3" },
-			"name": "Methik Fruits Chopper",
-			"a_price": "109.00",
-			"d_price": "99.00",
-			"img_link": "https://m.media-amazon.com/images/I/61u1uk7WZPL.AC_UL480_FMwebp_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "62626100c0c4467217d00de4" },
-			"name": "Expr Bed Warmer",
-			"a_price": "599.00",
-			"d_price": "569.00",
-			"img_link": "https://m.media-amazon.com/images/I/51Wziq-yXQL.AC_UL480_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "6262615ec0c4467217d00de5" },
-			"name": "Mi Security Camera",
-			"a_price": "369.00",
-			"d_price": "349.00",
-			"img_link": "https://images-eu.ssl-images-amazon.com/images/I/61JM7nC4OKL.AC_UL320_SR320,320.jpg"
-		},
-		{
-			"_id": { "$oid": "626261d1c0c4467217d00de6" },
-			"name": "Wipro Smart Bulbs",
-			"a_price": "315.00",
-			"d_price": "250.00",
-			"img_link": "https://images-eu.ssl-images-amazon.com/images/I/71LIfhSpAYS.AC_UL320_SR320,320.jpg"
-		},
-		{
-			"_id": { "$oid": "6262620ac0c4467217d00de7" },
-			"name": "RenesMee Food Kettle",
-			"a_price": "450.00",
-			"d_price": "418.00",
-			"img_link": "https://m.media-amazon.com/images/I/515DeRX2oqL.AC_UL480_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "62626252c0c4467217d00de9" },
-			"name": "Cheston Air Blower",
-			"a_price": "350.00",
-			"d_price": "330.00",
-			"img_link": "https://m.media-amazon.com/images/I/61gZ-WIJhML.AC_UL480_QL65.jpg"
-		},
-		{
-			"_id": { "$oid": "62626369c0c4467217d00dea" },
-			"name": "Leaf Blower",
-			"a_price": "2500.00",
-			"d_price": "1500.00",
-			"img_link": "https://m.media-amazon.com/images/I/41F2BFb5nNL.jpg"
-		},
-		{
-			"_id": { "$oid": "626263a5c0c4467217d00deb" },
-			"name": "Water dispenser",
-			"a_price": "999.00",
-			"d_price": "599.00",
-			"img_link": "https://m.media-amazon.com/images/I/61JnoQ06R7L.SL1001.jpg"
-		},
-		{
-			"_id": { "$oid": "6262640cc0c4467217d00dec" },
-			"name": "Electric mop",
-			"a_price": "999.00",
-			"d_price": "799.00",
-			"img_link": "https://m.media-amazon.com/images/I/31yvvQdsdPL.jpg"
-		},
-		{
-			"_id": { "$oid": "6262644cc0c4467217d00ded" },
-			"name": "Smart door lock",
-			"a_price": "2000.00",
-			"d_price": "1299.00",
-			"img_link": "https://m.media-amazon.com/images/I/51VvAgQBgTL.SL1080.jpg"
-		},
-		{
-			"_id": { "$oid": "6262649fc0c4467217d00dee" },
-			"name": "Motion Detector Switch(cieling mounted)",
-			"a_price": "800.00",
-			"d_price": "580.00",
-			"img_link": "https://images-eu.ssl-images-amazon.com/images/I/31Re6WcYvhL.SY300_SX300_QL70_FMwebp.jpg"
-		},
-		{
-			"_id": { "$oid": "626264e5c0c4467217d00def" },
-			"name": "Wireless Smart Security System",
-			"a_price": "25000.00",
-			"d_price": "9499.00",
-			"img_link": "https://m.media-amazon.com/images/I/51GpD1R+eeL.SL1000.jpg"
-		},
-		{
-			"_id": { "$oid": "62626521c0c4467217d00df0" },
-			"name": "Touch Switch",
-			"a_price": "5400.00",
-			"d_price": "2099.00",
-			"img_link": "https://images-eu.ssl-images-amazon.com/images/I/31tMPByrRJS.SY300_SX300_QL70_FMwebp.jpg"
-		},
-		{
-			"_id": { "$oid": "62626567c0c4467217d00df1" },
-			"name": "Vacuum Cleaner",
-			"a_price": "7000.00",
-			"d_price": "4999.00",
-			"img_link": "https://images-eu.ssl-images-amazon.com/images/I/31lWplljPgL.SX300_SY300_QL70_FMwebp.jpg"
-		}
-	]
+  "users": [
+    {
+      "id": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
+      "gender": "Male",
+      "username": "rohBop",
+      "fullname": "Rohith Boppey",
+      "useremail": "r@g.com",
+      "cityname": "Hyderabad",
+      "phoneNumber": "9533666898",
+      "address": "da98sdha9s8dh",
+      "avatar": "https://m.media-amazon.com/images/M/MV5BMTUyNDlkZDEtNmE5OS00NzMzLWI3Y2ItY2EzYWNlN2JlZmRmXkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg",
+      "password": "rb123"
+    },
+    {
+      "id": "41da7c8s90sad-fce-9246-b6fb273594c0",
+      "gender": "Male",
+      "username": "SantoshK",
+      "fullname": "Santosh K",
+      "useremail": "santosh.k@gmail.com",
+      "cityname": "Hyderabad",
+      "phoneNumber": "9533666898",
+      "address": "da98sdha9s8dh",
+      "avatar": "https://pbs.twimg.com/profile_images/1297865607799480320/rjLk9X3Z_400x400.jpg",
+      "password": "sk123"
+    },
+    {
+      "username": "asdas",
+      "useremail": "das@g.com",
+      "fullname": "dasdas",
+      "phoneNumber": "9533666898",
+      "password": "sa9d0ajsd890as",
+      "cityname": "Hyderabad",
+      "address": "da98sdha9s8dh",
+      "gender": "Male",
+      "avatar": "adasdas",
+      "id": "KnrSQpo"
+    },
+    {
+      "username": "R",
+      "useremail": "rohithboppey1298@gmail.com",
+      "fullname": "Rohith Boppey",
+      "phoneNumber": "9533666898",
+      "password": "RB12345678",
+      "cityname": "Hyderabad",
+      "address": "1-21--3-123-12-",
+      "gender": "Female",
+      "avatar": "https://avatars.githubusercontent.com/u/73538974?v=4",
+      "id": "z2g9nUe"
+    },
+    {
+      "username": "BargavK",
+      "useremail": "bargavk@g.com",
+      "fullname": "Bargav Koduri",
+      "phoneNumber": "9533666898",
+      "password": "prabhasislove",
+      "cityname": "Kakinada",
+      "address": "12-9js1 -djn-12jdc-12uj-",
+      "gender": "Female",
+      "avatar": "https://im.indiatimes.in/content/2021/Aug/2eq_6128dca7c069c.JPG?w=820&h=540&cc=1",
+      "id": "meqTNl3"
+    },
+    {
+      "username": "AbhinavP",
+      "useremail": "abhi@g.com",
+      "fullname": "Abhinav Kumar Padala",
+      "phoneNumber": "9533666898",
+      "password": "abhinav12345",
+      "cityname": "Hyderabad",
+      "address": "2131231",
+      "gender": "Female",
+      "avatar": "https://wellgroomedgentleman.com/media/images/Tony_Stark_Beard_with_Quiff_Hairstyle.width-800.jpg",
+      "id": "bg4gPLF"
+    },
+    {
+      "username": "Srav",
+      "useremail": "s@g.con",
+      "fullname": "Sraan Krm",
+      "phoneNumber": "9533666898",
+      "password": "9533666898",
+      "cityname": "Bhimvaram",
+      "address": "12-we-12-sd- 1-s2-12- 1",
+      "gender": "Female",
+      "avatar": "https://images.indianexpress.com/2022/09/Pk-1200by667.jpg",
+      "id": "NBVAnk5"
+    },
+    {
+      "username": "hitesh69",
+      "useremail": "hiteshmalla@gmail.com",
+      "fullname": "Hitesh Malla",
+      "phoneNumber": "8498949849",
+      "password": "hitman699",
+      "cityname": "Vizag",
+      "address": "8s9jad0a=-d As-do As0da-d",
+      "gender": "Female",
+      "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRpOxhsAoijkHMaELa-ca9ezr0GcqkT8hk29zwWLO3EmgFMFRNSaV1r-5RU",
+      "id": "zVeS-Pt"
+    }
+  ],
+  "vehicles": [
+    {
+      "_id": "6241b9c3d920b7e27af359f8",
+      "slug": "tata-nexon",
+      "title": "Tata Nexon",
+      "range": "2.42",
+      "speed": "1.85",
+      "max_speed": "300",
+      "p_power": "1020",
+      "img_link": "https://cars.tatamotors.com/images/nexon/brochures/img4_1280_800.png"
+    },
+    {
+      "_id": "6241b9c3d920b7e27af359f9",
+      "slug": "mahindra-e20",
+      "title": "Mahindra E20 Plus",
+      "range": "3.91",
+      "speed": "1.96",
+      "max_speed": "230",
+      "p_power": "1050",
+      "img_link": "https://www.pluginindia.com/uploads/2/1/8/5/21854234/screen-shot-2016-10-15-at-12-15-28-pm_1.png?1195"
+    },
+    {
+      "_id": "6241b9c3d920b7e27af359fb",
+      "title": "Volvo XC 40",
+      "slug": "xc40-recharge",
+      "range": "3.91",
+      "speed": "1.96",
+      "max_speed": "220",
+      "p_power": "1060",
+      "img_link": "https://wallpapercave.com/wp/wp4780199.jpg"
+    },
+    {
+      "_id": "6241b9c3d920b7e27af359fa",
+      "title": "Benz EQS",
+      "slug": "benz-eqs",
+      "range": "3.91",
+      "speed": "1.96",
+      "max_speed": "150",
+      "p_power": "1080",
+      "img_link": "https://w0.peakpx.com/wallpaper/120/475/HD-wallpaper-2022-mercedes-benz-eqs-580-4matic-amg-line-edition-1-color-high-tech-silver-obsidian-black-headlight-car.jpg"
+    }
+  ],
+  "products": [
+    {
+      "_id": {
+        "$oid": "6261a281ef04f29a7e3de2eb"
+      },
+      "name": "Philips Electric Kettle",
+      "a_price": "400.00",
+      "d_price": "369.68",
+      "img_link": "https://radiotvcentre.pk/wp-content/uploads/2020/07/HD9303.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6261a414ef04f29a7e3de2ec"
+      },
+      "name": "Philips Coffee Maker",
+      "a_price": "225.62",
+      "d_price": "223.68",
+      "img_link": "https://radiotvcentre.pk/wp-content/uploads/2020/07/HD9303.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62625d23c0c4467217d00ddf"
+      },
+      "name": "Dr. Fit Body Massager",
+      "a_price": "899.00",
+      "d_price": "649.00",
+      "img_link": "https://m.media-amazon.com/images/I/71oq8MxkjRL.AC_UL480_FMwebp_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62625e5ec0c4467217d00de0"
+      },
+      "name": "IBell Electric Screwdriver",
+      "a_price": "315.00",
+      "d_price": "250.00",
+      "img_link": "https://m.media-amazon.com/images/I/81aC4h5kVAL.AC_UL480_FMwebp_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62625edec0c4467217d00de1"
+      },
+      "name": "Cello Electric Table BBQ",
+      "a_price": "289.00",
+      "d_price": "269.00",
+      "img_link": "https://m.media-amazon.com/images/I/618r1GoN84L.AC_UL480_FMwebp_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62625f22c0c4467217d00de2"
+      },
+      "name": "Shop box Meat Grinders",
+      "a_price": "1099.00",
+      "d_price": "869.00",
+      "img_link": "https://m.media-amazon.com/images/I/4161ghQNJYS.AC_UL480_FMwebp_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "626260adc0c4467217d00de3"
+      },
+      "name": "Methik Fruits Chopper",
+      "a_price": "109.00",
+      "d_price": "99.00",
+      "img_link": "https://m.media-amazon.com/images/I/61u1uk7WZPL.AC_UL480_FMwebp_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62626100c0c4467217d00de4"
+      },
+      "name": "Expr Bed Warmer",
+      "a_price": "599.00",
+      "d_price": "569.00",
+      "img_link": "https://m.media-amazon.com/images/I/51Wziq-yXQL.AC_UL480_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6262615ec0c4467217d00de5"
+      },
+      "name": "Mi Security Camera",
+      "a_price": "369.00",
+      "d_price": "349.00",
+      "img_link": "https://images-eu.ssl-images-amazon.com/images/I/61JM7nC4OKL.AC_UL320_SR320,320.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "626261d1c0c4467217d00de6"
+      },
+      "name": "Wipro Smart Bulbs",
+      "a_price": "315.00",
+      "d_price": "250.00",
+      "img_link": "https://images-eu.ssl-images-amazon.com/images/I/71LIfhSpAYS.AC_UL320_SR320,320.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6262620ac0c4467217d00de7"
+      },
+      "name": "RenesMee Food Kettle",
+      "a_price": "450.00",
+      "d_price": "418.00",
+      "img_link": "https://m.media-amazon.com/images/I/515DeRX2oqL.AC_UL480_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62626252c0c4467217d00de9"
+      },
+      "name": "Cheston Air Blower",
+      "a_price": "350.00",
+      "d_price": "330.00",
+      "img_link": "https://m.media-amazon.com/images/I/61gZ-WIJhML.AC_UL480_QL65.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62626369c0c4467217d00dea"
+      },
+      "name": "Leaf Blower",
+      "a_price": "2500.00",
+      "d_price": "1500.00",
+      "img_link": "https://m.media-amazon.com/images/I/41F2BFb5nNL.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "626263a5c0c4467217d00deb"
+      },
+      "name": "Water dispenser",
+      "a_price": "999.00",
+      "d_price": "599.00",
+      "img_link": "https://m.media-amazon.com/images/I/61JnoQ06R7L.SL1001.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6262640cc0c4467217d00dec"
+      },
+      "name": "Electric mop",
+      "a_price": "999.00",
+      "d_price": "799.00",
+      "img_link": "https://m.media-amazon.com/images/I/31yvvQdsdPL.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6262644cc0c4467217d00ded"
+      },
+      "name": "Smart door lock",
+      "a_price": "2000.00",
+      "d_price": "1299.00",
+      "img_link": "https://m.media-amazon.com/images/I/51VvAgQBgTL.SL1080.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "6262649fc0c4467217d00dee"
+      },
+      "name": "Motion Detector Switch(cieling mounted)",
+      "a_price": "800.00",
+      "d_price": "580.00",
+      "img_link": "https://images-eu.ssl-images-amazon.com/images/I/31Re6WcYvhL.SY300_SX300_QL70_FMwebp.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "626264e5c0c4467217d00def"
+      },
+      "name": "Wireless Smart Security System",
+      "a_price": "25000.00",
+      "d_price": "9499.00",
+      "img_link": "https://m.media-amazon.com/images/I/51GpD1R+eeL.SL1000.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62626521c0c4467217d00df0"
+      },
+      "name": "Touch Switch",
+      "a_price": "5400.00",
+      "d_price": "2099.00",
+      "img_link": "https://images-eu.ssl-images-amazon.com/images/I/31tMPByrRJS.SY300_SX300_QL70_FMwebp.jpg"
+    },
+    {
+      "_id": {
+        "$oid": "62626567c0c4467217d00df1"
+      },
+      "name": "Vacuum Cleaner",
+      "a_price": "7000.00",
+      "d_price": "4999.00",
+      "img_link": "https://images-eu.ssl-images-amazon.com/images/I/31lWplljPgL.SX300_SY300_QL70_FMwebp.jpg"
+    }
+  ]
 }

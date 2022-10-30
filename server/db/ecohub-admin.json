@@ -1,26 +1,33 @@
 {
-	"admins": [
-		{
-			"username": "admin_new",
-			"password": "admin123"
-		}
-	],
-	"messages": [
-		{
-			"userId": "z2g9nUe",
-			"fullname": "Rohith Boppey",
-			"typeofQuery": "Contact Sales Manager",
-			"query": "asdas",
-			"useremail": "rohithboppey1298@gmail.com",
-			"id": 1
-		},
-		{
-			"userId": "z2g9nUe",
-			"fullname": "Rohith Boppey",
-			"typeofQuery": "Contact Us / Suggestion",
-			"query": "This is an amazing website!",
-			"useremail": "rohithboppey1298@gmail.com",
-			"id": 2
-		}
-	]
+  "admins": [
+    {
+      "username": "admin_new",
+      "password": "admin123"
+    }
+  ],
+  "messages": [
+    {
+      "userId": "z2g9nUe",
+      "fullname": "Rohith Boppey",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "asdas",
+      "useremail": "rohithboppey1298@gmail.com",
+      "id": 1
+    },
+    {
+      "userId": "z2g9nUe",
+      "fullname": "Rohith Boppey",
+      "typeofQuery": "Contact Us / Suggestion",
+      "query": "This is an amazing website!",
+      "useremail": "rohithboppey1298@gmail.com",
+      "id": 2
+    },
+    {
+      "fullname": "Hitesh Malla",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "Hi friends, This is Hitesh. I'm feeling happy. Please consider my request to buy a new Laptop in which I can watch lots of high quality 4k movies. Thank you.",
+      "useremail": "hiteshmalla@gmail.com",
+      "id": 3
+    }
+  ]
 }
