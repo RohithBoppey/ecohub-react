@@ -20,6 +20,7 @@ const Messages = (props) => {
 					style={{ margin: "20px" }}>
 					<tr className="tr-m">
 						<th className="th-m">Email</th>
+						<th className="th-m">User ID</th>
 						<th className="th-m">Full Name</th>
 						<th className="th-m">Type of Query</th>
 						<th className="th-m">Message</th>
@@ -30,6 +31,7 @@ const Messages = (props) => {
 						{props.messages.map((message) => (
 							<tr className="tr-m">
 								<td className="th-m">{message.useremail}</td>
+								<td className="th-m">{message.userId}</td>
 								<td className="th-m">{message.fullname}</td>
 								<td className="th-m">{message.typeofQuery}</td>
 								<td className="th-m">{message.query}</td>

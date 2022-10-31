@@ -10,13 +10,14 @@ const FAQpage = (props) => {
 	const isLoggedIn = Object.keys(props.user).length !== 0;
 
 	const navigate = useNavigate();
-	const queryRef = useRef();
+	const queryRef = useRef();	
+	const fullnameRef = useRef();
 
 	const submitHandler = async (event) => {
 		event.preventDefault();
 		const details = {
 			userId: props.user.id,
-			fullname: props.user.fullname,
+			fullname: fullnameRef.current.value,
 			typeofQuery: "Contact Us / Suggestion",
 			query: queryRef.current.value,
 			useremail: props.user.useremail,
@@ -143,9 +144,8 @@ const FAQpage = (props) => {
 								name="name"
 								placeholder="Name"
 								id="name"
-								value={props.user.fullname}
-								disabled={true}
-								readOnly={true}
+								defaultValue={props.user.fullname}
+								ref={fullnameRef}
 								required
 							/>
 							<span className="shadow-input1"></span>

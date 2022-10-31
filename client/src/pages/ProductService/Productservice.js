@@ -15,22 +15,23 @@ const Productservice = (props) => {
 
 	const queryRef = useRef();
 	const productIDRef = useRef();
+	const phoneNumberRef = useRef();
+	const useremailRef = useRef();
+	const fullnameRef = useRef();
 
 	const submitHandler = async (event) => {
 		event.preventDefault();
 		const details = {
 			userId: props.user.id,
-			fullname: props.user.fullname,
+			fullname: fullnameRef.current.value,
 			typeofQuery: "Product Service",
-			query: queryRef.current.value,
-			productId: productIDRef.current.value,
-			useremail: props.user.useremail,
+			query: `(ID : ${productIDRef.current.value})\nIssue: ${queryRef.current.value}`,
+			useremail: useremailRef.current.value,
 		};
 
 		// sending the details to backend admin messages
 		await sendMessageToAdmin(details);
 		navigate("/");
-
 	};
 
 	return (
@@ -66,10 +67,8 @@ const Productservice = (props) => {
 									type="text"
 									name="name"
 									className="form-control"
-									placeholder="Enter Your Name *"
-									value={props.user.fullname}
-									readOnly="true"
-									disabled="true"
+									defaultValue={props.user.fullname}
+									ref={fullnameRef}
 									required
 									autoComplete="off"
 								/>
@@ -79,11 +78,11 @@ const Productservice = (props) => {
 									type="text"
 									name="email"
 									className="form-control"
-									placeholder="Enter Your Email *"
-									value={props.user.useremail}
-									readOnly="true"
-									disabled="true"
+									defaultValue={props.user.useremail}
+									ref={useremailRef}
 									required
+									disabled={true}
+									readOnly={true}
 									id="email"
 									autoComplete="off"
 								/>
@@ -94,10 +93,8 @@ const Productservice = (props) => {
 									type="text"
 									name="phone"
 									className="form-control"
-									placeholder="Enter Your Phone Number *"
-									value={props.user.phoneNumber}
-									readOnly="true"
-									disabled="true"
+									defaultValue={props.user.phoneNumber}
+									ref={phoneNumberRef}
 									id="pno"
 									required
 									autoComplete="off"

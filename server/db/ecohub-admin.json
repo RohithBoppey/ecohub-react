@@ -23,6 +23,7 @@
       "id": 2
     },
     {
+      "userId": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
       "fullname": "Hitesh Malla",
       "typeofQuery": "Contact Sales Manager",
       "query": "Hi friends, This is Hitesh. I'm feeling happy. Please consider my request to buy a new Laptop in which I can watch lots of high quality 4k movies. Thank you.",
@@ -30,11 +31,68 @@
       "id": 3
     },
     {
+      "userId": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
       "fullname": "Sai Kiran",
       "typeofQuery": "Contact Sales Manager",
       "query": "I want to buy a good smart bulb with two fuses which will reduce electricity usage by 69.69%. Please send as soon as possible.",
       "useremail": "sk@hotmail.com",
       "id": 4
+    },
+    {
+      "userId": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
+      "fullname": "Rohith Boppey",
+      "typeofQuery": "Contact Us / Suggestion",
+      "query": "Amazing website.",
+      "useremail": "r@g.com",
+      "id": 8
+    },
+    {
+      "userId": "41da7c8c-6d19-4fce-9246-b6fb273594c0",
+      "fullname": "Jaswanth Boppey",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "Please suggest some good electric heater to buy.",
+      "useremail": "r@g.com",
+      "id": 9
+    },
+    {
+      "userId": "P4NtIQe",
+      "fullname": "Not Tejaswanth",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "I want to buy a good electric fan which consumes less current",
+      "useremail": "t@g.com",
+      "id": 10
+    },
+    {
+      "userId": "P4NtIQe",
+      "fullname": "Tejaswanth",
+      "typeofQuery": "Product Service",
+      "query": "(ID : da9dh7ah8) Issue: Fan wings are broken. What the hell is this crap? Please fix it as soon as possible.",
+      "useremail": "t@g.com",
+      "id": 11
+    },
+    {
+      "userId": "0XHrThG",
+      "fullname": "Sri Sivani Devineni",
+      "typeofQuery": "Contact Us / Suggestion",
+      "query": "Pakistan Zindabad.",
+      "useremail": "srisivani@gmail.com",
+      "id": 12
+    },
+    {
+      "userId": "0XHrThG",
+      "fullname": "Sri Sivani Devineni",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "Hum bomb laga denge!",
+      "useremail": "srisivani@gmail.com",
+      "id": 13
+    },
+    {
+      "userId": "0XHrThG",
+      "fullname": "Sri Sivani Devineni",
+      "typeofQuery": "Product Service",
+      "query": "(ID : 12d1212)\nIssue: Chandrababu naidu malum? Woh sab mere peeche hai!",
+      "useremail": "srisivani@gmail.com",
+      "id": 14
     }
   ]
 }

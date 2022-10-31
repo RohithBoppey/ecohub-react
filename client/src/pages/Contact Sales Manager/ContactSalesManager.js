@@ -10,6 +10,8 @@ import guyPhoto from "./guy.png";
 
 const ContactSalesManager = (props) => {
 	const queryRef = useRef();
+	const fullnameRef = useRef();
+	const phoneNumberRef = useRef();
 
 	const isLoggedIn = Object.keys(props.user).length !== 0;
 
@@ -19,7 +21,7 @@ const ContactSalesManager = (props) => {
 		event.preventDefault();
 		const details = {
 			userId: props.user.id,
-			fullname: props.user.fullname,
+			fullname: fullnameRef.current.value,
 			typeofQuery: "Contact Sales Manager",
 			query: queryRef.current.value,
 			useremail: props.user.useremail,
@@ -44,13 +46,12 @@ const ContactSalesManager = (props) => {
 					<input
 						type="text"
 						placeholder="Name"
-						value={props.user.fullname}
+						defaultValue={props.user.fullname}
 						id="name"
+						ref={fullnameRef}
 						name="name"
 						class="input"
 						autoComplete="off"
-						readOnly="true"
-						disabled="true"
 						required></input>
 					<input
 						type="text"
@@ -69,7 +70,7 @@ const ContactSalesManager = (props) => {
 						class="input"
 						readOnly="true"
 						disabled="true"
-						value={props.user.useremail}
+						defaultValue={props.user.useremail}
 						autoComplete="off"
 						required></input>
 					<input
@@ -78,9 +79,8 @@ const ContactSalesManager = (props) => {
 						id="phone"
 						name="phone"
 						class="input"
-						readOnly="true"
-						disabled="true"
-						value={props.user.phoneNumber}
+						ref={phoneNumberRef}
+						defaultValue={props.user.phoneNumber}
 						autoComplete="off"
 					/>
 					<br />
