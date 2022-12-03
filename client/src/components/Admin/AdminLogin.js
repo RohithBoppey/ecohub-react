@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./adLogin.css";
 import AdminNavbar from "./Navbar/Navbar";
 
@@ -18,12 +18,15 @@ const AdminLogin = (props) => {
 	return (
 		<>
 			<AdminNavbar onLogout={props.onLogout} />
+
 			<form
 				className="login-ad"
 				onSubmit={submitHandler}
 				autoComplete="off">
-				<div className="content-ad">
+				{/* <div className="content-ad"> */}
+				<div className="c-a">
 					<div className="header-ad">
+						{/* <div> */}
 						<h2>Admin Login</h2>
 					</div>
 					<label>

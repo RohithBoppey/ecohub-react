@@ -93,10 +93,14 @@ function App() {
 				user.username === details.username &&
 				user.password === details.password
 		);
-		console.log(requiredAdmin);
-		setAdminDetails(requiredAdmin[0]);
-		localStorage.setItem("ecohub-admin", requiredAdmin[0].username);
-		navigate("/admin/home");
+		// console.log(requiredAdmin);
+		if(requiredAdmin.length === 0){
+			alert('Please provide proper Admin Details')
+		}else{
+			setAdminDetails(requiredAdmin[0]);
+			localStorage.setItem("ecohub-admin", requiredAdmin[0].username);
+			navigate("/admin/home");
+		}
 	};
 
 	const onRegister = async (details) => {
@@ -325,6 +329,7 @@ function App() {
 
 			{/* Admin Section */}
 			{/* Check if admin details are present and redirect accordingly */}
+
 			<Route
 				path="/admin/login"
 				element={
@@ -339,6 +344,7 @@ function App() {
 				}
 				exact
 			/>
+			{console.log(adminDetails)}
 			<Route
 				path="/admin/home"
 				element={

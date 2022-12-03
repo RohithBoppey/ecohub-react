@@ -43,7 +43,7 @@ const Navbar = () => {
 					</ul>
 					<NavLink to="/register" className="nav-link">
 						<button
-							class="btn btn-outline-success my-2 my-sm-0"
+							className="btn btn-outline-success my-2 my-sm-0"
 							type="submit">
 							Join us
 						</button>

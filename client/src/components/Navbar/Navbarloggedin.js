@@ -11,7 +11,7 @@ const NavbarLoggedIn = (props) => {
 
 	return (
 		<>
-			{/* {classes.navbar + classeses.navbar-expand + class} */}
+			{/* {classes.navbar + classeses.navbar-expand + className} */}
 			<nav className="navbar navbar-expand-lg navbar-dark defaultNavbar">
 				<NavLink className="navbar-brand" to="/">
 					ECOHUB

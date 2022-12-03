@@ -19,23 +19,23 @@ const SigninForm = (props) => {
 
 	return (
 		<div>
-			<div class="container signup_body">
-				<div class="row">
-					<div class="col-lg-10 col-xl-9 mx-auto">
-						<div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
-							<div class="card-img-left d-none d-md-flex"></div>
-							<div class="card-body p-4 p-sm-5">
-								<h5 class="card-title text-center mb-5 fw-light fs-5">
+			<div className="container signup_body">
+				<div className="row">
+					<div className="col-lg-10 col-xl-9 mx-auto">
+						<div className="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+							<div className="card-img-left d-none d-md-flex"></div>
+							<div className="card-body p-4 p-sm-5">
+								<h5 className="card-title text-center mb-5 fw-light fs-5">
 									Login
 								</h5>
 
 								<form
 									autoComplete="off"
 									onSubmit={submitHandler}>
-									<div class="form-floating mb-3">
+									<div className="form-floating mb-3">
 										<input
 											type="email"
-											class="form-control"
+											className="form-control"
 											id="floatingInputEmail"
 											placeholder="name@example.com"
 											name="email"
@@ -51,10 +51,10 @@ const SigninForm = (props) => {
 
 									<hr />
 
-									<div class="form-floating mb-3">
+									<div className="form-floating mb-3">
 										<input
 											type="password"
-											class="form-control"
+											className="form-control"
 											id="floatingPassword"
 											placeholder="Password"
 											name="password"
@@ -72,35 +72,35 @@ const SigninForm = (props) => {
 										</label>
 									</div>
 
-									<div class="d-grid mb-2">
+									<div className="d-grid mb-2">
 										<button
-											class="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
+											className="btn btn-lg btn-secondary btn-login fw-bold text-uppercase"
 											type="submit">
 											Login
 										</button>
 									</div>
 
 									<a
-										class="d-block text-center mt-2 small"
+										className="d-block text-center mt-2 small"
 										href="/register">
 										Don't Have an account? Register
 									</a>
-									<hr class="my-4" />
+									<hr className="my-4" />
 
-									<div class="d-grid mb-2">
+									<div className="d-grid mb-2">
 										<button
-											class="btn btn-lg btn-google btn-login fw-bold text-uppercase"
+											className="btn btn-lg btn-google btn-login fw-bold text-uppercase"
 											type="submit">
-											<i class="fab fa-google me-2"></i>{" "}
+											<i className="fab fa-google me-2"></i>{" "}
 											Log in with Google
 										</button>
 									</div>
 
-									<div class="d-grid">
+									<div className="d-grid">
 										<button
-											class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase"
+											className="btn btn-lg btn-facebook btn-login fw-bold text-uppercase"
 											type="submit">
-											<i class="fab fa-facebook-f me-2"></i>{" "}
+											<i className="fab fa-facebook-f me-2"></i>{" "}
 											Log in with Facebook
 										</button>
 									</div>

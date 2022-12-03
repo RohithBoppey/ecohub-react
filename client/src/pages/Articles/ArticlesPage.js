@@ -1,11 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Navbar from "../../components/Navbar/Navbar";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
 import "./ArticleCSS.css";
 
 const ArticlesPage = (props) => {
-	const isLoggedIn = Object.keys(props.user).length !== 0;
+
+	const isLoggedIn = useSelector((state) => state.userIsLoggedIn);
+
 
 	// All articles will be present here. Will map from here.
 
@@ -65,17 +68,17 @@ const ArticlesPage = (props) => {
 			) : (
 				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
 			)}
-			<div class="container-md-fluid">
-				<div class="row">
-					<div class="col-10">
-						<p class="mainHeading">
+			<div className="container-md-fluid">
+				<div className="row">
+					<div className="col-10">
+						<p className="mainHeading">
 							Subscribe to our newsletter? Get the news delivered
 							to you right now at your mail?
 						</p>
 					</div>
-					<div class="col-2">
-						<div class="form-group">
-							<div class="checkbox checbox-switch switch-primary">
+					<div className="col-2">
+						<div className="form-group">
+							<div className="checkbox checbox-switch switch-primary">
 								<label>
 									<input type="checkbox" name="" />
 									<span></span>
@@ -88,18 +91,18 @@ const ArticlesPage = (props) => {
 
 			{/* Mapping from here. */}
 			{articles.map((article) => (
-				<div class="container-article">
-					<div class="row">
-						<div class="col-md-4 articleBox">
+				<div className="container-article">
+					<div className="row">
+						<div className="col-md-4 articleBox">
 							<h2>{article.heading}</h2>
 							<div id="summary">
 								<p
-									class="collapse articleText"
+									className="collapse articleText"
 									id="collapseSummary2">
 									{article.article}
 								</p>
 								<a
-									class="collapsed"
+									className="collapsed"
 									data-toggle="collapse"
 									href="#collapseSummary2"
 									aria-expanded="false"

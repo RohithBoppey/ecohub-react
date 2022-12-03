@@ -24,10 +24,14 @@
 
 
 .content-ad {
+    /* padding: 30px; */
+    /* background: white; */
+    /* position: relative; */
+}
+.c-a{
     padding: 30px;
     background: white;
     position: relative;
-    
 }
 
 .header-ad {
