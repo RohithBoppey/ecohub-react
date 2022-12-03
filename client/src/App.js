@@ -18,6 +18,8 @@ import UserDetails from "./pages/UserProfile/UserDetails";
 import ElectricProductsPage from "./pages/ElectricProducts/ElectricProductsPage";
 import ShowMainData from "./pages/Admin/ShowMainData";
 import ShowAllMessages from "./pages/Admin/ShowAllMessages";
+import UserCart from "./pages/Cart/UserCart";
+import { useDispatch, useSelector } from "react-redux";
 
 /* 
 	This is the main file.
@@ -37,6 +39,9 @@ function App() {
 	const [adminDetails, setAdminDetails] = useState({});
 
 	const [allProducts, setAllProducts] = useState([]);
+
+	const dispatch = useDispatch();
+	const userDet = useSelector((state) => state.userDet);
 
 	/* 
 		This navigate helps to navigate between pages while retaining states.
@@ -76,9 +81,14 @@ function App() {
 
 		// Set localStorage and State.
 
-		setUserDetails(requiredUser[0]);
-		localStorage.setItem("ecohub-email", requiredUser[0].useremail);
-		navigate("/");
+		if (requiredUser.length === 0) {
+			alert("Please enter a valid useremail and password and try again.");
+		} else {
+			setUserDetails(requiredUser[0]);
+			localStorage.setItem("ecohub-email", requiredUser[0].useremail);
+			dispatch({ type: "login", userDetails: details });
+			navigate("/");
+		}
 	};
 
 	const adminSigninHandler = async (details) => {
@@ -94,9 +104,9 @@ function App() {
 				user.password === details.password
 		);
 		// console.log(requiredAdmin);
-		if(requiredAdmin.length === 0){
-			alert('Please provide proper Admin Details')
-		}else{
+		if (requiredAdmin.length === 0) {
+			alert("Please provide proper Admin Details");
+		} else {
 			setAdminDetails(requiredAdmin[0]);
 			localStorage.setItem("ecohub-admin", requiredAdmin[0].username);
 			navigate("/admin/home");
@@ -132,11 +142,13 @@ function App() {
 
 			// Storing entered userDetails in state and also localStore
 			setUserDetails(details);
+			dispatch({ type: "login", userDetails: details });
 			localStorage.setItem("ecohub-email", details.useremail);
 		} else {
 			// Storing already present userDetails in state and also localStore
 
 			localStorage.setItem("ecohub-email", requiredUser[0].useremail);
+			dispatch({ type: "login", userDetails: requiredUser[0] });
 			setUserDetails(requiredUser[0]);
 		}
 		navigate("/");
@@ -178,6 +190,7 @@ function App() {
 				(user) => user.useremail === useremail
 			);
 			setUserDetails(requiredUser[0]);
+			dispatch({ type: "login", userDetails: requiredUser[0] });
 		}
 
 		if (adminLogin !== null && adminLogin !== undefined) {
@@ -327,6 +340,13 @@ function App() {
 				exact
 			/>
 
+			<Route
+				path="/show-cart"
+				element={
+					<UserCart user={userDetails} onLogout={LogoutHandler} />
+				}
+				exact
+			/>
 			{/* Admin Section */}
 			{/* Check if admin details are present and redirect accordingly */}
 

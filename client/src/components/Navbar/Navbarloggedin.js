@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const NavbarLoggedIn = (props) => {
 	const navigate = useNavigate();
+
+	const userDetails = useSelector((state) => state.userDet);
 
 	const logoutHandler = () => {
 		props.onLogout();
@@ -55,10 +58,10 @@ const NavbarLoggedIn = (props) => {
 								className="dropdown-toggle user-action">
 								<img
 									className="avatar"
-									src={props.user.avatar}
+									src={userDetails.avatar}
 									alt="Avatar"
 								/>{" "}
-								<b className="caret">{props.user.username}</b>
+								<b className="caret">{userDetails.username}</b>
 							</NavLink>
 							<ul className="dropdown-menu">
 								<li>

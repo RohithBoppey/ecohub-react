@@ -2,8 +2,21 @@ import React from "react";
 import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import "./PageList.css";
 
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 const ElectricProductsPage = (props) => {
 	// console.log(props)
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+
+	const addToCartHandler = (object) => {
+		dispatch({
+			type: "add-to-cart",
+			product: object,
+		});
+		navigate("/show-cart");
+	};
 
 	const getMainProduct = (i) => {
 		return (
@@ -19,9 +32,9 @@ const ElectricProductsPage = (props) => {
 						}}>
 						<ul>
 							<li>
-								<a href="#">
+								<button href="#">
 									<i className="fas fa-heart"></i>
-								</a>
+								</button>
 							</li>
 						</ul>
 					</div>
@@ -53,11 +66,11 @@ const ElectricProductsPage = (props) => {
 									</li>
 								</ul>
 							</div>
-							<a
+							<button
 								href="/electric-products/<%= list[i].id %>"
 								className="btn btn-primary">
 								Add to Cart
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -156,11 +169,17 @@ const ElectricProductsPage = (props) => {
 															}
 														</b>
 													</p>
-													<a
-														href="/electric-products/<%= list[0].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[0]
+															);
+														}}
+														href="#"
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -219,11 +238,17 @@ const ElectricProductsPage = (props) => {
 															}
 														</b>
 													</p>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[1]
+															);
+														}}
+														href="#"
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -282,11 +307,16 @@ const ElectricProductsPage = (props) => {
 															}
 														</b>
 													</p>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[2]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -344,11 +374,16 @@ const ElectricProductsPage = (props) => {
 															}
 														</b>
 													</p>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[3]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -410,11 +445,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[4]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -471,11 +511,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[5]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -532,11 +577,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[6]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -593,11 +643,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[7]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -662,11 +717,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[8]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -723,11 +783,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[9]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -736,9 +801,9 @@ const ElectricProductsPage = (props) => {
 												<span className="wish-icon">
 													<ul>
 														<li>
-															<a href="#">
+															<button href="#">
 																<i className="fas fa-heart"></i>
-															</a>
+															</button>
 														</li>
 													</ul>
 												</span>
@@ -794,11 +859,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[10]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -858,11 +928,16 @@ const ElectricProductsPage = (props) => {
 															</li>
 														</ul>
 													</div>
-													<a
-														href="/electric-products/<%= list[i].id %>"
+													<button
+														onClick={() => {
+															addToCartHandler(
+																props
+																	.products[11]
+															);
+														}}
 														className="btn btn-primary">
 														Add to Cart
-													</a>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -870,18 +945,18 @@ const ElectricProductsPage = (props) => {
 								</div>
 							</div>
 
-							<a
+							<button
 								className="carousel-control-prev"
 								href="#myCarousel"
 								data-slide="prev">
 								<i className="fa fa-angle-left"></i>
-							</a>
-							<a
+							</button>
+							<button
 								className="carousel-control-next"
 								href="#myCarousel"
 								data-slide="next">
 								<i className="fa fa-angle-right"></i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
