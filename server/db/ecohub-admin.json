@@ -93,6 +93,37 @@
       "query": "(ID : 12d1212)\nIssue: Chandrababu naidu malum? Woh sab mere peeche hai!",
       "useremail": "srisivani@gmail.com",
       "id": 14
+    },
+    {
+      "userId": "CtISAdG",
+      "fullname": "Rohith Boppey",
+      "typeofQuery": "Contact Sales Manager",
+      "query": "I want to buy smart watch for my kids.",
+      "useremail": "temp@gmail.com",
+      "id": 15
+    },
+    {
+      "userId": "CtISAdG",
+      "fullname": "Temp",
+      "typeofQuery": "Product Service",
+      "query": "(ID : 98fa87hd87)\nIssue: Nib is broken.",
+      "useremail": "temp@gmail.com",
+      "id": 16
+    },
+    {
+      "fullname": "Temp",
+      "typeofQuery": "Contact Us / Suggestion",
+      "query": "The website is great.",
+      "useremail": "temp@gmail.com",
+      "id": 17
+    },
+    {
+      "userId": "zVeS-Pt",
+      "fullname": "Hitesh Malla",
+      "typeofQuery": "Product Service",
+      "query": "(ID : adasd)\nIssue: sadad",
+      "useremail": "hiteshmalla@gmail.com",
+      "id": 18
     }
   ]
 }

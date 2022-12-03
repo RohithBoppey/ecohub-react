@@ -36,6 +36,8 @@ function App() {
 	const [userDetails, setUserDetails] = useState({});
 	const [adminDetails, setAdminDetails] = useState({});
 
+	const [allProducts, setAllProducts] = useState([]);
+
 	/* 
 		This navigate helps to navigate between pages while retaining states.
 	*/
@@ -187,10 +189,17 @@ function App() {
 		}
 	};
 
+	const getAllElectricProducts = async () => {
+		const result = await fetch("http://localhost:3001/products");
+		const resultJSON = await result.json();
+		setAllProducts(resultJSON);
+	};
+
 	// This will render each time component is re-rendered.
 
 	useEffect(() => {
 		isLoggedIn();
+		getAllElectricProducts();
 	}, []);
 
 	// Routing should be here.
@@ -291,7 +300,16 @@ function App() {
 			/>
 			<Route
 				path="/electric-products"
-				element={<ElectricProductsPage user={userDetails} />}
+				element={
+					allProducts.length !== 0 ? (
+						<ElectricProductsPage
+							user={userDetails}
+							products={allProducts}
+						/>
+					) : (
+						<p>Loading...</p>
+					)
+				}
 				exact
 			/>
 			<Route

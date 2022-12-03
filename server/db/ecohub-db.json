@@ -131,6 +131,18 @@
       "gender": "Female",
       "avatar": "https://assets.vogue.in/photos/603616d097a6d928a4e6ea55/2:3/w_900,h_1350,c_limit/Kajal%20aggarwal%20beauty%20makeup%20skincare%20wellness.jpg",
       "id": "0XHrThG"
+    },
+    {
+      "username": "temp",
+      "useremail": "temp@gmail.com",
+      "fullname": "Temp",
+      "phoneNumber": "9533666898",
+      "password": "temp123456",
+      "cityname": "Hyderabad",
+      "address": "1202ke9ve9vq-",
+      "gender": "Male",
+      "avatar": "",
+      "id": "CtISAdG"
     }
   ],
   "vehicles": [
@@ -286,7 +298,7 @@
       "name": "Cheston Air Blower",
       "a_price": "350.00",
       "d_price": "330.00",
-      "img_link": "https://m.media-amazon.com/images/I/61gZ-WIJhML.AC_UL480_QL65.jpg"
+      "img_link": "https://www.helpingindia.com/images/jacklyairblower.jpg"
     },
     {
       "_id": {
@@ -322,16 +334,16 @@
       "name": "Smart door lock",
       "a_price": "2000.00",
       "d_price": "1299.00",
-      "img_link": "https://m.media-amazon.com/images/I/51VvAgQBgTL.SL1080.jpg"
+      "img_link": "https://m.media-amazon.com/images/I/81DMJUIPgTL._SY355_.jpg"
     },
     {
       "_id": {
         "$oid": "6262649fc0c4467217d00dee"
       },
-      "name": "Motion Detector Switch(cieling mounted)",
+      "name": "Motion Detector Switch (Cieling Mounted)",
       "a_price": "800.00",
       "d_price": "580.00",
-      "img_link": "https://images-eu.ssl-images-amazon.com/images/I/31Re6WcYvhL.SY300_SX300_QL70_FMwebp.jpg"
+      "img_link": "https://www.electronicscomp.com/image/cache/catalog/pir-sensor-module-1-400x400.jpg"
     },
     {
       "_id": {

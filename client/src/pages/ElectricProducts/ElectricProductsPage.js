@@ -3,18 +3,88 @@ import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import "./PageList.css";
 
 const ElectricProductsPage = (props) => {
+	// console.log(props)
+
+	const getMainProduct = (i) => {
+		return (
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div class="single-product">
+					<div
+						class="part-1"
+						style={{
+							backgroundImage: `url('${props.products[i].img_link}')`,
+							backgroundSize: "cover",
+							transition: "all 0.3s",
+							width: "100%",
+							
+						}}>
+						<ul>
+							<li>
+								<a href="#">
+									<i class="fas fa-heart"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<div class="thumb-content">
+							<h4>{props.products[i].name} </h4>
+							<p class="item-price">
+								<strike>₹ {props.products[i].a_price} </strike>{" "}
+								<span>
+									&nbsp; ₹ {props.products[i].d_price}
+								</span>
+							</p>
+							<div class="star-rating">
+								<ul class="list-inline">
+									<li class="list-inline-item">
+										<i class="fa fa-star"></i>
+									</li>
+									<li class="list-inline-item">
+										<i class="fa fa-star"></i>
+									</li>
+									<li class="list-inline-item">
+										<i class="fa fa-star"></i>
+									</li>
+									<li class="list-inline-item">
+										<i class="fa fa-star"></i>
+									</li>
+									<li class="list-inline-item">
+										<i class="fa fa-star-half-o"></i>
+									</li>
+								</ul>
+							</div>
+							<a
+								href="/electric-products/<%= list[i].id %>"
+								class="btn btn-primary">
+								Add to Cart
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	};
+
+	const getRemainingProducts = () => {
+		const result = [];
+		for (let i = 12; i < 22; i++) {
+			result.push(getMainProduct(i));
+		}
+		return result;
+	};
+
 	return (
 		<div className="">
-			<NavbarLoggedIn user = {props.user}/>
+			<NavbarLoggedIn user={props.user} />
 
 			<div class="container-xl">
 				<div class="row">
 					<div class="col-md-12 ">
 						<div className="title-container">
-						<h2>
-							Featured <b>Products</b>
-						</h2>
-
+							<h2>
+								Featured <b>Products</b>
+							</h2>
 						</div>
 						<div
 							id="myCarousel"
@@ -37,6 +107,7 @@ const ElectricProductsPage = (props) => {
 							<div class="carousel-inner">
 								<div class="item carousel-item active">
 									<div class="row">
+										{/* Here to */}
 										<div class="col-sm-3">
 											<div class="thumb-wrapper">
 												<span class="wish-icon">
@@ -50,7 +121,13 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4> list[0].name </h4>
+													<h4>
+														{" "}
+														{
+															props.products[0]
+																.name
+														}{" "}
+													</h4>
 													<div class="star-rating">
 														<ul class="list-inline">
 															<li class="list-inline-item">
@@ -72,9 +149,21 @@ const ElectricProductsPage = (props) => {
 													</div>
 													<p class="item-price">
 														<strike>
-															₹list[0].a_price{" "}
+															₹
+															{
+																props
+																	.products[0]
+																	.a_price
+															}
 														</strike>{" "}
-														<b>₹ list[0].d_price</b>
+														<b>
+															₹
+															{
+																props
+																	.products[0]
+																	.d_price
+															}
+														</b>
 													</p>
 													<a
 														href="/electric-products/<%= list[0].id %>"
@@ -84,6 +173,7 @@ const ElectricProductsPage = (props) => {
 												</div>
 											</div>
 										</div>
+
 										<div class="col-sm-3">
 											<div class="thumb-wrapper">
 												<span class="wish-icon">
@@ -97,7 +187,10 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4> list[1].name</h4>
+													<h4>
+														{" "}
+														{props.products[1].name}
+													</h4>
 													<div class="star-rating">
 														<ul class="list-inline">
 															<li class="list-inline-item">
@@ -119,18 +212,31 @@ const ElectricProductsPage = (props) => {
 													</div>
 													<p class="item-price">
 														<strike>
-															₹list[1].a_price{" "}
+															₹
+															{
+																props
+																	.products[1]
+																	.a_price
+															}{" "}
 														</strike>{" "}
-														<b>₹ list[1].d_price</b>
+														<b>
+															₹{" "}
+															{
+																props
+																	.products[1]
+																	.d_price
+															}
+														</b>
 													</p>
 													<a
-														href="/electric-products/<%= list[1].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
 												</div>
 											</div>
 										</div>
+
 										<div class="col-sm-3">
 											<div class="thumb-wrapper">
 												<span class="wish-icon">
@@ -140,11 +246,76 @@ const ElectricProductsPage = (props) => {
 													<img
 														src="https://m.media-amazon.com/images/I/71oq8MxkjRL.AC_UL480_FMwebp_QL65.jpg"
 														class="img-fluid"
+														alt="Headphone"
+													/>
+												</div>
+												<div class="thumb-content">
+													<h4>
+														{" "}
+														{props.products[2].name}
+													</h4>
+													<div class="star-rating">
+														<ul class="list-inline">
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star"></i>
+															</li>
+															<li class="list-inline-item">
+																<i class="fa fa-star-o"></i>
+															</li>
+														</ul>
+													</div>
+													<p class="item-price">
+														<strike>
+															₹
+															{
+																props
+																	.products[2]
+																	.a_price
+															}{" "}
+														</strike>{" "}
+														<b>
+															₹{" "}
+															{
+																props
+																	.products[2]
+																	.d_price
+															}
+														</b>
+													</p>
+													<a
+														href="/electric-products/<%= list[i].id %>"
+														class="btn btn-primary">
+														Add to Cart
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-sm-3">
+											<div class="thumb-wrapper">
+												<span class="wish-icon">
+													<i class="fa fa-heart-o"></i>
+												</span>
+												<div class="img-box">
+													<img
+														src="https://m.media-amazon.com/images/I/81aC4h5kVAL.AC_UL480_FMwebp_QL65.jpg"
+														class="img-fluid"
 														alt="Macbook"
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[2].name</h4>
+													<h4>
+														{props.products[3].name}
+													</h4>
 													<div class="star-rating">
 														<ul class="list-inline">
 															<li class="list-inline-item">
@@ -166,59 +337,24 @@ const ElectricProductsPage = (props) => {
 													</div>
 													<p class="item-price">
 														<strike>
-															₹ list[2].a_price{" "}
+															₹{" "}
+															{
+																props
+																	.products[3]
+																	.a_price
+															}{" "}
 														</strike>{" "}
-														<b>₹ list[2].d_price</b>
+														<b>
+															₹{" "}
+															{
+																props
+																	.products[3]
+																	.d_price
+															}
+														</b>
 													</p>
 													<a
-														href="/electric-products/<%= list[2].id %>"
-														class="btn btn-primary">
-														Add to Cart
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-3">
-											<div class="thumb-wrapper">
-												<span class="wish-icon">
-													<i class="fa fa-heart-o"></i>
-												</span>
-												<div class="img-box">
-													<img
-														src="https://m.media-amazon.com/images/I/81aC4h5kVAL.AC_UL480_FMwebp_QL65.jpg"
-														class="img-fluid"
-														alt="Nikon"
-													/>
-												</div>
-												<div class="thumb-content">
-													<h4>list[3].name</h4>
-													<div class="star-rating">
-														<ul class="list-inline">
-															<li class="list-inline-item">
-																<i class="fa fa-star"></i>
-															</li>
-															<li class="list-inline-item">
-																<i class="fa fa-star"></i>
-															</li>
-															<li class="list-inline-item">
-																<i class="fa fa-star"></i>
-															</li>
-															<li class="list-inline-item">
-																<i class="fa fa-star-o"></i>
-															</li>
-															<li class="list-inline-item">
-																<i class="fa fa-star-o"></i>
-															</li>
-														</ul>
-													</div>
-													<p class="item-price">
-														<strike>
-															₹list[3].a_price{" "}
-														</strike>{" "}
-														<b>₹list[3].d_price</b>
-													</p>
-													<a
-														href="/electric-products/<%= list[3].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -227,6 +363,7 @@ const ElectricProductsPage = (props) => {
 										</div>
 									</div>
 								</div>
+
 								<div class="item carousel-item">
 									<div class="row">
 										<div class="col-sm-3">
@@ -242,12 +379,26 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[4].name</h4>
+													<h4>
+														{props.products[4].name}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹list[4].a_price
+															₹
+															{
+																props
+																	.products[4]
+																	.a_price
+															}
 														</strike>{" "}
-														<b>₹ list[4].d_price</b>
+														<b>
+															₹{" "}
+															{
+																props
+																	.products[4]
+																	.d_price
+															}
+														</b>
 													</p>
 													<div class="star-rating">
 														<ul class="list-inline">
@@ -269,7 +420,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[4].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -289,12 +440,26 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[5].name</h4>
+													<h4>
+														{props.products[5].name}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹list[5].a_price
+															₹
+															{
+																props
+																	.products[5]
+																	.a_price
+															}
 														</strike>{" "}
-														<b>₹list[5].d_price</b>
+														<b>
+															₹
+															{
+																props
+																	.products[5]
+																	.d_price
+															}
+														</b>
 													</p>
 													<div class="star-rating">
 														<ul class="list-inline">
@@ -316,7 +481,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[5].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -336,12 +501,26 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[6].name</h4>
+													<h4>
+														{props.products[6].name}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹list[6].a_price{" "}
+															₹
+															{
+																props
+																	.products[6]
+																	.a_price
+															}{" "}
 														</strike>{" "}
-														<b>₹list[6].d_price</b>
+														<b>
+															₹
+															{
+																props
+																	.products[6]
+																	.d_price
+															}
+														</b>
 													</p>
 													<div class="star-rating">
 														<ul class="list-inline">
@@ -363,7 +542,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[6].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -383,12 +562,26 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[7].name</h4>
+													<h4>
+														{props.products[7].name}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹list[7].a_price{" "}
+															₹
+															{
+																props
+																	.products[7]
+																	.a_price
+															}{" "}
 														</strike>{" "}
-														<b>₹list[7].d_price</b>
+														<b>
+															₹
+															{
+																props
+																	.products[7]
+																	.d_price
+															}
+														</b>
 													</p>
 													<div class="star-rating">
 														<ul class="list-inline">
@@ -410,7 +603,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[7].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -434,12 +627,30 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4> list[8].name </h4>
+													<h4>
+														{" "}
+														{
+															props.products[8]
+																.name
+														}{" "}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹list[8].a_price{" "}
+															₹
+															{
+																props
+																	.products[8]
+																	.a_price
+															}{" "}
 														</strike>{" "}
-														<b>₹ list[8].d_price</b>
+														<b>
+															₹{" "}
+															{
+																props
+																	.products[8]
+																	.d_price
+															}
+														</b>
 													</p>
 													<div class="star-rating">
 														<ul class="list-inline">
@@ -461,7 +672,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[8].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -481,12 +692,26 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[9].name </h4>
+													<h4>
+														{props.products[9].name}{" "}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹ list[9].a_price{" "}
+															₹{" "}
+															{
+																props
+																	.products[9]
+																	.a_price
+															}{" "}
 														</strike>{" "}
-														<b>₹ list[9].d_price</b>
+														<b>
+															₹{" "}
+															{
+																props
+																	.products[9]
+																	.d_price
+															}
+														</b>
 													</p>
 													<div class="star-rating">
 														<ul class="list-inline">
@@ -508,7 +733,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[9].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -534,13 +759,29 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4> list[10].name </h4>
+													<h4>
+														{" "}
+														{
+															props.products[10]
+																.name
+														}{" "}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹ list[10].a_price{" "}
+															₹{" "}
+															{
+																props
+																	.products[10]
+																	.a_price
+															}{" "}
 														</strike>{" "}
 														<b>
-															₹ list[10].d_price
+															₹{" "}
+															{
+																props
+																	.products[10]
+																	.d_price
+															}
 														</b>
 													</p>
 													<div class="star-rating">
@@ -563,7 +804,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[10].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -583,13 +824,28 @@ const ElectricProductsPage = (props) => {
 													/>
 												</div>
 												<div class="thumb-content">
-													<h4>list[11].name</h4>
+													<h4>
+														{
+															props.products[11]
+																.name
+														}
+													</h4>
 													<p class="item-price">
 														<strike>
-															₹ list[11].a_price
+															₹{" "}
+															{
+																props
+																	.products[11]
+																	.a_price
+															}
 														</strike>{" "}
 														<b>
-															₹ list[11].d_price
+															₹{" "}
+															{
+																props
+																	.products[11]
+																	.d_price
+															}
 														</b>
 													</p>
 													<div class="star-rating">
@@ -612,7 +868,7 @@ const ElectricProductsPage = (props) => {
 														</ul>
 													</div>
 													<a
-														href="/electric-products/<%= list[11].id %>"
+														href="/electric-products/<%= list[i].id %>"
 														class="btn btn-primary">
 														Add to Cart
 													</a>
@@ -640,18 +896,7 @@ const ElectricProductsPage = (props) => {
 				</div>
 			</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+			{/* ----------------------- MAIN PRODCUTS ---------------------------- */}
 
 			<section class="section-products">
 				<div class="container item">
@@ -663,569 +908,19 @@ const ElectricProductsPage = (props) => {
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-1" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[12].name </h4>
-										<p class="item-price">
-											<strike> list[12].a_price </strike>{" "}
-											<span> list[12].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[12].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						{/* {getRemainingProducts().map((i) => {
+							return i;
+						})} */}
+						{getMainProduct(11)}
+						{getMainProduct(12)}
+						{getMainProduct(13)}
+						{getMainProduct(14)}
+						{getMainProduct(15)}
+						{getMainProduct(16)}
+						{getMainProduct(17)}
+						{getMainProduct(18)}
+						{getMainProduct(19)}
 
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-2" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[13].name</h4>
-										<p class="item-price">
-											<strike> list[13].a_price</strike>{" "}
-											<span>list[13].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[13].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-3" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[14].name </h4>
-										<p class="item-price">
-											<strike> list[14].a_price</strike>{" "}
-											<span>list[14].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[14].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-4" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[15].name </h4>
-										<p class="item-price">
-											<strike> list[15].a_price</strike>{" "}
-											<span> list[15].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[15].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-5" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4> list[16].name</h4>
-										<p class="item-price">
-											<strike> list[16].a_price</strike>{" "}
-											<span> list[16].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[16].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-6" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[17].name</h4>
-										<p class="item-price">
-											<strike>list[17].a_price</strike>{" "}
-											<span> list[17].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[17].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-7" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[18].name</h4>
-										<p class="item-price">
-											<strike> list[18].a_price</strike>{" "}
-											<span> list[18].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[18].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-8" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[19].name</h4>
-										<p class="item-price">
-											<strike>list[19].a_price</strike>{" "}
-											<span> list[19].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[19].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-9" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4> list[20].name</h4>
-										<p class="item-price">
-											<strike> list[20].a_price</strike>{" "}
-											<span> list[20].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[20].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-10" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4>list[21].name</h4>
-										<p class="item-price">
-											<strike> list[21].a_price</strike>{" "}
-											<span>list[21].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[21].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-11" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4> list[22].name</h4>
-										<p class="item-price">
-											<strike> list[22].a_price </strike>{" "}
-											<span> list[22].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[22].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-4 col-xl-3">
-							<div id="product-12" class="single-product">
-								<div class="part-1">
-									<ul>
-										<li>
-											<a href="#">
-												<i class="fas fa-heart"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="part-2">
-									<div class="thumb-content">
-										<h4> list[23].name</h4>
-										<p class="item-price">
-											<strike> list[23].a_price</strike>{" "}
-											<span> list[23].d_price</span>
-										</p>
-										<div class="star-rating">
-											<ul class="list-inline">
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star"></i>
-												</li>
-												<li class="list-inline-item">
-													<i class="fa fa-star-half-o"></i>
-												</li>
-											</ul>
-										</div>
-										<a
-											href="/electric-products/<%= list[23].id %>"
-											class="btn btn-primary">
-											Add to Cart
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
