@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
+import Navbar from "../../components/Navbar/Navbar";
 
 import "./Cart.css";
 
@@ -124,7 +124,7 @@ const UserCart = (props) => {
 	return (
 		<div>
 			<div>
-				<NavbarLoggedIn />
+				<Navbar />
 				<h2 className="section-header">Welcome to Cart!</h2>
 
 				{finalCart.length !== 0 ? (

@@ -1,16 +1,13 @@
 import React, { useRef } from "react";
 import "./FAQcss.css";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import LeafImage from "./Mail Green.png";
 import Navbar from "../../components/Navbar/Navbar";
 import { sendMessageToAdmin } from "../../util/utils";
 import { useNavigate } from "react-router-dom";
 
 const FAQpage = (props) => {
-	const isLoggedIn = Object.keys(props.user).length !== 0;
-
 	const navigate = useNavigate();
-	const queryRef = useRef();	
+	const queryRef = useRef();
 	const fullnameRef = useRef();
 
 	const submitHandler = async (event) => {
@@ -29,11 +26,7 @@ const FAQpage = (props) => {
 
 	return (
 		<div>
-			{!isLoggedIn ? (
-				<Navbar />
-			) : (
-				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
-			)}
+			<Navbar />
 			<div className="mainTitle">
 				See the Frequently asked questions here:
 			</div>

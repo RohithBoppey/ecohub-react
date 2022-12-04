@@ -1,15 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Navbar from "../../components/Navbar/Navbar";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
 import "./ArticleCSS.css";
 
 const ArticlesPage = (props) => {
-
-	const isLoggedIn = useSelector((state) => state.userIsLoggedIn);
-
-
 	// All articles will be present here. Will map from here.
 
 	const articles = [
@@ -63,11 +58,7 @@ const ArticlesPage = (props) => {
 
 	return (
 		<div>
-			{!isLoggedIn ? (
-				<Navbar />
-			) : (
-				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
-			)}
+			<Navbar />
 			<div className="container-md-fluid">
 				<div className="row">
 					<div className="col-10">
@@ -106,9 +97,7 @@ const ArticlesPage = (props) => {
 									data-toggle="collapse"
 									href="#collapseSummary2"
 									aria-expanded="false"
-									aria-controls="collapseSummary">
-									
-								</a>
+									aria-controls="collapseSummary"></a>
 							</div>
 						</div>
 					</div>

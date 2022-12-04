@@ -1,11 +1,14 @@
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 
 import "./user-profile.css";
 
 const UserDetails = (props) => {
 	// console.log(props.user)
+	
 	return (
 		<div>
+			<Navbar />
 			<div class="container-up middle">
 				<div class="outer">
 					<div

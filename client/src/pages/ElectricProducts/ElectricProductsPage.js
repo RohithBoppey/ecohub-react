@@ -1,9 +1,9 @@
 import React from "react";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import "./PageList.css";
 
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 
 const ElectricProductsPage = (props) => {
 	// console.log(props)
@@ -67,7 +67,7 @@ const ElectricProductsPage = (props) => {
 								</ul>
 							</div>
 							<button
-								href="/electric-products/<%= list[i].id %>"
+								onClick={() => {addToCartHandler(props.products[i])}}
 								className="btn btn-primary">
 								Add to Cart
 							</button>
@@ -80,8 +80,7 @@ const ElectricProductsPage = (props) => {
 
 	return (
 		<div className="">
-			<NavbarLoggedIn user={props.user} />
-
+			<Navbar />
 			<div className="container-xl">
 				<div className="row">
 					<div className="col-md-12 ">

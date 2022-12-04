@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import Navbar from "../../components/Navbar/NavbarLoggedIn";
+import Navbar from "../../components/Navbar/Navbar";
 import RegisterFooter from "../../components/Login_Signup/RegisterFooter";
 import "./ProductServicePage.css";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import AnimatedLeafIcon from "../../components/Animated Leaf Icon final.jpg";
 import { sendMessageToAdmin } from "../../util/utils";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const Productservice = (props) => {
 	console.log(props);
 
-	const isLoggedIn = Object.keys(props.user).length !== 0;
 	const navigate = useNavigate();
 
 	const queryRef = useRef();
@@ -36,12 +34,7 @@ const Productservice = (props) => {
 
 	return (
 		<>
-			{!isLoggedIn ? (
-				<Navbar />
-			) : (
-				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
-			)}
-
+			<Navbar />
 			<div className=" container contact-form">
 				<div className="contact-image">
 					<img src={AnimatedLeafIcon} alt="rocket_contact" />

@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 import { sendMessageToAdmin } from "../../util/utils";
 
 import "./ContactSM.css";
@@ -26,7 +25,7 @@ const ContactSalesManager = (props) => {
 			query: queryRef.current.value,
 			useremail: props.user.useremail,
 		};
-		
+
 		// sending the details to backend admin messages
 		await sendMessageToAdmin(details);
 		navigate("/");
@@ -34,11 +33,7 @@ const ContactSalesManager = (props) => {
 
 	return (
 		<div>
-			{!isLoggedIn ? (
-				<Navbar />
-			) : (
-				<NavbarLoggedIn user={props.user} onLogout={props.onLogout} />
-			)}
+			<Navbar />
 			<div className="column left">
 				<h1 style={{ fontSize: 50, paddingTop: 60 }}>Get a demo</h1>
 				<p className="p0">Fill in the following details: </p>
@@ -90,7 +85,9 @@ const ContactSalesManager = (props) => {
 					</button>
 				</form>
 			</div>
-			<div className="column right" style={{ backgroundColor: "#c5ead8" }}>
+			<div
+				className="column right"
+				style={{ backgroundColor: "#c5ead8" }}>
 				<p className="p1">
 					You can contact our highly trained marketing and sales agent
 					regarding queries about not only electric products and
@@ -100,7 +97,10 @@ const ContactSalesManager = (props) => {
 				<div className="container-csm">
 					<div className="row">
 						<div className="col-md-4">
-							<img src={guyPhoto} className="img1" alt="alt"></img>
+							<img
+								src={guyPhoto}
+								className="img1"
+								alt="alt"></img>
 						</div>
 						<div className="col-md-8">
 							<div className="row">

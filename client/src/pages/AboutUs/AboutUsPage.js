@@ -8,7 +8,6 @@ import KarthikPhoto from "../../faces_photos/karthik.jpg";
 
 import "./about_us.css";
 import Navbar from "../../components/Navbar/Navbar";
-import NavbarLoggedIn from "../../components/Navbar/NavbarLoggedIn";
 
 const AboutUsPage = (props) => {
 	// This function will generate socials.
@@ -104,7 +103,7 @@ const AboutUsPage = (props) => {
 							<div className="p-4">
 								<h6 className="mb-3">{info.name}</h6>
 								<p>
-									Hi, I'm Rohith, and I contributed in the
+									Hi, I'm {info.name}, and I contributed in the
 									frontend which includes homepage, etc and
 									leanring a little bit of backend.
 								</p>
@@ -118,11 +117,7 @@ const AboutUsPage = (props) => {
 	};
 	return (
 		<div>
-			{Object.keys(props.user).length === 0 ? (
-				<Navbar />
-			) : (
-				<NavbarLoggedIn user={props.user} />
-			)}
+			<Navbar />
 			<div className="bg-light">
 				<div className="container py-5">
 					<div className="row h-100 align-items-center py-5">

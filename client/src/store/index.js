@@ -11,6 +11,7 @@ const reducingFunction = (state = initialState, action) => {
 		};
 	}
 	if (action.type === "logout") {
+		localStorage.removeItem("ecohub-email")
 		return {
 			...state,
 			userIsLoggedIn: false,

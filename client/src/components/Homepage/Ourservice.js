@@ -145,11 +145,7 @@ const Ourservice = (props) => {
 						<div className="col-sm-6 col-lg-4">
 							<div className="feature-box-1">
 								<Link
-									to={
-										props.isLoggedIn
-											? `/articles`
-											: `/register`
-									}
+									to={`/articles`}
 									rel="noopener noreferrer">
 									<div className="icon">
 										<i className="fa fa-newspaper-o"></i>
