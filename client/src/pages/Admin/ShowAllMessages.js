@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Messages from "../../components/Admin/Messages";
 
 const ShowAllMessages = (props) => {
 	// Set messages as soon as page renderes
 	const [allMessages, setAllMessages] = useState([]);
+	const navigate = useNavigate();
 
 	/*
 		1. Fetch all messages from json-server.
-		2. 
 	*/
 	const getAllMessages = async () => {
 		const messages = await fetch("http://localhost:3002/messages");
 		const messagesJson = await messages.json();
 		console.log(messagesJson);
 		setAllMessages(messagesJson);
+	};
+
+	const onRemoveMessage = async (id) => {
+		await fetch(`http://localhost:3002/messages/${id}`, {
+			method: "DELETE",
+		});
+		console.log('removed')
+		window.location.reload("/admin/messages");
 	};
 
 	// as soon as page renders, execute this.
@@ -25,7 +34,7 @@ const ShowAllMessages = (props) => {
 	return (
 		<div>
 			{allMessages !== undefined && allMessages !== null && (
-				<Messages messages={allMessages} onLogout={props.onLogout} />
+				<Messages messages={allMessages} onLogout={props.onLogout} onRemoveMessage = {onRemoveMessage}/>
 			)}
 		</div>
 	);

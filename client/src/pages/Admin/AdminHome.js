@@ -4,24 +4,33 @@ import AdminNavbar from "../../components/Admin/Navbar/Navbar";
 const AdminHome = (props) => {
 	const [allUsers, setAllUsers] = useState([]);
 	const [allProducts, setAllProducts] = useState([]);
+	const [allMessages, setAllMessages] = useState([]);
 
 	const getAllProducts = async () => {
 		const products = await fetch("http://localhost:3001/products");
 		const productsJson = await products.json();
-		console.log(productsJson);
+		// console.log(productsJson);
 		setAllProducts(productsJson);
 	};
 
 	const getAllUsers = async () => {
 		const users = await fetch("http://localhost:3001/users");
 		const usersJson = await users.json();
-		console.log(usersJson);
+		// console.log(usersJson);
 		setAllUsers(usersJson);
+	};
+
+	const getAllMessages = async () => {
+		const messages = await fetch("http://localhost:3002/messages");
+		const messagesJson = await messages.json();
+		console.log(messagesJson);
+		setAllMessages(messagesJson);
 	};
 
 	useEffect(() => {
 		getAllUsers();
 		getAllProducts();
+		getAllMessages();
 	}, []);
 
 	return (
@@ -77,11 +86,13 @@ const AdminHome = (props) => {
 									marginLeft: "20%",
 								}}>
 								<center>
-									<div className="card-header">Services</div>
+									<div className="card-header">Requests</div>
 								</center>
 								<div className="card-body">
 									<center>
-										<h5 className="card-title">8</h5>
+										<h5 className="card-title">
+											{allMessages.length}
+										</h5>
 									</center>
 								</div>
 							</div>

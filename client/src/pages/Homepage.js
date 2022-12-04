@@ -17,7 +17,7 @@ const Homepage = () => {
 			<Atyourservice />
 			{/* if not logged in, redirect to register */}
 			<Ourservice isLoggedIn={isLoggedIn} />
-			<Footer />
+			<Footer isLoggedIn={isLoggedIn}/>
 		</div>
 	);
 };

@@ -189,8 +189,10 @@ function App() {
 			const requiredUser = allUsersJson.filter(
 				(user) => user.useremail === useremail
 			);
-			setUserDetails(requiredUser[0]);
-			dispatch({ type: "login", userDetails: requiredUser[0] });
+			if(requiredUser.length !== 0){
+				setUserDetails(requiredUser[0]);
+				dispatch({ type: "login", userDetails: requiredUser[0] });
+			}
 		}
 
 		if (adminLogin !== null && adminLogin !== undefined) {

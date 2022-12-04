@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import "./showdata.css";
 
 const ShowUserData = (props) => {
@@ -25,6 +24,11 @@ const ShowUserData = (props) => {
 		return allRows;
 	};
 
+	const onDeleteHandler = async (id) => {
+		await fetch(`http://localhost:3001/users/${id}`, { method: "DELETE" });
+		window.location.reload();
+	};
+
 	return (
 		<>
 			<br></br>
@@ -45,16 +49,17 @@ const ShowUserData = (props) => {
 								<th className="th-sd">{user.address}</th>
 								<th className="th-sd">{user.cityname}</th>
 								<th className="th-sd">
-									<a href="/admin/deleteuser/<%= cust._id %>">
-										<center>
-											<button
-												name="delete"
-												type="submit"
-												className="btn btn-outline-primary button-sd">
-												Delete
-											</button>
-										</center>
-									</a>
+									<center>
+										<button
+											onClick={() =>
+												onDeleteHandler(user.id)
+											}
+											name="delete"
+											type="submit"
+											className="btn btn-outline-primary button-sd">
+											Delete
+										</button>
+									</center>
 								</th>
 							</tr>
 						);
