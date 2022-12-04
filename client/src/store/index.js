@@ -35,6 +35,13 @@ const reducingFunction = (state = initialState, action) => {
 		}
 	}
 
+	if(action.type === 'remove-item-from-cart'){
+		return {
+			...state,
+			cart: state.cart.filter((item) => item._id.$oid !== action.productId)
+		}
+	}
+
 	return state;
 };
 

@@ -54,9 +54,9 @@ const UserCart = (props) => {
 	};
 
 	const purchase = () => {
-		const text = `\n\nYour bill is: $${total}\n\nYour items are: \n${cart.map(
-			(dish) => {
-				return `${dish.name} - ${dish.count}\n`;
+		const text = `\n\nYour bill is: $${total}\n\nYour items are: \n${finalCart.map(
+			(cartItem) => {
+				return `${cartItem.name} - ${cartItem.count}\n`;
 			}
 		)}\nThank you for shopping with us!\nHoping to see you soon Customer.`;
 		alert(text);
@@ -64,6 +64,10 @@ const UserCart = (props) => {
         setFinalCart([])
 		navigate("/show-cart");
 	};
+
+	const removeItemFromCart = (id) => {
+		dispatch({type: 'remove-item-from-cart', productId: id})
+	}
 
 	const getDetails = (detail) => {
 		// console.log(detail);
@@ -98,13 +102,15 @@ const UserCart = (props) => {
 							className="btn btn-danger"
 							type="button"
 							onClick={() => {
-								props.removeFromCart(detail.id);
+								// props.removeFromCart(detail.id);
+								removeItemFromCart(detail._id.$oid)
 								setFinalCart((prevCart) => {
+									console.log(prevCart)
 									return prevCart.filter(
-										(dish) => dish.id !== detail.id
+										(cartItem) => cartItem._id.$oid !== detail._id.$oid
 									);
 								});
-
+								
 								navigate("/show-cart");
 							}}>
 							REMOVE
@@ -137,7 +143,7 @@ const UserCart = (props) => {
 								</span>
 							</div>
 
-							{cart.map((dish) => getDetails(dish))}
+							{cart.map((cartItem) => getDetails(cartItem))}
 
 							<div class="cart-total">
 								<strong class="cart-total-title">Total</strong>
