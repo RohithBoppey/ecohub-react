@@ -1,11 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../Admin/Navbar/Navbar";
 import "./messages.css";
 
 const Messages = (props) => {
 	// console.log(props);
-
 
 	return (
 		<>
@@ -44,7 +42,9 @@ const Messages = (props) => {
 								<a
 									href={`https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=${message.useremail}`}
 									target="__blank"
-									onClick={() => props.onRemoveMessage(message.id)}>
+									onClick={() =>
+										props.onRemoveMessage(message.id)
+									}>
 									<center>
 										<button
 											name="delete"
