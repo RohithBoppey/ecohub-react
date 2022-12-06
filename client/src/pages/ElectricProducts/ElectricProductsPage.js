@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PageList.css";
 
 import { useDispatch } from "react-redux";
@@ -9,6 +9,9 @@ const ElectricProductsPage = (props) => {
 	// console.log(props)
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+
+	const [allProducts, setAllProducts] = useState(props.products);
+	const [searchInput, setSearchInput] = useState("");
 
 	const addToCartHandler = (object) => {
 		dispatch({
@@ -67,7 +70,9 @@ const ElectricProductsPage = (props) => {
 								</ul>
 							</div>
 							<button
-								onClick={() => {addToCartHandler(props.products[i])}}
+								onClick={() => {
+									addToCartHandler(props.products[i]);
+								}}
 								className="btn btn-primary">
 								Add to Cart
 							</button>
@@ -76,6 +81,20 @@ const ElectricProductsPage = (props) => {
 				</div>
 			</div>
 		);
+	};
+
+	const getDetails = () => {
+		let temp = [];
+		let all = allProducts;
+		// all.reverse();
+		console.log(searchInput)
+		for (let i = 0; i < all.length; i++) {
+			// console.log(i);
+			if(all[i].name.toLowerCase().includes(searchInput)){
+				temp.push(getMainProduct(i));
+			}
+		}
+		return temp;
 	};
 
 	return (
@@ -963,6 +982,23 @@ const ElectricProductsPage = (props) => {
 
 			{/* ----------------------- MAIN PRODCUTS ---------------------------- */}
 
+			<br />
+			<br />
+			<div
+				style={{
+					width: "100%",
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+				}}>
+				<h3>Search For Products: &nbsp;&nbsp;&nbsp;</h3>
+				<input
+					type="text"
+					style={{ width: "50%" }}
+					onChange={(e) => {
+						setSearchInput(e.target.value);
+					}}></input>
+			</div>
 			<section className="section-products">
 				<div className="container item">
 					<div className="row justify-content-center text-center">
@@ -976,15 +1012,7 @@ const ElectricProductsPage = (props) => {
 						{/* {getRemainingProducts().map((i) => {
 							return i;
 						})} */}
-						{getMainProduct(11)}
-						{getMainProduct(12)}
-						{getMainProduct(13)}
-						{getMainProduct(14)}
-						{getMainProduct(15)}
-						{getMainProduct(16)}
-						{getMainProduct(17)}
-						{getMainProduct(18)}
-						{getMainProduct(19)}
+						{getDetails()}
 					</div>
 				</div>
 			</section>

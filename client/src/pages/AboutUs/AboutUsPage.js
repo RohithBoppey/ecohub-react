@@ -103,9 +103,9 @@ const AboutUsPage = (props) => {
 							<div className="p-4">
 								<h6 className="mb-3">{info.name}</h6>
 								<p>
-									Hi, I'm {info.name}, and I contributed in the
-									frontend which includes homepage, etc and
-									leanring a little bit of backend.
+									Hi, I'm {info.name}, and I contributed in
+									the frontend which includes homepage, etc
+									and leanring a little bit of backend.
 								</p>
 								{generateSocials()}
 							</div>

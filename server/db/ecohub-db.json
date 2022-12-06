@@ -35,6 +35,18 @@
       "gender": "Male",
       "avatar": "",
       "id": "CtISAdG"
+    },
+    {
+      "username": "r",
+      "useremail": "r@g.com",
+      "fullname": "R",
+      "phoneNumber": "9533666898",
+      "password": "rb123456",
+      "cityname": "Hyderabad",
+      "address": "Asd890asdha Sd",
+      "gender": "Male",
+      "avatar": "",
+      "id": "2RkIOOM"
     }
   ],
   "vehicles": [
